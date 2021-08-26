@@ -41,8 +41,12 @@ opt.termguicolors = true
 opt.timeoutlen = options.timeoutlen
 opt.undofile = options.permanent_undo
 
+-- SwapFile
+vim.g.noswapfile = true
+vim.g.nobackup = true
+
 -- cursor color
-opt.guicursor = "i:block"
+opt.gcr='a:blinkon0'
 cmd[[highlight Cursor guifg=white guibg=white]]
 opt.guicursor="n-v-c-i:block-Cursor"
 

@@ -61,8 +61,6 @@ g.nvim_tree_icons = {
    },
 }
 
-vim.api.nvim_exec([[ autocmd VimEnter * NvimTreeToggle]], false)
-
 g.nvim_tree_bindings = {
    { key = { "<CR>", "o", "<2-LeftMouse>" }, cb = tree_cb "edit" },
    { key = { "<2-RightMouse>", "<C-]>" }, cb = tree_cb "cd" },
