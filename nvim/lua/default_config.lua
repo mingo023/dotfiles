@@ -219,7 +219,7 @@ M.custom.mappings = {
 }
 
 M.on_startup = {
-   vim.api.nvim_exec([[ autocmd VimEnter * Dashboard]], false)
+   -- vim.api.nvim_exec([[ autocmd VimEnter * Dashboard]], false)
 }
 
 return M

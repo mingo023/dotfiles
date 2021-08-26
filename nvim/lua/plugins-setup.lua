@@ -132,9 +132,18 @@ return require('packer').startup(function()
     -- |                 🪐 Coding experience  🪐                 |
     -- ------------------------------------------------------------
 
-    use {"tpope/vim-surround"}
+    use { "tpope/vim-surround" }
 
-    use {"matze/vim-move"}
+    use { "matze/vim-move" }
+
+    use { 
+        "justinmk/vim-sneak", 
+        config = function()
+            require "configs.sneak"
+        end
+    }
+
+    use "terryma/vim-multiple-cursors"
 
     -- ------------------------------------------------------------
     -- |                🪐 Telescope - Dashboard 🪐                |
