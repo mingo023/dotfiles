@@ -97,7 +97,6 @@ return require('packer').startup(function()
         "NvChad/nvim-base16.lua",
         after = "packer.nvim",
         config = function()
-            -- require("colors").init('onedark')
             require("colors").init('onedark')
         end
     }

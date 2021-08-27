@@ -17,7 +17,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>',
+  opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -33,6 +34,10 @@ local on_attach = function(client, bufnr)
 
 end
 
+-- ------------------------------------------------------------
+-- |                 🌈 Typesciprt - Javascript  🌈           |
+-- ------------------------------------------------------------
+
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" },
@@ -41,84 +46,19 @@ nvim_lsp.tsserver.setup {
   end
 }
 
--- replace the default lsp diagnostic symbols
-function lspSymbol(name, icon)
-  vim.fn.sign_define("LspDiagnosticsSign" .. name, {text = icon, numhl = "LspDiagnosticsDefaul" .. name})
-end
+-- ------------------------------------------------------------
+-- |                 🌈 Typesciprt - Javascript  🌈           |
+-- ------------------------------------------------------------
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-lspSymbol("Error", "")
-lspSymbol("Warning", "")
-lspSymbol("Information", "")
-lspSymbol("Hint", "")
-
--- set up diagnostics
-nvim_lsp.diagnosticls.setup {
-  on_attach = on_attach,
-  cmd = {"diagnostic-languageserver", "--stdio"},
-  filetypes={ "typescript", "typescriptreact", "typescript.tsx" },
-  init_options = {
-    linters = {
-      eslint = {
-        command = 'eslint_d',
-        rootPatterns = {
-          ".eslitrc.js",
-          "package.json"
-        },
-        debounce = 2,
-        args = {
-          '--stdin',
-          '--stdin-filename',
-          '%filepath',
-          '--format',
-          'json'
-        },
-        sourceName = 'eslint_d',
-        parseJson = {
-          errorsRoot = '[0].messages',
-          line = 'line',
-          column = 'column',
-          endLine = 'endLine',
-          endColumn = 'endColumn',
-          message = '${message} [${ruleId}]',
-          security = 'severity'
-        },
-        securities = {
-          [2] = 'error',
-          [1] = 'warning',
-        },
-      },
-    },
-    filetypes = {
-      javascript = 'eslint',
-      typescript = 'eslint'
-    },
-    formatters = {
-      prettier = {
-        command = "./node_modules/.bin/prettier",
-        args = {"--stdin-filepath" ,"%filepath" }
-      }
-    },
-    formatFiletypes = {
-      javascript = "prettier",
-      typescript = "prettier"
-    },
-  }
+nvim_lsp.html.setup {
+  capabilities = capabilities,
+  filetypes = { "html", "typescriptreact" },
+  root_dir = function()
+    return vim.fn.getcwd()
+  end
 }
-
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics,
-    {
-        virtual_text = {
-            prefix = "",
-            spacing = 0
-        },
-        signs = true,
-        underline = true,
-        -- set this to true if you want diagnostics to show in insert mode
-        update_in_insert = false
-    }
-)
-
 
 -- suppress error messages from lang servers
 vim.notify = function(msg, log_level, _opts)
@@ -131,3 +71,5 @@ vim.notify = function(msg, log_level, _opts)
      vim.api.nvim_echo({ { msg } }, true, {})
   end
 end
+
+require "configs.diagnostics"

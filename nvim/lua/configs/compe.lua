@@ -5,7 +5,6 @@ end
 
 compe.setup {
    enabled = true,
-
    autocomplete = true,
    debug = false,
    documentation = true,
@@ -22,5 +21,5 @@ compe.setup {
       nvim_lsp = true,
       nvim_lua = true,
    },
-   throttle_time = 80,
+   throttle_time = 200,
 }
