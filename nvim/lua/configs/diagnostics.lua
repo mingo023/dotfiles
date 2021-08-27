@@ -13,7 +13,7 @@ nvim_lsp.diagnosticls.setup {
           ".eslitrc.js",
           "package.json"
         },
-        debounce = 500,
+        debounce = 400,
         args = {
           '--stdin',
           '--stdin-filename',
@@ -70,3 +70,4 @@ vim.fn.sign_define("LspDiagnosticsSignWarning", {text = "", numhl = "LspDiagnost
 vim.fn.sign_define("LspDiagnosticsSignInformation", {text = "", numhl = "LspDiagnosticsDefaultInformation"})
 vim.fn.sign_define("LspDiagnosticsSignHint", {text = "", numhl = "LspDiagnosticsDefaultHint"})
 
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]

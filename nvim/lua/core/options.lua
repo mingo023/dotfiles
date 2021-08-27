@@ -44,6 +44,7 @@ opt.undofile = options.permanent_undo
 -- SwapFile
 vim.g.noswapfile = true
 vim.g.nobackup = true
+opt.shortmess:append "A"
 
 -- cursor color
 opt.gcr='a:blinkon0'

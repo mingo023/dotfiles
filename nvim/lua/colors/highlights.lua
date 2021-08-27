@@ -97,6 +97,8 @@ fg("LspDiagnosticsSignError", red)
 fg("LspDiagnosticsSignWarning", yellow)
 fg("LspDiagnosticsVirtualTextError", red)
 fg("LspDiagnosticsVirtualTextWarning", yellow)
+fg("LspDiagnosticsUnderlineError", red)
+fg("LspDiagnosticsUnderlineWarning", yellow)
 
 -- info
 fg("LspDiagnosticsSignInformation", green)

@@ -101,6 +101,8 @@ return require('packer').startup(function()
         end
     }
 
+    use "sainnhe/gruvbox-material"
+
     -- ------------------------------------------------------------
     -- |                   🎃 Coding styles 🎃                    |
     -- ------------------------------------------------------------
