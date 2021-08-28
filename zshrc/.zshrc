@@ -28,7 +28,7 @@ alias nv='nvim'
 
 # config project working directory
 alias work='f(){ ~/dev/work/"$@";  unset -f f; }; f'
-alias portbe='~/dev/work/portfolio-management-backend'
+alias portbe='~/dev/work/portfolio/portfolio-management-backend'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

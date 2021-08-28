@@ -47,18 +47,18 @@ nvim_lsp.tsserver.setup {
 }
 
 -- ------------------------------------------------------------
--- |                 🌈 Typesciprt - Javascript  🌈           |
+-- |                 🌈 HTML  🌈           |
 -- ------------------------------------------------------------
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-nvim_lsp.html.setup {
-  capabilities = capabilities,
-  filetypes = { "html", "typescriptreact" },
-  root_dir = function()
-    return vim.fn.getcwd()
-  end
-}
+-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+-- capabilities.textDocument.completion.completionItem.snippetSupport = true
+-- 
+-- nvim_lsp.html.setup {
+--   capabilities = capabilities,
+--   filetypes = { "html", "typescriptreact" },
+--   root_dir = function()
+--     return vim.fn.getcwd()
+--   end
+-- }
 
 -- suppress error messages from lang servers
 vim.notify = function(msg, log_level, _opts)

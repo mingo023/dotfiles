@@ -4,7 +4,7 @@ if not present then
 end
 
 ts_config.setup {
-    ensure_installed = {"lua", "typescript", "javascript"},
+    ensure_installed = {"lua", "typescript", "javascript", "html"},
     highlight = {
         enable = true,
         use_languagetree = true
