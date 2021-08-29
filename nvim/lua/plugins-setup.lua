@@ -146,6 +146,8 @@ return require('packer').startup(function()
 
     use "terryma/vim-multiple-cursors"
 
+    use "kamykn/spelunker.vim"
+
     -- ------------------------------------------------------------
     -- |                🪐 Telescope - Dashboard 🪐                |
     -- ------------------------------------------------------------

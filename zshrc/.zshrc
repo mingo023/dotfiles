@@ -28,6 +28,7 @@ alias nv='nvim'
 
 # config project working directory
 alias work='f(){ ~/dev/work/"$@";  unset -f f; }; f'
+alias learning='f(){ ~/dev/learning/"$@";  unset -f f; }; f'
 alias portbe='~/dev/work/portfolio/portfolio-management-backend'
 
 export NVM_DIR="$HOME/.nvm"
