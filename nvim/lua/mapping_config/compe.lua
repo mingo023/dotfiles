@@ -32,7 +32,7 @@ _G.s_tab_complete = function()
 end
 
 --  compe mappings
-map("i", "<Tab>", "v:lua.tab_complete()", {expr = true}, {noremap = true, silent = true})
+map("i", "<Tab>", "v:lua.tab_complete({ 'keys': '<CR>', 'select': v:true })", {expr = true}, {noremap = true, silent = true})
 map("s", "<Tab>", "v:lua.tab_complete()", {expr = true}, {noremap = true, silent = true})
 map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true}, {noremap = true, silent = true})
 map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true}, {noremap = true, silent = true})
