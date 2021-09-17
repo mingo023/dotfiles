@@ -56,9 +56,9 @@ M.options = {
    mouse = "a",
    number = true,
    -- relative numbers in normal mode tool at the bottom of options.lua
-   numberwidth = 4,
+   numberwidth = 2,
    permanent_undo = true,
-   shiftwidth = 4,
+   shiftwidth = 2,
    smartindent = true,
    tabstop = 8, -- Number of spaces that a <Tab> in the file counts for
    timeoutlen = 400,

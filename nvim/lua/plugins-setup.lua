@@ -166,6 +166,13 @@ return require('packer').startup(function()
         end
     }
 
+    use "Pocco81/TrueZen.nvim"
+
+    use {
+        "RishabhRD/nvim-lsputils",
+        requires = "RishabhRD/popfix"
+    }
+
     -- ------------------------------------------------------------
     -- |                          ⛄️ Git ⛄️                       |
     -- ------------------------------------------------------------
