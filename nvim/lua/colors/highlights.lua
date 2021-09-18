@@ -47,6 +47,9 @@ fg("cursorlinenr", white) -- line number
 -- same it bg, so it doesn't appear
 fg("EndOfBuffer", black)
 
+-- color for background
+bg("Normal", darker_black)
+
 -- For floating windows
 fg("FloatBorder", blue)
 bg("NormalFloat", one_bg)

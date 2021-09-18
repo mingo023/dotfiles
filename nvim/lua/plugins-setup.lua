@@ -169,8 +169,8 @@ return require('packer').startup(function()
     use "Pocco81/TrueZen.nvim"
 
     use {
-        "RishabhRD/nvim-lsputils",
-        requires = "RishabhRD/popfix"
+      "jose-elias-alvarez/nvim-lsp-ts-utils",
+      requires = {{'nvim-lua/plenary.nvim','jose-elias-alvarez/null-ls.nvim'}},
     }
 
     -- ------------------------------------------------------------
