@@ -17,11 +17,11 @@ bufferline.setup {
       max_name_length = 14,
       close_command = "Bclose!",
       max_prefix_length = 13,
-      tab_size = 20,
+      tab_size = 24,
       show_tab_indicators = true,
-      enforce_regular_tabs = true,
+      -- enforce_regular_tabs = true,
       diagnostics = "nvim_lsp",
-      view = "multiwindow",
+      -- view = "multiwindow",
       show_buffer_close_icons = true,
       separator_style = "slant",
       always_show_bufferline = true,
@@ -54,6 +54,24 @@ bufferline.setup {
       tab_close = {
          guifg = colors.red,
          guibg = colors.black,
+      },
+      error_diagnostic_visible = {
+        guifg = colors.red,
+      },
+      error_diagnostic = {
+        guifg = colors.red,
+      },
+      error_visible = {
+        guifg = colors.red
+      },
+      warning_diagnostic_visible = {
+        guifg = colors.yellow,
+      },
+      warning_diagnostic = {
+        guifg = colors.yellow,
+      },
+      warning_visible = {
+        guifg = colors.yellow
       },
    },
 }
