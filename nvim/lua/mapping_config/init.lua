@@ -5,5 +5,7 @@ require("mapping_config.fugitive")
 require("mapping_config.telescope")
 require("mapping_config.vimmove")
 require("mapping_config.truezen")
+require("mapping_config.trouble")
+require("mapping_config.saga")
 
 require("mapping_config.personal")

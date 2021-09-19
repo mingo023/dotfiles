@@ -32,6 +32,15 @@ return require('packer').startup(function()
         end
     }
 
+    use {
+      "jose-elias-alvarez/nvim-lsp-ts-utils",
+      requires = {{'nvim-lua/plenary.nvim','jose-elias-alvarez/null-ls.nvim'}},
+    }
+
+    use {
+      "glepnir/lspsaga.nvim"
+    }
+
     -- ------------------------------------------------------------
     -- |            ✨ Auto pair - Indent - Suggestion ✨          |
     -- ------------------------------------------------------------
@@ -101,7 +110,24 @@ return require('packer').startup(function()
         end
     }
 
+    -- ------------------------------------------------------------
+    -- |                  🎃 Themes and color 🎃                  |
+    -- ------------------------------------------------------------
+
     use "sainnhe/gruvbox-material"
+    use 'folke/tokyonight.nvim'
+
+    use {
+      'folke/lsp-colors.nvim',
+      config = function()
+        require("lsp-colors").setup({
+          Error = "#db4b4b",
+          Warning = "#e0af68",
+          Information = "#0db9d7",
+          Hint = "#10B981"
+        })
+      end
+    }
 
     -- ------------------------------------------------------------
     -- |                   🎃 Coding styles 🎃                    |
@@ -169,8 +195,11 @@ return require('packer').startup(function()
     use "Pocco81/TrueZen.nvim"
 
     use {
-      "jose-elias-alvarez/nvim-lsp-ts-utils",
-      requires = {{'nvim-lua/plenary.nvim','jose-elias-alvarez/null-ls.nvim'}},
+      "folke/trouble.nvim",
+      requires = "kyazdani42/nvim-web-devicons",
+      config = function()
+        require "configs.trouble"
+      end
     }
 
     -- ------------------------------------------------------------
