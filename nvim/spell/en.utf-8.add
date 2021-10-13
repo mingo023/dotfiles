@@ -28,3 +28,4 @@ rxjs
 lodash
 deactive
 postback
+axios

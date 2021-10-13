@@ -3,3 +3,4 @@ nvim/plugin/packer_compiled.lua
 configstore
 iterm2
 pgcli
+.DS_Store
