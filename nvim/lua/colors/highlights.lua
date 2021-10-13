@@ -20,6 +20,7 @@ local purple = colors.purple
 local red = colors.red
 local white = colors.white
 local yellow = colors.yellow
+local origin_white = colors.origin_white
 
 local ui = require("core.utils").load_config().ui
 
@@ -43,7 +44,9 @@ else
 end
 
 -- cmd "hi clear CursorLine" -- disable cusror line
-fg("cursorlinenr", white) -- line number
+fg("cursorlinenr", origin_white) -- line number
+fg("Cursor", origin_white) -- line number
+bg("Cursor", origin_white) -- line number
 
 -- same it bg, so it doesn't appear
 fg("EndOfBuffer", black)

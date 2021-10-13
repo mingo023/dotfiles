@@ -48,7 +48,6 @@ opt.shortmess:append "A"
 
 -- cursor color
 opt.gcr='a:blinkon0'
-cmd[[highlight Cursor guifg=white guibg=white]]
 opt.guicursor="n-v-c-i:block-Cursor"
 
 -- interval for writing swap file to disk, also used by gitsigns
