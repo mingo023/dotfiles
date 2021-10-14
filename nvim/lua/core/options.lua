@@ -40,6 +40,8 @@ opt.tabstop = options.tabstop
 opt.termguicolors = true
 opt.timeoutlen = options.timeoutlen
 opt.undofile = options.permanent_undo
+opt.timeoutlen = options.timeoutlen
+opt.background = "dark"
 
 -- SwapFile
 vim.g.noswapfile = true
