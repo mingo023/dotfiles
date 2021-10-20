@@ -149,11 +149,13 @@ return require('packer').startup(function()
     }
 
     use {
-        "terrortylor/nvim-comment",
+        'b3nj5m1n/kommentary',
         config = function()
             require "configs.comment"
         end
     }
+
+    use "preservim/vimux"
 
     -- ------------------------------------------------------------
     -- |                 🪐 Coding experience  🪐                 |
