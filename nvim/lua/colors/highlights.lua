@@ -75,12 +75,10 @@ fg("StatusLineNC", line .. " gui=underline")
 fg("VertSplit", line)
 -- fg_bg("Visual",light_grey, colors.lightbg)
 
-if ui.transparency then
-   bg("Normal", "NONE")
-   bg("Folded", "NONE")
-   fg("Folded", "NONE")
-   fg("Comment", grey)
-end
+bg("Normal", "NONE")
+bg("Folded", "NONE")
+fg("Folded", "NONE")
+fg("Comment", grey)
 
 ----- plugin related highlights -----
 
@@ -133,12 +131,10 @@ fg_bg("NvimTreeStatuslineNc", darker_black, darker_black)
 -- bg("NvimTreeVertSplit", darker_black)
 fg_bg("NvimTreeWindowPicker", red, black2)
 -- disable some highlight in nvim tree if transparency enabled
-if ui.transparency then
-   bg("NvimTreeNormal", "NONE")
-   bg("NvimTreeStatusLineNC", "NONE")
-   -- bg("NvimTreeVertSplit", "NONE")
-   -- fg("NvimTreeVertSplit", grey)
-end
+bg("NvimTreeNormal", "NONE")
+bg("NvimTreeStatusLineNC", "NONE")
+bg("NvimTreeVertSplit", "NONE")
+fg("NvimTreeVertSplit", grey)
 
 -- telescope --
 fg("TelescopeBorder", line)

@@ -23,7 +23,7 @@ bufferline.setup {
       diagnostics = "nvim_lsp",
       -- view = "multiwindow",
       show_buffer_close_icons = true,
-      separator_style = "slant",
+      -- separator_style = "slant",
       always_show_bufferline = true,
    },
    highlights = {

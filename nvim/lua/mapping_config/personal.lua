@@ -15,3 +15,5 @@ map("v", "/", "y/<C-R>\"<CR>", { silent = true })
 -- mapping for shift multiple lines repeatedly
 map("v", "<", "<gv", { silent = true })
 map("v", ">", ">gv", { silent = true })
+
+map("n", ":ư", ":w")
