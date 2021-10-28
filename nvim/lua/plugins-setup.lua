@@ -47,13 +47,24 @@ return require('packer').startup(function()
 
     use {
         "windwp/nvim-autopairs",
-        after = "nvim-compe",
         config = function()
             require("nvim-autopairs").setup()
-            require("nvim-autopairs.completion.compe").setup({
-                map_cr = true,
-                map_complete = true -- insert () func completion
-            })
+        end
+    }
+    
+
+    use {
+        "hrsh7th/nvim-cmp",
+        requires = {
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'hrsh7th/cmp-buffer' },
+            { 'hrsh7th/cmp-path' },
+            { 'hrsh7th/cmp-cmdline' },
+            { 'hrsh7th/cmp-vsnip' },
+            { 'hrsh7th/vim-vsnip' }
+        },
+        config = function()
+            require "configs.cmp"
         end
     }
 
@@ -64,13 +75,13 @@ return require('packer').startup(function()
         end
     }
 
-    use {
-        "hrsh7th/nvim-compe",
-        event = "InsertEnter",
-        config = function()
-            require('configs.compe')
-        end
-    }
+    -- use {
+    --     "hrsh7th/nvim-compe",
+    --     event = "InsertEnter",
+    --     config = function()
+    --         require('configs.compe')
+    --     end
+    -- }
 
     -- ------------------------------------------------------------
     -- |             👾 File - Folder - Statusline 👾              |

@@ -9,7 +9,7 @@ local options = require("core.utils").load_config().options
 
 -- opt.clipboard = options.clipboard
 opt.cmdheight = options.cmdheight
-opt.completeopt = { "menuone", "noselect" }
+opt.completeopt = { "menu","menuone", "noselect" }
 opt.cul = true -- cursor line
 
 -- Indentline
