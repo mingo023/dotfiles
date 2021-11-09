@@ -40,7 +40,13 @@ cmp.setup({
 cmp.setup.cmdline('/', {
     sources = {{
         name = 'buffer'
-    }}
+    }},
+    mapping = {
+        ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 's' }),
+        ['<CR>'] = cmp.mapping.confirm({
+            select = true
+        })
+    },
 })
 
 -- Use cmdline & path source for ':'.
