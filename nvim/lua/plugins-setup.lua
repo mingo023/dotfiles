@@ -20,7 +20,7 @@ return require('packer').startup(function()
     use {
         "neovim/nvim-lspconfig",
         config = function()
-            require "configs.lspconfig"
+            require("configs.lspconfig")
         end
     }
 
@@ -28,18 +28,16 @@ return require('packer').startup(function()
         "nvim-treesitter/nvim-treesitter",
         event = "BufRead",
         config = function()
-            require "configs.treesitter"
+            require("configs.treesitter")
         end
     }
 
     use {
-      "jose-elias-alvarez/nvim-lsp-ts-utils",
-      requires = {{'nvim-lua/plenary.nvim','jose-elias-alvarez/null-ls.nvim'}},
+        "jose-elias-alvarez/nvim-lsp-ts-utils",
+        requires = {{'nvim-lua/plenary.nvim', 'jose-elias-alvarez/null-ls.nvim'}}
     }
 
-    use {
-      "glepnir/lspsaga.nvim"
-    }
+    use {"glepnir/lspsaga.nvim"}
 
     -- ------------------------------------------------------------
     -- |            ✨ Auto pair - Indent - Suggestion ✨          |
@@ -51,18 +49,11 @@ return require('packer').startup(function()
             require("nvim-autopairs").setup()
         end
     }
-    
 
     use {
         "hrsh7th/nvim-cmp",
-        requires = {
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'hrsh7th/cmp-cmdline' },
-            { 'hrsh7th/cmp-vsnip' },
-            { 'hrsh7th/vim-vsnip' }
-        },
+        requires = {{'hrsh7th/cmp-nvim-lsp'}, {'hrsh7th/cmp-buffer'}, {'hrsh7th/cmp-path'}, {'hrsh7th/cmp-cmdline'},
+                    {'hrsh7th/cmp-vsnip'}, {'hrsh7th/vim-vsnip'}},
         config = function()
             require "configs.cmp"
         end
@@ -89,9 +80,10 @@ return require('packer').startup(function()
 
     use {
         'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons',
-        config = function() 
-            require "configs.nvimtree"
+        commit = '86e6dc6',
+        requires = {'kyazdani42/nvim-web-devicons'},
+        config = function()
+            require'nvim-tree'.setup {}
         end
     }
 
@@ -99,7 +91,7 @@ return require('packer').startup(function()
         "kyazdani42/nvim-web-devicons",
         after = "nvim-base16.lua",
         config = function()
-            require "configs.icons"
+            require("configs.icons")
         end
     }
 
@@ -108,7 +100,7 @@ return require('packer').startup(function()
         disable = not plugin_status.galaxyline,
         after = "nvim-web-devicons",
         config = function()
-            require "configs.statusline"
+            require("configs.statusline")
         end
     }
 
@@ -128,15 +120,15 @@ return require('packer').startup(function()
     use 'folke/tokyonight.nvim'
 
     use {
-      'folke/lsp-colors.nvim',
-      config = function()
-        require("lsp-colors").setup({
-          Error = "#db4b4b",
-          Warning = "#e0af68",
-          Information = "#0db9d7",
-          Hint = "#10B981"
-        })
-      end
+        'folke/lsp-colors.nvim',
+        config = function()
+            require("lsp-colors").setup({
+                Error = "#db4b4b",
+                Warning = "#e0af68",
+                Information = "#0db9d7",
+                Hint = "#10B981"
+            })
+        end
     }
 
     -- ------------------------------------------------------------
@@ -147,21 +139,21 @@ return require('packer').startup(function()
         disable = not plugin_status.bufferline,
         after = "galaxyline.nvim",
         config = function()
-            require "configs.bufferline"
+            require("configs.bufferline")
         end
     }
 
     use {
         "mhartington/formatter.nvim",
         config = function()
-            require "configs.prettier"
+            require("configs.prettier")
         end
     }
 
     use {
         'b3nj5m1n/kommentary',
         config = function()
-            require "configs.comment"
+            require("configs.comment")
         end
     }
 
@@ -171,14 +163,14 @@ return require('packer').startup(function()
     -- |                 🪐 Coding experience  🪐                 |
     -- ------------------------------------------------------------
 
-    use { "tpope/vim-surround" }
+    use {"tpope/vim-surround"}
 
-    use { "matze/vim-move" }
+    use {"matze/vim-move"}
 
-    use { 
-        "justinmk/vim-sneak", 
+    use {
+        "justinmk/vim-sneak",
         config = function()
-            require "configs.sneak"
+            require("configs.sneak")
         end
     }
 
@@ -190,16 +182,15 @@ return require('packer').startup(function()
         'karb94/neoscroll.nvim',
         config = function()
             require('neoscroll').setup({
-                mappings = {'<C-u>', '<C-d>', '<C-b>', '<C-f>',
-                '<C-y>', '<C-e>', 'zt', 'zz', 'zb'},
-    hide_cursor = true,          -- Hide cursor while scrolling
-    stop_eof = true,             -- Stop at <EOF> when scrolling downwards
-    use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
-    respect_scrolloff = false,   -- Stop scrolling when the cursor reaches the scrolloff margin of the file
-    cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
-    easing_function = nil,        -- Default easing function
-    pre_hook = nil,              -- Function to run before the scrolling animation starts
-    post_hook = nil,              -- Function to run after the scrolling animation ends
+                mappings = {'<C-u>', '<C-d>', '<C-b>', '<C-f>', '<C-y>', '<C-e>', 'zt', 'zz', 'zb'},
+                hide_cursor = true, -- Hide cursor while scrolling
+                stop_eof = true, -- Stop at <EOF> when scrolling downwards
+                use_local_scrolloff = false, -- Use the local scope of scrolloff instead of the global scope
+                respect_scrolloff = false, -- Stop scrolling when the cursor reaches the scrolloff margin of the file
+                cursor_scrolls_alone = true, -- The cursor will keep on scrolling even if the window cannot scroll further
+                easing_function = nil, -- Default easing function
+                pre_hook = nil, -- Function to run before the scrolling animation starts
+                post_hook = nil -- Function to run after the scrolling animation ends
             })
         end
     }
@@ -225,11 +216,12 @@ return require('packer').startup(function()
     use "Pocco81/TrueZen.nvim"
 
     use {
-      "folke/trouble.nvim",
-      requires = "kyazdani42/nvim-web-devicons",
-      config = function()
-        require "configs.trouble"
-      end
+        "folke/trouble.nvim",
+        commit = 'ff40475',
+        requires = "kyazdani42/nvim-web-devicons",
+        config = function()
+            require "configs.trouble"
+        end
     }
 
     -- ------------------------------------------------------------
@@ -242,7 +234,7 @@ return require('packer').startup(function()
             return vim.fn.isdirectory ".git" == 1
         end,
         config = function()
-            require "configs.gitsigns"
+            require("configs.gitsigns")
         end
     }
 
