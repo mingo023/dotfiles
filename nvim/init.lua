@@ -1,5 +1,7 @@
-require "plugins-setup"
+require("plugins")
+require("options")
+require("mappings")
 
-require "core.options"
-require "mapping_config.init"
-
+vim.cmd [[
+    autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+]]
