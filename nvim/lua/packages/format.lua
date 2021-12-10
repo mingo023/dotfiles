@@ -23,3 +23,21 @@ use {
         require("cores.formatter")
     end
 }
+
+use {
+    "tpope/vim-surround"
+} 
+
+use {
+    "matze/vim-move",
+    config = function()
+        vim.cmd("let g:move_key_modifier = 'C'")
+    end
+}
+
+use {
+    "justinmk/vim-sneak",
+    config = function()
+        vim.cmd("let g:sneak#label = 1")
+    end
+}

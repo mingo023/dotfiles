@@ -24,8 +24,6 @@ map("v", ">", ">gv", {
     silent = true
 })
 
-map("n", ":ư", ":w")
-
 -- custom mapping for copilot
 vim.cmd [[
     imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
