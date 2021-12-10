@@ -52,4 +52,7 @@ vim.g.loaded_spec = 0
 
 
 -- SCHEME
-vim.cmd[[colorscheme gruvbox]]
+vim.cmd[[
+    let g:gruvbox_material_palette = 'original'
+    colorscheme gruvbox-material
+]]
