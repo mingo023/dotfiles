@@ -7,6 +7,7 @@ require("telescope").setup {
         sorting_strategy = 'ascending',
         winblend = 0,
         preview = false,
+        file_ignore_patterns = {"node_modules", ".git"},
         mappings = {
             i = {
                 ["<C-d>"] = actions.close,

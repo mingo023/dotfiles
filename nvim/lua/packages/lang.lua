@@ -8,11 +8,15 @@ use {
     end
 }
 use {
+    "jose-elias-alvarez/nvim-lsp-ts-utils",
+    after ="nvim-lspconfig"
+}
+use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
 }
 use {
-    "kabouzeid/nvim-lspinstall",
+    "williamboman/nvim-lsp-installer",
     event = "BufRead"
 }
 use {"tami5/lspsaga.nvim"}
@@ -28,7 +32,6 @@ use {
     end
 }
 use {"github/copilot.vim"}
-
 use {
     "windwp/nvim-ts-autotag",
     config = function()

@@ -23,6 +23,8 @@ return function(client, bufnr)
     buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
     buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     buf_set_keymap('n', '<Leader>ca', ':Lspsaga code_action <CR>', opts)
+    buf_set_keymap('n', 'gr', ':TroubleToggle lsp_references <CR>', opts)
+    buf_set_keymap('n', '<C-r>', ':Lspsaga rename<CR>', opts)
 
     if client.resolved_capabilities.document_formatting then
         vim.cmd('augroup Format')

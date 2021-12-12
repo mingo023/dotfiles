@@ -6,7 +6,6 @@ return require("packer").startup{
     use 'wbthomason/packer.nvim'
     require("packages.cmp")
     require("packages.lang")
-    require("packages.pair")
     require("packages.format")
     require("packages.scheme")
     require("packages.tree")
