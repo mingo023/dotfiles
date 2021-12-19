@@ -43,3 +43,7 @@ use {
     end
 }
 
+use {
+    "mg979/vim-visual-multi"
+}
+

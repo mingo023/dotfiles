@@ -59,3 +59,7 @@ use {
         vim.cmd("let g:sneak#label = 1")
     end
 }
+
+use {
+    "kamykn/spelunker.vim"
+}

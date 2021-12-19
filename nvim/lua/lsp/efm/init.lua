@@ -32,21 +32,27 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
     update_in_insert = false
 })
 
-vim.fn.sign_define("LspDiagnosticsSignError", {
-    text = "",
-    numhl = "LspDiagnosticsDefaultError"
-})
-vim.fn.sign_define("LspDiagnosticsSignWarning", {
-    text = "",
-    numhl = "LspDiagnosticsDefaultWarning"
-})
-vim.fn.sign_define("LspDiagnosticsSignInformation", {
-    text = "",
-    numhl = "LspDiagnosticsDefaultInformation"
-})
-vim.fn.sign_define("LspDiagnosticsSignHint", {
-    text = "",
-    numhl = "LspDiagnosticsDefaultHint"
-})
+vim.notify = function(msg, log_level)
+    if msg:match "exit code" then
+        return
+    end
+    if log_level == vim.log.levels.ERROR then
+        vim.api.nvim_err_writeln(msg)
+    else
+        vim.api.nvim_echo({ { msg } }, true, {})
+    end
+end
+
+local function lspSymbol(name, icon)
+    vim.fn.sign_define(
+        "DiagnosticSign".. name,
+        { text = icon, numhl = "DiagnosticDefault".. name }
+    )
+end
+lspSymbol("Error", "❗")
+lspSymbol("Information", "ℹ️")
+lspSymbol("Hint", "💡")
+lspSymbol("Info", "💡")
+lspSymbol("Warning", "⚠️")
 
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]

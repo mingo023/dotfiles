@@ -6,7 +6,7 @@ require("telescope").setup {
         entry_prefix = "   ",
         sorting_strategy = 'ascending',
         winblend = 0,
-        preview = false,
+        -- preview = false,
         file_ignore_patterns = {"node_modules", ".git"},
         mappings = {
             i = {
@@ -32,9 +32,9 @@ require("telescope").setup {
         },
         layout_config = {
             height = 0.5,
-            width = 0.4
+            width = 0.6
         },
         initial_mode = "insert",
-        layout_strategy = "center",
+        layout_strategy = "horizontal",
     }
 }

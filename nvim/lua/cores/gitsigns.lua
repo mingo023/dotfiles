@@ -22,37 +22,14 @@ gitsigns.setup {
         ["n <leader>hp"] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
         ["n <leader>hb"] = '<cmd>lua require"gitsigns".blame_line()<CR>'
     },
-    numhl = false,
-
     sign_priority = 5,
     signs = {
-        add = {
-            hl = "DiffAdd",
-            text = "✅",
-            numhl = "GitSignsAddNr"
-        },
-        change = {
-            hl = "DiffChange",
-            text = "🔅",
-            numhl = "GitSignsChangeNr"
-        },
-        changedelete = {
-            hl = "DiffChange",
-            tet = "⛔️",
-            numhl = "GitSignsChangeNr"
-        },
-        delete = {
-            hl = "DiffDelete",
-            text = "_",
-            numhl = "GitSignsDeleteNr"
-        },
-        topdelete = {
-            hl = "DiffDelete",
-            text = "‾",
-            numhl = "GitSignsDeleteNr"
-        }
+        add = { hl = "DiffAdd", text = "│", numhl = "GitSignsAddNr" },
+        change = { hl = "DiffChange", text = "│", numhl = "GitSignsChangeNr" },
+        delete = { hl = "DiffDelete", text = "", numhl = "GitSignsDeleteNr" },
+        topdelete = { hl = "DiffDelete", text = "‾", numhl = "GitSignsDeleteNr" },
+        changedelete = { hl = "DiffChangeDelete", text = "~", numhl = "GitSignsChangeNr" }
     },
-
     status_formatter = nil, -- Use default
     watch_index = {
         interval = 100

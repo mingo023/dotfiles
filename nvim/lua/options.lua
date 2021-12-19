@@ -12,7 +12,7 @@ opt.mouse = "a"
 opt.cmdheight = 1
 opt.updatetime = 250 -- update interval for gitsigns
 opt.timeoutlen = 400
-opt.clipboard = "unnamedplus"
+-- opt.clipboard = "unnamedplus"
 opt.fillchars = {
     eob = "x"
 }
@@ -30,8 +30,10 @@ vim.g.nobackup = true
 opt.shortmess:append "A"
 
 -- NUMBERS
+opt.signcolumn = "yes"
 opt.number = true
 opt.relativenumber = true
+opt.numberwidth = 2
 
 -- INDENLINE
 opt.expandtab = true
@@ -55,4 +57,7 @@ vim.g.loaded_spec = 0
 vim.cmd[[
     let g:gruvbox_material_palette = 'original'
     colorscheme gruvbox-material
+
+    highlight SignColumn guibg=transparent
 ]]
+
