@@ -11,39 +11,15 @@ shift + alt - d : open -a /Applications/DataGrip.app
 alt - f         : yabai -m window --toggle zoom-fullscreen
 
 # Navigation
-cmd - h : yabai -m window --focus west
-cmd - j : yabai -m window --focus south
-cmd - k : yabai -m window --focus north
-cmd - l : yabai -m window --focus east
-
-# Moving windows
-# shift + cmd - h : yabai -m window --warp west
-# shift + cmd - j : yabai -m window --warp south
-# shift + cmd - l : yabai -m window --warp east
-# shift + cmd - k : yabai -m window --warp north
-
-# Move focus container to workspace
-# shift + cmd - 1 : yabai -m window --space 1; yabai -m space --focus 1
-# shift + cmd - 2 : yabai -m window --space 2; yabai -m space --focus 2
-# shift + cmd - 3 : yabai -m window --space 3; yabai -m space --focus 3
-# shift + cmd - 4 : yabai -m window --space 4; yabai -m space --focus 4
-# shift + cmd - 5 : yabai -m window --space 5; yabai -m space --focus 5
-# shift + cmd - 6 : yabai -m window --space 6; yabai -m space --focus 6
-
-# Move all the container to workspace
-# shift + alt - 1 : yabai -m space --move 1
-# shift + alt - 2 : yabai -m space --move 2
-# shift + alt - 3 : yabai -m space --move 3
-# shift + alt - 4 : yabai -m space --move 4
-# shift + alt - 5 : yabai -m space --move 5
-# shift + alt - 6 : yabai -m space --move 6
+cmd + shift - h : yabai -m window --focus west
+cmd + shift - j : yabai -m window --focus south
+cmd + shift - k : yabai -m window --focus north
+cmd + shift - l : yabai -m window --focus east
 
 alt - r : yabai -m space --rotate 90
 
 # Focus Space
-# cmd - tab : yabai -m space --focus recent
-alt + cmd - h : yabai -m space --focus prev
-alt + cmd - l : yabai -m space --focus next
+
 shift + alt - 1 : yabai -m space --focus 1
 shift + alt - 2 : yabai -m space --focus 2
 shift + alt - 3 : yabai -m space --focus 3
@@ -52,7 +28,7 @@ shift + alt - 5 : yabai -m space --focus 5
 shift + alt - 6 : yabai -m space --focus 6
 shift + alt - 7 : yabai -m space --focus 7
 shift + alt - 8 : yabai -m space --focus 8
-shift + alt - 9 : yabai -m space --focus 9 */
+shift + alt - 9 : yabai -m space --focus 9
 
 # Resize windows
 shift + alt - h : \
@@ -71,11 +47,8 @@ shift + alt - l : \
     yabai -m window --resize right:20:0 ; \
     yabai -m window --resize left:20:0
 
-# equalize size of windows
+# # equalize size of windows
 shift + alt - 0 : yabai -m space --balance
-
-# destroy desktop
-cmd + alt - w : chunkc tiling::desktop --annihilate
 
 # Restart Yabai
 shift + lctrl + alt - r :

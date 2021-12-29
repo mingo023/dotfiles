@@ -6,3 +6,7 @@ use {"morhetz/gruvbox"}
 use {"sainnhe/gruvbox-material"}
 
 use {"doums/darcula"}
+
+use {"tiagovla/tokyodark.nvim"}
+
+use {"folke/tokyonight.nvim"}

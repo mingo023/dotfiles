@@ -13,6 +13,7 @@ return require("packer").startup{
     require("packages.statusline")
     require("packages.telescope")
     require("packages.git")
+    require("packages.utils")
   end,
   config = {
     display = {

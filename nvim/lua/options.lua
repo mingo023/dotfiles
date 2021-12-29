@@ -57,7 +57,15 @@ vim.g.loaded_spec = 0
 vim.cmd[[
     let g:gruvbox_material_palette = 'original'
     colorscheme gruvbox-material
+]]
 
+-- vim.g.tokyonight_style = "storm"
+
+-- vim.cmd[[
+--     colorscheme tokyonight
+-- ]]
+
+vim.cmd[[
     highlight SignColumn guibg=transparent
 ]]
 

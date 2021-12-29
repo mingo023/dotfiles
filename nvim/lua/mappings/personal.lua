@@ -24,6 +24,8 @@ map("v", ">", ">gv", {
     silent = true
 })
 
+map("n", "<Leader>jt", ":RunJestFocused <CR>")
+
 -- custom mapping for copilot
 vim.cmd [[
     imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
