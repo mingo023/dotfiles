@@ -36,12 +36,12 @@ require'nvim-tree'.setup {
         }
     },
     files = {
-        dotfiles = false,
+        dotfiles = true,
         custom = { ".git", "node_modules", ".cache", ".DS_Store" }
     },
     update_focused_file = {
         enable = true,
-        update_cwd = true,
+        update_cwd = false,
         ignore_list = {}
     },
     system_open = {
@@ -53,7 +53,7 @@ require'nvim-tree'.setup {
         width = 30,
         height = 30,
         side = 'left',
-        auto_resize = false,
+        auto_resize = true,
         mappings = {
             custom_only = false,
             list = {}
