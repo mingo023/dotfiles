@@ -6,6 +6,7 @@ require("telescope").setup {
         entry_prefix = "   ",
         sorting_strategy = 'ascending',
         winblend = 0,
+        hidden = true,
         -- preview = false,
         file_ignore_patterns = {"node_modules", ".git"},
         mappings = {

@@ -15,6 +15,9 @@ use {
 use {
     "L3MON4D3/LuaSnip",
     wants = "friendly-snippets",
+    config = function()
+        require "cores.snip"
+    end,
     after = "nvim-cmp"
 }
 use {

@@ -2,8 +2,9 @@ local packer = require "packer"
 local use = packer.use
 
 use {
-    'glepnir/galaxyline.nvim',
-    branch = 'main',
+    'dsych/galaxyline.nvim',
+    -- branch = 'main',
+    commit = '586ed3b6c8f0e066606f6b621b0b34bdb1c9fe57',
     config = function()
         require("cores.statusline")
     end,

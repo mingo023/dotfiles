@@ -47,3 +47,10 @@ use {
     "mg979/vim-visual-multi"
 }
 
+use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
+    }
+}

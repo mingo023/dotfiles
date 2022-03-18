@@ -55,4 +55,4 @@ lspSymbol("Hint", "💡")
 lspSymbol("Info", "💡")
 lspSymbol("Warning", "⚠️")
 
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.lsp.diagnostic.show_line_diagnostics({focusable=false})]]
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float({focusable=false})]]

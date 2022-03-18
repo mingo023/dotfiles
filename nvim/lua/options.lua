@@ -32,7 +32,7 @@ opt.shortmess:append "A"
 -- NUMBERS
 opt.signcolumn = "yes"
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.numberwidth = 2
 
 -- INDENLINE
@@ -53,19 +53,20 @@ vim.g.loaded_matchparen = 0
 vim.g.loaded_spec = 0
 
 
+-- Vim-illuminate
+vim.cmd[[
+    let g:Illuminate_ftblacklist = ['NvimTree']
+]]
+
+
 -- SCHEME
 vim.cmd[[
     let g:gruvbox_material_palette = 'original'
     colorscheme gruvbox-material
 ]]
 
--- vim.g.tokyonight_style = "storm"
-
--- vim.cmd[[
---     colorscheme tokyonight
--- ]]
-
 vim.cmd[[
     highlight SignColumn guibg=transparent
 ]]
 
+vim.cmd "hi cursorlinenr guifg=white"

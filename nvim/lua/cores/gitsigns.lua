@@ -31,7 +31,7 @@ gitsigns.setup {
         changedelete = { hl = "DiffChangeDelete", text = "~", numhl = "GitSignsChangeNr" }
     },
     status_formatter = nil, -- Use default
-    watch_index = {
+    watch_gitdir = {
         interval = 100
     }
 }

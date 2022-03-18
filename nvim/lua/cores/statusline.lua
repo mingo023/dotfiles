@@ -238,40 +238,40 @@ gls.left[7] = {
     }
 }
 
-gls.right[0] = {
-    DiffAdd = {
-        provider = 'DiffAdd',
-        condition = checkwidth,
-        icon = '+',
-        highlight = {colors.green, colors.bg},
-        separator = ' ',
-        separator_highlight = {colors.section_bg, colors.bg}
-    }
-}
-gls.right[1] = {
-    DiffModified = {
-        provider = 'DiffModified',
-        condition = checkwidth,
-        icon = '~',
-        highlight = {colors.orange, colors.bg}
-    }
-}
-gls.right[2] = {
-    DiffRemove = {
-        provider = 'DiffRemove',
-        condition = checkwidth,
-        icon = '-',
-        highlight = {colors.red, colors.bg}
-    }
-}
-gls.right[3] = {
-    Space = {
-        provider = function()
-            return ' '
-        end,
-        highlight = {colors.section_bg, colors.bg}
-    }
-}
+-- gls.right[0] = {
+--     DiffAdd = {
+--         provider = 'DiffAdd',
+--         condition = checkwidth,
+--         icon = '+',
+--         highlight = {colors.green, colors.bg},
+--         separator = ' ',
+--         separator_highlight = {colors.section_bg, colors.bg}
+--     }
+-- }
+-- gls.right[1] = {
+--     DiffModified = {
+--         provider = 'DiffModified',
+--         condition = checkwidth,
+--         icon = '~',
+--         highlight = {colors.orange, colors.bg}
+--     }
+-- }
+-- gls.right[2] = {
+--     DiffRemove = {
+--         provider = 'DiffRemove',
+--         condition = checkwidth,
+--         icon = '-',
+--         highlight = {colors.red, colors.bg}
+--     }
+-- }
+-- gls.right[3] = {
+--     Space = {
+--         provider = function()
+--             return ' '
+--         end,
+--         highlight = {colors.section_bg, colors.bg}
+--     }
+-- }
 gls.right[4] = {
     GitBranch = {
         provider = {function()
