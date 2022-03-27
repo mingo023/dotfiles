@@ -11,8 +11,6 @@ vim.o.termguicolors = true
 g.nvim_tree_git_hl = 1
 g.nvim_tree_indent_markers = 1
 
--- g.nvim_tree_ignore = { ".git", "node_modules", ".cache", ".DS_Store" }
-
 require'nvim-tree'.setup {
     disable_netrw = true,
     hijack_netrw = true,
@@ -35,9 +33,10 @@ require'nvim-tree'.setup {
             error = ""
         }
     },
-    files = {
-        dotfiles = true,
-        custom = { ".git", "node_modules", ".cache", ".DS_Store" }
+    filters = {
+        -- dotfiles = true,
+        custom = { ".git", ".cache", ".DS_Store" },
+        exclude = { "node_modules", ".gitlab-ci.yml" }
     },
     update_focused_file = {
         enable = true,
