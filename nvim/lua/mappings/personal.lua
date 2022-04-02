@@ -12,7 +12,7 @@ map("n", "<Leader>dm", ":noh <CR>", {
 })
 
 -- search all the words match with current selection
-map("v", "/", "y/<C-R>\"<CR>", {
+map("v", "/", "y/<C-R>\"<CR>N", {
     silent = true
 })
 
@@ -31,3 +31,9 @@ vim.cmd [[
     imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
     let g:copilot_no_tab_map = v:true 
 ]]
+
+
+-- override paste try to copying back to clipboard
+map("v", "p", "\"_dP", {
+    silent = true
+})

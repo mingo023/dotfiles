@@ -1,4 +1,6 @@
 local actions = require 'telescope.actions'
+local trouble = require 'trouble.providers.telescope'
+
 require("telescope").setup {
     defaults = {
         prompt_prefix = "   ",
@@ -18,7 +20,8 @@ require("telescope").setup {
                 ["<C-b>"] = actions.preview_scrolling_up,
                 ["<C-f>"] = actions.preview_scrolling_down,
                 ["<C-s>"] = actions.select_vertical,
-                ["<C-i>"] = actions.select_horizontal
+                ["<C-i>"] = actions.select_horizontal,
+                ["<C-t>"] = trouble.open_with_trouble
             },
             n = {
                 ["<C-d>"] = actions.close,
@@ -28,7 +31,8 @@ require("telescope").setup {
                 ["<C-b>"] = actions.preview_scrolling_up,
                 ["<C-f>"] = actions.preview_scrolling_down,
                 ["<C-s>"] = actions.select_vertical,
-                ["<C-i>"] = actions.select_horizontal
+                ["<C-i>"] = actions.select_horizontal,
+                ["<C-t>"] = trouble.open_with_trouble
             }
         },
         layout_config = {

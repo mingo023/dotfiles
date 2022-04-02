@@ -6,7 +6,6 @@ opt.ignorecase = true
 opt.autoread = true
 opt.splitbelow = false
 opt.splitright = true
-opt.termguicolors = true
 opt.cul = true
 opt.mouse = "a"
 opt.cmdheight = 1
@@ -19,10 +18,6 @@ opt.fillchars = {
 
 -- STATUSLINE
 opt.laststatus = 3
-
--- CENTER CURSOR
--- opt.scrolloff = 999
--- opt.sidescrolloff = 999
 
 -- CURSOR
 opt.gcr = 'a:blinkon0'
@@ -56,6 +51,18 @@ vim.g.loaded_matchparen = 0
 vim.g.loaded_spec = 0
 
 
+-- vim.cmd[[
+--     set foldmethod=expr
+--     set foldexpr=FoldAnalysis()
+-- ]]
+--
+vim.cmd[[
+    if has('termguicolors')
+      set termguicolors
+    endif
+]]
+
+
 -- Vim-illuminate
 vim.cmd[[
     let g:Illuminate_ftblacklist = ['NvimTree']
@@ -64,7 +71,9 @@ vim.cmd[[
 
 -- SCHEME
 vim.cmd[[
-    let g:gruvbox_material_palette = 'original'
+    let g:gruvbox_material_palette = 'default'
+    let g:gruvbox_material_background = 'medium'
+
     colorscheme gruvbox-material
 ]]
 
@@ -72,4 +81,4 @@ vim.cmd[[
     highlight SignColumn guibg=transparent
 ]]
 
-vim.cmd "hi cursorlinenr guifg=white"
+vim.cmd "hi cursorlinenr guifg=white guibg=black"
