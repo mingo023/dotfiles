@@ -30,7 +30,7 @@ opt.shortmess:append "A"
 -- NUMBERS
 opt.signcolumn = "yes"
 opt.number = true
-opt.relativenumber = false
+opt.relativenumber = true
 opt.numberwidth = 2
 
 -- INDENLINE
@@ -62,7 +62,6 @@ vim.cmd[[
     endif
 ]]
 
-
 -- Vim-illuminate
 vim.cmd[[
     let g:Illuminate_ftblacklist = ['NvimTree']
@@ -71,14 +70,17 @@ vim.cmd[[
 
 -- SCHEME
 vim.cmd[[
-    let g:gruvbox_material_palette = 'default'
+    let g:gruvbox_material_enable_bold=1
+    let g:gruvbox_material_enable_italic=1
+    let g:gruvbox_material_palette = 'original'
     let g:gruvbox_material_background = 'medium'
 
     colorscheme gruvbox-material
 ]]
 
+
 vim.cmd[[
     highlight SignColumn guibg=transparent
 ]]
 
-vim.cmd "hi cursorlinenr guifg=white guibg=black"
+vim.cmd "hi cursorlinenr guifg=yellow guibg=black"

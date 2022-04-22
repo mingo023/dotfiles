@@ -34,6 +34,6 @@ vim.cmd [[
 
 
 -- override paste try to copying back to clipboard
-map("v", "p", "\"_dP", {
-    silent = true
-})
+-- map("v", "p", "\"_dP", {
+--     silent = true
+-- })
