@@ -46,3 +46,10 @@ use {
 use {
     "kamykn/spelunker.vim"
 }
+
+use {
+    "windwp/nvim-spectre",
+    config = function()
+        require("cores.spectre")
+    end
+}

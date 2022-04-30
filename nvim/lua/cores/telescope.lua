@@ -18,10 +18,10 @@ require("telescope").setup {
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
                 ["<C-b>"] = actions.preview_scrolling_up,
-                ["<C-f>"] = actions.preview_scrolling_down,
+                -- ["<C-f>"] = actions.preview_scrolling_down,
                 ["<C-s>"] = actions.select_vertical,
                 ["<C-i>"] = actions.select_horizontal,
-                ["<C-t>"] = trouble.open_with_trouble
+                -- ["<C-t>"] = trouble.open_with_trouble
             },
             n = {
                 ["<C-d>"] = actions.close,
@@ -29,10 +29,10 @@ require("telescope").setup {
                 ["<C-j>"] = actions.move_selection_next,
                 ["<C-k>"] = actions.move_selection_previous,
                 ["<C-b>"] = actions.preview_scrolling_up,
-                ["<C-f>"] = actions.preview_scrolling_down,
+                -- ["<C-f>"] = actions.preview_scrolling_down,
                 ["<C-s>"] = actions.select_vertical,
                 ["<C-i>"] = actions.select_horizontal,
-                ["<C-t>"] = trouble.open_with_trouble
+                -- ["<C-t>"] = trouble.open_with_trouble
             }
         },
         layout_config = {
