@@ -50,3 +50,7 @@ use {
 use {
     "ThePrimeagen/harpoon"
 }
+
+use {
+    "liuchengxu/vista.vim"
+}
