@@ -10,7 +10,7 @@ require("telescope").setup {
         winblend = 0,
         hidden = true,
         -- preview = false,
-        file_ignore_patterns = {"node_modules", ".git"},
+        file_ignore_patterns = {"node_modules"},
         mappings = {
             i = {
                 ["<C-d>"] = actions.close,
