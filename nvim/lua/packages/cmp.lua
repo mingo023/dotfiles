@@ -36,3 +36,8 @@ use {
     "hrsh7th/cmp-buffer",
     after = "cmp-nvim-lsp"
 }
+
+use {
+    "hrsh7th/cmp-path",
+    after = "cmp-nvim-lsp"
+}

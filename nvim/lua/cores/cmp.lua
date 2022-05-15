@@ -55,13 +55,21 @@ cmp.setup {
             end
         end
     },
-    sources = {{
-        name = "nvim_lsp"
-    }, {
-        name = "luasnip"
-    }, {
-        name = "buffer"
-    }, {
-        name = "nvim_lua"
-    }}
+    sources = {
+        {
+            name = "nvim_lsp"
+        }, 
+        {
+            name = "luasnip"
+        }, 
+        {
+            name = "buffer"
+        }, 
+        {
+            name = "nvim_lua"
+        },
+        {
+            name = "path"
+        }
+    }
 }

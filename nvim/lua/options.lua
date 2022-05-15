@@ -57,6 +57,7 @@ vim.g.loaded_spec = 0
 -- ]]
 --
 vim.cmd[[
+    syntax enable
     if has('termguicolors')
       set termguicolors
     endif
