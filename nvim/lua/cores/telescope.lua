@@ -21,7 +21,7 @@ require("telescope").setup {
                 -- ["<C-f>"] = actions.preview_scrolling_down,
                 ["<C-s>"] = actions.select_vertical,
                 ["<C-i>"] = actions.select_horizontal,
-                -- ["<C-t>"] = trouble.open_with_trouble
+                ["<C-t>"] = trouble.open_with_trouble
             },
             n = {
                 ["<C-d>"] = actions.close,
@@ -36,8 +36,8 @@ require("telescope").setup {
             }
         },
         layout_config = {
-            height = 0.5,
-            width = 0.6
+            height = 0.6,
+            width = 0.9
         },
         initial_mode = "insert",
         layout_strategy = "horizontal",

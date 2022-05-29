@@ -13,7 +13,10 @@ use {
 }
 use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = ':TSUpdate',
+    config = function()
+        require "cores.treesitter"
+    end
 }
 use {
     "williamboman/nvim-lsp-installer",
@@ -32,16 +35,16 @@ use {
     end
 }
 use {"github/copilot.vim"}
-use {
-    "windwp/nvim-ts-autotag",
-    config = function()
-        require'nvim-treesitter.configs'.setup {
-            autotag = {
-                enable = true
-            }
-        }
-    end
-}
+-- use {
+--     "windwp/nvim-ts-autotag",
+--     config = function()
+--         require'nvim-treesitter.configs'.setup {
+--             autotag = {
+--                 enable = true
+--             }
+--         }
+--     end
+-- }
 
 use {
     "mg979/vim-visual-multi"

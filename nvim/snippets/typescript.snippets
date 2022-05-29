@@ -1,3 +1,9 @@
+snippet clog "console log"
+	console.log(${1});
+snippet jlog "console log json format"
+	console.log(JSON.stringify(${1}, null, 2));
+snippet tjson "Object to json"
+	JSON.stringify(${1}, null, 2);
 snippet tconst "ts const"
 	const ${1}: ${2:any} = ${3};
 	${0}

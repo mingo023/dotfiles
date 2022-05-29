@@ -9,4 +9,6 @@ use {"doums/darcula"}
 
 use {"tiagovla/tokyodark.nvim"}
 
-use {"folke/tokyonight.nvim"}
+use {"folke/tokyonight.nvim" }
+
+use { "rebelot/kanagawa.nvim" }

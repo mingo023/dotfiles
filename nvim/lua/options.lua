@@ -46,16 +46,8 @@ vim.g.loaded_zipPlugin = 0
 vim.g.loaded_2html_plugin = 0
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
-vim.g.loaded_matchit = 0
-vim.g.loaded_matchparen = 0
 vim.g.loaded_spec = 0
 
-
--- vim.cmd[[
---     set foldmethod=expr
---     set foldexpr=FoldAnalysis()
--- ]]
---
 vim.cmd[[
     syntax enable
     if has('termguicolors')
@@ -77,7 +69,7 @@ vim.cmd "hi cursorlinenr guifg=yellow guibg=black"
 
 -- SCHEME
 vim.cmd[[
-    let g:gruvbox_material_enable_bold=1
+    let g:gruvbox_material_enable_bold=0
     let g:gruvbox_material_enable_italic=1
     let g:gruvbox_material_palette = 'original'
     let g:gruvbox_material_background = 'medium'
