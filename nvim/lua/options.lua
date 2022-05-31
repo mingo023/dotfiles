@@ -65,7 +65,6 @@ vim.cmd[[
     highlight SignColumn guibg=transparent
 ]]
 
-vim.cmd "hi cursorlinenr guifg=yellow guibg=black"
 
 -- SCHEME
 vim.cmd[[
@@ -78,3 +77,4 @@ vim.cmd[[
     colorscheme gruvbox-material
 ]]
 
+vim.cmd "hi cursorlinenr cterm=bold guifg=yellow guibg=transparent"

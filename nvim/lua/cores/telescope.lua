@@ -36,10 +36,13 @@ require("telescope").setup {
             }
         },
         layout_config = {
-            height = 0.6,
-            width = 0.9
+            height = 0.8,
+            width = 0.6,
+            vertical = {
+                preview_height = 0.7,
+            },
         },
         initial_mode = "insert",
-        layout_strategy = "horizontal",
+        layout_strategy = "vertical",
     }
 }

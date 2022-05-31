@@ -122,6 +122,17 @@ install_tools() {
   fi
 }
 
+install_typescript_tools() {
+    read -r -p "Do you want to install typescript tools? [y|N] " response
+    if [[ $response =~ (y|yes|Y) ]];then
+        npm i typescript -g
+        npm i eslint_d -g
+        npm i prettier -g
+
+        success "Installed typescript tools"
+    fi
+}
+
 install_docker() {
     read -r -p "Do you want to install docker? [y|N] " response
     if [[ $response =~ (y|yes|Y) ]];then
@@ -141,5 +152,6 @@ install_nvim
 install_tmux
 install_tools
 install_docker
+install_typescript_tools
 
 echo "Finish Install! 🎉 🚀"
