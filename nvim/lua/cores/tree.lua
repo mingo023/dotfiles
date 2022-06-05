@@ -34,7 +34,7 @@ require'nvim-tree'.setup {
     filters = {
         dotfiles = false,
         custom = { ".cache", ".DS_Store" },
-        exclude = { "node_modules" }
+        exclude = { "node_modules", "dist" }
     },
     update_focused_file = {
         enable = true,
