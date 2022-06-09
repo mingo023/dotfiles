@@ -74,7 +74,7 @@ vim.cmd[[
     let g:gruvbox_material_background = 'medium'
 
     set background=dark
-    colorscheme gruvbox-material
+    colorscheme kanagawa
 ]]
 
-vim.cmd "hi cursorlinenr cterm=bold guifg=yellow guibg=transparent"
+-- vim.cmd "hi cursorlinenr cterm=bold guifg=yellow guibg=transparent"
