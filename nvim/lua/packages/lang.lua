@@ -2,6 +2,10 @@ local packer = require "packer"
 local use = packer.use
 
 use {
+    "fatih/vim-go"
+}
+
+use {
     "neovim/nvim-lspconfig",
     config = function()
         require "lsp"
