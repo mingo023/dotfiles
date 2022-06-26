@@ -1,7 +1,8 @@
+local telescope = require('telescope')
 local actions = require 'telescope.actions'
 local trouble = require 'trouble.providers.telescope'
 
-require("telescope").setup {
+telescope.setup {
     defaults = {
         prompt_prefix = "   ",
         selection_caret = " ❯ ",
