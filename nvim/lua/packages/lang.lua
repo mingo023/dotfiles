@@ -26,7 +26,9 @@ use {
     "williamboman/nvim-lsp-installer",
     event = "BufRead"
 }
+
 use {"tami5/lspsaga.nvim"}
+
 use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
@@ -60,4 +62,13 @@ use {
 
 use {
     "liuchengxu/vista.vim"
+}
+
+use 'mfussenegger/nvim-treehopper'
+
+use {
+    'j-hui/fidget.nvim',
+    config = function()
+        require"fidget".setup{}
+    end
 }

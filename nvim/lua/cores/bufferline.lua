@@ -15,6 +15,10 @@ bufferline.setup {
         close_icon = "",
         left_trunc_marker = "",
         right_trunc_marker = "",
+        indicator = {
+            style = 'icon',
+            icon = '|',
+        },
         indicator_icon = '▎',
         max_name_length = 14,
         close_command = "Bclose!",

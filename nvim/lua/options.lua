@@ -19,8 +19,11 @@ opt.fillchars = {
 -- STATUSLINE
 opt.laststatus = 3
 
+-- MAXIMUM OF SUGGESTIONS LIST
+opt.pumheight = 20
+
 -- CURSOR
-opt.gcr = 'a:blinkon0'
+-- opt.gcr = 'a:blinkon0'
 
 -- SWAPFILE
 vim.g.noswapfile = true
@@ -74,7 +77,7 @@ vim.cmd[[
     let g:gruvbox_material_background = 'medium'
 
     set background=dark
-    colorscheme kanagawa
+    colorscheme gruvbox-material
 ]]
 
 -- vim.cmd "hi cursorlinenr cterm=bold guifg=yellow guibg=transparent"
