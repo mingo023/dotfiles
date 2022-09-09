@@ -19,7 +19,6 @@ bufferline.setup {
             style = 'icon',
             icon = '|',
         },
-        indicator_icon = '▎',
         max_name_length = 14,
         close_command = "Bclose!",
         max_prefix_length = 13,

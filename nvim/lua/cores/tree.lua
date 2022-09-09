@@ -8,8 +8,6 @@ local g = vim.g
 
 vim.o.termguicolors = true
 
-g.nvim_tree_git_hl = 1
-
 require'nvim-tree'.setup {
     disable_netrw = true,
     hijack_netrw = true,
@@ -48,7 +46,8 @@ require'nvim-tree'.setup {
     renderer = {
         indent_markers = {
             enable = true,
-        }
+        },
+        highlight_git = true
     },
     view = {
         width = 30,
