@@ -10,7 +10,7 @@ map("n", "<Leader>gd3", ":diffget //3 <CR>")
 
 -- Git conflict
 
-map('n', '<Leader>co', '<Plug>(git-conflict-ours)')
+-- map('n', '<Leader>co', ':GitConflictChooseOur <CR>')
 map('n', '<Leader>cb', '<Plug>(git-conflict-both)')
 map('n', '<Leader>c0', '<Plug>(git-conflict-none)')
 map('n', '<Leader>ct', '<Plug>(git-conflict-theirs)')
