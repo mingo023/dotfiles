@@ -33,7 +33,7 @@ install_homebrew() {
 install_languages() {
   read -r -p "Do you want to install languages? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
-    brew install node
+    brew install node@16
     success "Installed NodeJs"
   fi
 }
@@ -125,9 +125,10 @@ install_tools() {
 install_typescript_tools() {
     read -r -p "Do you want to install typescript tools? [y|N] " response
     if [[ $response =~ (y|yes|Y) ]];then
-        npm i typescript -g
-        npm i eslint_d -g
-        npm i prettier -g
+        npm i -g typescript
+        npm i -g eslint_d
+        npm i -g prettier
+        npm i -g typescript-language-server typescript
 
         success "Installed typescript tools"
     fi

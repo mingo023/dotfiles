@@ -12,7 +12,7 @@ use {
 use {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-        -- require("cores.indent").config()
+        require("cores.indent")
     end
 }
 
