@@ -2,7 +2,11 @@ require "staline".setup {
 	sections = {
                 left = { '  ', 'mode', ' ', 'branch' },
 		mid  = {'lsp'},
-                right = {'file_name', 'line_column' }
+                right = {
+                    'right_sep', '- ', '-lsp_name', '- ', 'left_sep',
+                    'file_name',
+                    'line_column'
+                }
 	},
 	mode_colors = {
 		i = "#d4be98",

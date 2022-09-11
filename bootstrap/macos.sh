@@ -56,8 +56,11 @@ setup_git() {
 install_font() {
   read -r -p "Do you want to install font? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
-    brew tap homebrew/cask-fonts && brew install --cask font-ubuntu-mono-nerd-font
-    brew tap homebrew/cask-fonts && brew install --cask font-ubuntu-nerd-font
+    brew tap homebrew/cask-fonts 
+    brew install --cask font-ubuntu-mono-nerd-font
+    brew install --cask font-ubuntu-nerd-font
+    brew install --cask font-jetbrains-mono
+    brew install --cask font-hack-nerd-font
 
     success "Installed font!"
   fi
