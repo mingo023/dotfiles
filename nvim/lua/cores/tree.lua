@@ -3,10 +3,7 @@ if not present then
     return
 end
 
-local tree_cb = tree_c.nvim_tree_callback
 local g = vim.g
-
-vim.o.termguicolors = true
 
 require'nvim-tree'.setup {
     disable_netrw = true,
@@ -50,6 +47,7 @@ require'nvim-tree'.setup {
         highlight_git = true
     },
     view = {
+        adaptive_size = true,
         width = 30,
         height = 30,
         side = 'left',

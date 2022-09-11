@@ -47,7 +47,11 @@ use {
 }
 
 use {
-    "liuchengxu/vista.vim"
+    "liuchengxu/vista.vim",
+    config = function()
+        require "cores.vista"
+    end
+
 }
 
 use {
