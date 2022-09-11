@@ -37,13 +37,6 @@ use {
 } 
 
 use {
-    "justinmk/vim-sneak",
-    config = function()
-        vim.cmd("let g:sneak#label = 1")
-    end
-}
-
-use {
     "kamykn/spelunker.vim"
 }
 

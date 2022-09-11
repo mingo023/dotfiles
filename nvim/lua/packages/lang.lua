@@ -41,30 +41,14 @@ use {
     end
 }
 use {"github/copilot.vim"}
--- use {
---     "windwp/nvim-ts-autotag",
---     config = function()
---         require'nvim-treesitter.configs'.setup {
---             autotag = {
---                 enable = true
---             }
---         }
---     end
--- }
 
 use {
     "mg979/vim-visual-multi"
 }
 
 use {
-    "ThePrimeagen/harpoon"
-}
-
-use {
     "liuchengxu/vista.vim"
 }
-
-use 'mfussenegger/nvim-treehopper'
 
 use {
     'j-hui/fidget.nvim',

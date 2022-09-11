@@ -14,6 +14,7 @@ return require("packer").startup{
     require("packages.telescope")
     require("packages.git")
     require("packages.utils")
+    require("packages.movement")
   end,
   config = {
     display = {
