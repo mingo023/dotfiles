@@ -120,6 +120,7 @@ install_tools() {
     brew install --cask google-chrome
     brew install --cask visual-studio-code
     brew install --cask postman
+    brew install --cask notion
 
     success "Installed working tools"
   fi
