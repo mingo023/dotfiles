@@ -26,6 +26,8 @@ install_homebrew() {
   if [[ $response =~ (y|yes|Y) ]];then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew update --force --quiet
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/minhngo/.zshrc
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     success "Installed homebrew"
   fi
 }
@@ -33,7 +35,7 @@ install_homebrew() {
 install_languages() {
   read -r -p "Do you want to install languages? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
-    brew install node@16
+    brew install node
     success "Installed NodeJs"
   fi
 }
@@ -79,7 +81,7 @@ install_nvim() {
   if [[ $response =~ (y|yes|Y) ]];then
     info "Installing neovim"
     brew install lua
-    brew install --HEAD neovim
+    brew install neovim
 
     # reduce keyrepeat for faster typing in vim
     defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
@@ -114,6 +116,7 @@ install_tools() {
     brew install fzf
     brew install asciinema
     brew install efm-langserver
+    brew install gnu-sed
 
     success "Installed some fancy tools"
 
