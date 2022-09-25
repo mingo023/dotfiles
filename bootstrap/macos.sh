@@ -81,6 +81,9 @@ install_nvim() {
     brew install lua
     brew install --HEAD neovim
 
+    info "Installing packer"
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
     # reduce keyrepeat for faster typing in vim
     defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
     defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
@@ -121,6 +124,7 @@ install_tools() {
     brew install --cask visual-studio-code
     brew install --cask postman
     brew install --cask notion
+    brew install --cask raycast
 
     success "Installed working tools"
   fi

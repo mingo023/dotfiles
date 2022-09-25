@@ -1,21 +1,7 @@
 # My dotfiles 🌤
 
-## Installation
-
 ```bash
-brew install ripgrep
-brew tap homebrew/cask-fonts
-brew install --cask font-hack-nerd-font
-```
-
-### [Install packer.nvim](https://github.com/wbthomason/packer.nvim)
-
-```bash
-git clone ... ~/.config
-```
-
-```bash
-npm i -g typescript eslint_d diagnostic-languageserver
+git clone https://github.com/immint023/dotfiles ~/.config
 ```
 
 ```
