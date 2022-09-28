@@ -5,9 +5,9 @@ git clone https://github.com/immint023/dotfiles ~/.config
 ```
 
 ```
-cd ~
-ln -s ~/.config/.tmux/.tmux.conf .tmux.conf
-ln -s ~/.config/zshrc/.zshrc .zshrc
+cd ~/.config
+
+./bootstrap/macos.sh <email-address> <username>
 ```
 
 ![Alt text](./images/dashboard.png?raw=true "Title")

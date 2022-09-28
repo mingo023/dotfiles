@@ -15,6 +15,7 @@ return require("packer").startup{
     require("packages.git")
     require("packages.utils")
     require("packages.movement")
+    require("packages.testing")
   end,
   config = {
     display = {

@@ -21,6 +21,11 @@ fail () {
   exit
 }
 
+setup_zsh_tmux() {
+    ln -s ~/.config/.tmux/.tmux.conf ~/.tmux.conf
+    ln -s ~/.config/zshrc/.zshrc ~/.zshrc
+}
+
 install_homebrew() {
   read -r -p "Do you want to install homebrew? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
@@ -37,6 +42,8 @@ install_languages() {
   if [[ $response =~ (y|yes|Y) ]];then
     brew install node
     success "Installed NodeJs"
+    brew install go
+    success "Installed Golang"
   fi
 }
 
@@ -44,8 +51,8 @@ install_languages() {
 setup_git() {
   read -r -p "Do you want to setup git? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
-    git config --global user.email "nvminh023@gmail.com"
-    git config --global user.name  "Minh Ngo"
+    git config --global user.email "$1"
+    git config --global user.name  "$2"
     git config --global color.ui true
 
     success "Setup Git Successfully"
@@ -128,6 +135,8 @@ install_tools() {
     brew install --cask postman
     brew install --cask notion
     brew install --cask raycast
+    brew install --cask spotify
+    brew install --cask jetbrains-toolbox
 
     success "Installed working tools"
   fi
@@ -145,16 +154,16 @@ install_typescript_tools() {
     fi
 }
 
-install_docker() {
-    read -r -p "Do you want to install docker? [y|N] " response
+install_golang_tools() {
+    read -r -p "Do you want to install golang tools? [y|N] " response
     if [[ $response =~ (y|yes|Y) ]];then
-        brew install docker
+        go install golang.org/x/tools/gopls@latest
 
-        success "Installed docker"
+        success "Installed golang tools"
     fi
 }
 
-
+setup_zsh_tmux
 install_homebrew
 install_languages
 setup_git
@@ -163,7 +172,7 @@ install_terminal
 install_nvim
 install_tmux
 install_tools
-install_docker
 install_typescript_tools
+install_golang_tools
 
 echo "Finish Install! 🎉 🚀"
