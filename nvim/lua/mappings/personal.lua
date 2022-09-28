@@ -32,7 +32,9 @@ vim.cmd [[
     let g:copilot_no_tab_map = v:true 
 ]]
 
-map("n", "<Leader>f", ":Fix <CR>")
+map("n", "<Leader>f", ":EslintFixAll <CR>", {
+    silent = true
+})
 map("n", "<C-s>", ":w <CR>")
 
 -- override paste try to copying back to clipboard

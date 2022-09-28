@@ -146,7 +146,7 @@ install_typescript_tools() {
     read -r -p "Do you want to install typescript tools? [y|N] " response
     if [[ $response =~ (y|yes|Y) ]];then
         npm i -g typescript
-        npm i -g eslint_d
+        npm i -g vscode-eslint-language-server
         npm i -g prettier
         npm i -g typescript-language-server typescript
 

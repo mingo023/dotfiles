@@ -23,9 +23,4 @@ lsp_config.tsserver.setup({
     end
 })
 
--- require'lspconfig'.gopls.setup {
---     on_attach = function(client)
---       -- [[ other on_attach code ]]
---       require 'illuminate'.on_attach(client)
---     end,
--- }
+lsp_config.eslint.setup{}
