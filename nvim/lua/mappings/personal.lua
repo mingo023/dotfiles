@@ -38,6 +38,6 @@ map("n", "<Leader>f", ":EslintFixAll <CR>", {
 map("n", "<C-s>", ":w <CR>")
 
 -- override paste try to copying back to clipboard
-map("v", "p", "\"_dP", {
-    silent = true
-})
+-- map("v", "p", "\"_dP", {
+--     silent = true
+-- })
