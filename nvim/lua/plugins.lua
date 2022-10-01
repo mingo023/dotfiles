@@ -16,6 +16,7 @@ return require("packer").startup{
     require("packages.utils")
     require("packages.movement")
     require("packages.testing")
+    require("packages.term")
   end,
   config = {
     display = {
