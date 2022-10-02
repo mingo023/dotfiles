@@ -63,12 +63,8 @@ vim.cmd[[
     let g:Illuminate_ftblacklist = ['NvimTree']
 ]]
 
--- NAVIC
--- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-vim.o.statusline = "%{%v:lua.require'nvim-navic'.get_location()%}"
-
-
-
+-- WINBAR
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
 vim.cmd[[
     highlight SignColumn guibg=transparent
