@@ -33,6 +33,7 @@ return require("packer").startup{
     require("packages.testing")
     require("packages.term")
     require("packages.winbar")
+    require("packages.ui")
   end,
   config = {
     display = {
