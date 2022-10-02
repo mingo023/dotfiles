@@ -82,4 +82,9 @@ vim.cmd[[
     colorscheme nightfox
 ]]
 
+-- DISABLE AUTO COMMENT ON INSERT
+vim.cmd [[
+    autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+]]
+
 -- vim.cmd "hi cursorlinenr cterm=bold guifg=yellow guibg=transparent"
