@@ -8,13 +8,14 @@ opt.splitbelow = false
 opt.splitright = true
 opt.cul = true
 opt.mouse = "a"
-opt.cmdheight = 1
+opt.cmdheight = 0
 opt.updatetime = 250 -- update interval for gitsigns
 opt.timeoutlen = 400
 opt.clipboard = "unnamedplus"
 opt.fillchars = {
     eob = "x"
 }
+
 
 -- STATUSLINE
 opt.laststatus = 3

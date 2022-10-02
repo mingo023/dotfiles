@@ -32,6 +32,11 @@ require('formatter').setup({
             function()
                 require('go.format').gofmt()
             end,
+        },
+        ["*"] = {
+            function()
+                vim.lsp.buf.format()
+            end
         }
     }
 })
