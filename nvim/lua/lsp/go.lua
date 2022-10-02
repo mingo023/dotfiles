@@ -1,5 +1,16 @@
 local lsp_config = require 'lspconfig'
 local on_attach = require 'lsp/on_attach'
 
-lsp_config.gopls.setup{}
--- lsp_config.golangci_lint_ls.setup{}
+lsp_config.gopls.setup{
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+    end,
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+}

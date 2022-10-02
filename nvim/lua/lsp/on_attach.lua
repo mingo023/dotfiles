@@ -1,9 +1,15 @@
+local navic = require("nvim-navic")
+
 return function(client, bufnr)
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
     local function buf_set_option(...)
         vim.api.nvim_buf_set_option(bufnr, ...)
+    end
+
+    if client.server_capabilities.documentSymbolProvider then
+        navic.attach(client, bufnr)
     end
 
     -- Mappings.
@@ -13,7 +19,7 @@ return function(client, bufnr)
     }
 
     -- Avoid TSServer clashing with Prettier
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
 
     buf_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -27,7 +33,7 @@ return function(client, bufnr)
     buf_set_keymap('n', 'gr', ':TroubleToggle lsp_references <CR>', opts)
     buf_set_keymap('n', '<C-r>', ':Lspsaga rename<CR>', opts)
 
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
         vim.cmd('augroup Format')
         vim.cmd('autocmd! * <buffer>')
         vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)')

@@ -17,6 +17,7 @@ return require("packer").startup{
     require("packages.movement")
     require("packages.testing")
     require("packages.term")
+    require("packages.winbar")
   end,
   config = {
     display = {

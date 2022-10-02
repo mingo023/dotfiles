@@ -9,7 +9,6 @@ require'staline'.setup {
 		mid  = {'lsp'},
 		right= {
 			'right_sep', '-cool_symbol', 'left_sep', ' ',
-			'right_sep', '- ', '-lsp_name', '- ', 'left_sep',
 			'right_sep_double', '-line_column', 'left_sep_double', ' ',
 		}
 	},

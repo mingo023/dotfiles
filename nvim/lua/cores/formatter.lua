@@ -27,6 +27,11 @@ require('formatter').setup({
                     stdin = true
                 }
             end,
+        },
+        go = {
+            function()
+                require('go.format').gofmt()
+            end,
         }
     }
 })

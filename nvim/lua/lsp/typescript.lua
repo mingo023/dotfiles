@@ -3,7 +3,7 @@ local on_attach = require 'lsp/on_attach'
 
 lsp_config.tsserver.setup({
     on_attach = function(client, bufnr)
-        client.resolved_capabilities.document_formatting = false
+        client.server_capabilities.document_formatting = false
         on_attach(client, bufnr)
 
         local ts_utils = require("nvim-lsp-ts-utils")

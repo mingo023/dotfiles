@@ -1,9 +1,17 @@
 local packer = require "packer"
 local use = packer.use
 
+-- GOLANG SETUP
 use {
-    "fatih/vim-go"
+    'ray-x/go.nvim',
+    config = function()
+        require('go').setup()
+        -- Run gofmt + goimport on save
+        vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+
+    end
 }
+use 'ray-x/guihua.lua' -- recommanded if need floating window support
 
 use {
     "neovim/nvim-lspconfig",

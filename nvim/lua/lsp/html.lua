@@ -3,7 +3,7 @@ local on_attach = require 'lsp/on_attach'
 
 lsp_config.html.setup({
     on_attach = function(client, bufnr)
-        client.resolved_capabilities.document_formatting = false
+        client.server_capabilities.document_formatting = false
         on_attach(client, bufnr)
     end,
     cmd = { "vscode-html-language-server", "--stdio" },
