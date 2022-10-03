@@ -1,33 +1,40 @@
-require'staline'.setup {
-
-	sections = {
-		left = {
-			' ', 'right_sep_double', '-mode', 'left_sep_double', ' ',
-			'right_sep', '-file_name', 'left_sep', ' ',
-			'right_sep_double', '-branch', 'left_sep_double', ' ',
-		},
-		mid  = {'lsp'},
-		right= {
-			'right_sep', '-cool_symbol', 'left_sep', ' ',
-			'right_sep_double', '-line_column', 'left_sep_double', ' ',
-		}
-	},
-
-	defaults={
-		fg = "#986fec",
-		cool_symbol = "  ",
-		left_separator = "",
-		right_separator = "",
-		-- line_column = "%l:%c [%L]",
-		true_colors = true,
-		line_column = "[%l:%c] 並%p%% "
-		-- font_active = "bold"
-	},
-	mode_colors = {
-		n  = "#181a23",
-		i  = "#181a23",
-		ic = "#181a23",
-		c  = "#181a23",
-		v  = "#181a23"       -- etc
-	}
+require('lualine').setup {
+  options = {
+    icons_enabled = true,
+    theme = 'auto',
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+    disabled_filetypes = {
+      statusline = {},
+      winbar = {},
+    },
+    ignore_focus = {},
+    always_divide_middle = true,
+    globalstatus = false,
+    refresh = {
+      statusline = 1000,
+      tabline = 1000,
+      winbar = 1000,
+    }
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_c = {'filename'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  },
+  inactive_sections = {
+    lualine_a = {},
+    lualine_b = {},
+    lualine_c = {'filename'},
+    lualine_x = {'location'},
+    lualine_y = {},
+    lualine_z = {}
+  },
+  tabline = {},
+  winbar = {},
+  inactive_winbar = {},
+  extensions = {}
 }
