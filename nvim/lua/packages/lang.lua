@@ -6,9 +6,6 @@ use {
     'ray-x/go.nvim',
     config = function()
         require('go').setup()
-        -- Run gofmt + goimport on save
-        vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
-
     end
 }
 use 'ray-x/guihua.lua' -- recommanded if need floating window support
@@ -31,8 +28,10 @@ use {
     end
 }
 use {
-    "williamboman/nvim-lsp-installer",
-    event = "BufRead"
+    "williamboman/mason.nvim",
+    config = function()
+        require("mason").setup()
+    end
 }
 
 use {"tami5/lspsaga.nvim"}

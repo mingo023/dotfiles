@@ -8,6 +8,9 @@ autocmd BufEnter *.go  setlocal
     \ filetype=go
 ]]
 
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+
+
 lsp_config.gopls.setup{
     on_attach = function(client, bufnr)
         on_attach(client, bufnr)
