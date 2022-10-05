@@ -80,7 +80,7 @@ vim.cmd[[
     let g:gruvbox_material_background = 'medium'
 
     set background=dark
-    colorscheme nightfox
+    colorscheme gruvbox-material
 ]]
 
 -- DISABLE AUTO COMMENT ON INSERT
