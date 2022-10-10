@@ -88,4 +88,4 @@ vim.cmd [[
     autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 ]]
 
--- vim.cmd "hi cursorlinenr cterm=bold guifg=yellow guibg=transparent"
+vim.cmd "hi cursorlinenr cterm=bold guifg=yellow guibg=transparent"
