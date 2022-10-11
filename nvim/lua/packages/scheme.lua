@@ -15,4 +15,8 @@ use {"sainnhe/gruvbox-material"}
 
 use {"EdenEast/nightfox.nvim"}
 
-use { "folke/tokyonight.nvim" }
+use {
+    "folke/tokyonight.nvim",
+    config = function()
+    end
+}

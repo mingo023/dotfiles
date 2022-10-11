@@ -7,8 +7,7 @@ gitsigns.setup {
     keymaps = {
         -- Default keymap options
         buffer = true,
-        noremap = true,
-        ["n ]c"] = {
+        noremap = true, ["n ]c"] = {
             expr = true,
             "&diff ? ']c' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"
         },

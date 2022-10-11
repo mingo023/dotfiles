@@ -1,7 +1,5 @@
 local present, tree_c = pcall(require, "nvim-tree.config")
-if not present then
-    return
-end
+if not present then return end
 
 local g = vim.g
 
@@ -15,44 +13,21 @@ require'nvim-tree'.setup {
     update_cwd = false,
     diagnostics = {
         enable = false,
-        icons = {
-            hint = "",
-            info = "",
-            warning = "",
-            error = ""
-        }
+        icons = {hint = "", info = "", warning = "", error = ""}
     },
-    hijack_directories = {
-      enable = true,
-      auto_open = true,
-    },
+    hijack_directories = {enable = true, auto_open = true},
     filters = {
         dotfiles = false,
-        custom = { ".cache", ".DS_Store", "^.git$" },
-        exclude = { "node_modules", "dist", ".env" }
+        custom = {".cache", ".DS_Store", "^.git$"},
+        exclude = {"node_modules", "dist", ".env"}
     },
-    update_focused_file = {
-        enable = true,
-        update_cwd = false,
-        ignore_list = {}
-    },
-    system_open = {
-        cmd = nil,
-        args = {}
-    },
-    renderer = {
-        indent_markers = {
-            enable = true,
-        },
-        highlight_git = true
-    },
+    update_focused_file = {enable = true, update_cwd = false, ignore_list = {}},
+    system_open = {cmd = nil, args = {}},
+    renderer = {indent_markers = {enable = true}, highlight_git = true},
     view = {
         adaptive_size = true,
         side = 'left',
-        mappings = {
-            custom_only = false,
-            list = {}
-        }
+        mappings = {custom_only = false, list = {}}
     }
 }
 
@@ -69,7 +44,7 @@ g.nvim_tree_icons = {
         untracked = "★"
     },
     folder = {
-        -- disable indent_markers option to get arrows working or if you want both arrows and indent then just add the arrow icons in front            ofthe default and opened folders below!
+        -- disable indent_markers option to get arrows working or if you want both arrows and indent then just add the arrow icons in front of the default and opened folders below!
         arrow_open = "",
         arrow_closed = "",
         default = "",

@@ -4,7 +4,8 @@ local use = packer.use
 use {
     'nvim-telescope/telescope.nvim',
     requires = {{'nvim-lua/plenary.nvim'}},
-    config = function()
-        require("cores.telescope")
-    end
+    config = function() require("cores.telescope") end
 }
+
+use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
+

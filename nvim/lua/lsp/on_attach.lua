@@ -30,6 +30,5 @@ return function(client, bufnr)
     buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
     buf_set_keymap('n', '<Leader>ca', ':Lspsaga code_action <CR>', opts)
     buf_set_keymap('v', '<Leader>ca', ':<C-U>Lspsaga range_code_action<CR>', opts)
-    buf_set_keymap('n', 'gr', ':TroubleToggle lsp_references <CR>', opts)
     buf_set_keymap('n', '<C-r>', ':Lspsaga rename<CR>', opts)
 end
