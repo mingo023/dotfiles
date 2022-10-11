@@ -32,7 +32,7 @@ vim.cmd [[
     let g:copilot_no_tab_map = v:true 
 ]]
 
-map("n", "<Leader>f", ":EslintFixAll <CR>", {
+map("n", "<Leader>ff", ":EslintFixAll <CR>", {
     silent = true
 })
 map("n", "<C-s>", ":w <CR>")

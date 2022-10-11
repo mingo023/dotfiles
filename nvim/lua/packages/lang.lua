@@ -5,33 +5,19 @@ local use = packer.use
 use {
     'ray-x/go.nvim',
     requires = 'ray-x/guihua.lua',
-    config = function()
-        require('go').setup()
-    end
+    config = function() require('go').setup() end
 }
 
-use {
-    "neovim/nvim-lspconfig",
-    config = function()
-        require "lsp"
-    end
-}
-use {
-    "jose-elias-alvarez/nvim-lsp-ts-utils",
-    after ="nvim-lspconfig"
-}
+use {"neovim/nvim-lspconfig", config = function() require "lsp" end}
+use {"jose-elias-alvarez/nvim-lsp-ts-utils", after = "nvim-lspconfig"}
 use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate',
-    config = function()
-        require "cores.treesitter"
-    end
+    config = function() require "cores.treesitter" end
 }
 use {
     "williamboman/mason.nvim",
-    config = function()
-        require("mason").setup()
-    end
+    config = function() require("mason").setup() end
 }
 
 use {"tami5/lspsaga.nvim"}
@@ -49,15 +35,6 @@ use {
 }
 use {"github/copilot.vim"}
 
-use {
-    "mg979/vim-visual-multi"
-}
+use {"mg979/vim-visual-multi"}
 
-use {
-    "liuchengxu/vista.vim",
-    config = function()
-        require "cores.vista"
-    end
-
-}
-
+use {"liuchengxu/vista.vim", config = function() require "cores.vista" end}
