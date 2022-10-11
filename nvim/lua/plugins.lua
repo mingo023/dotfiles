@@ -37,9 +37,9 @@ return require("packer").startup{
   end,
   config = {
     display = {
-      -- open_fn = function()
-      --   return require("packer.util").float({border = {"╭", "─", "╮", "│", "╯", "─", "╰", "│"}})
-      -- end,
+      open_fn = function()
+        return require("packer.util").float({border = {"╭", "─", "╮", "│", "╯", "─", "╰", "│"}})
+      end,
       working_sym = "",
       error_sym = "",
       done_sym = "",

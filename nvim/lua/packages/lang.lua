@@ -4,11 +4,11 @@ local use = packer.use
 -- GOLANG SETUP
 use {
     'ray-x/go.nvim',
+    requires = 'ray-x/guihua.lua',
     config = function()
         require('go').setup()
     end
 }
-use 'ray-x/guihua.lua' -- recommanded if need floating window support
 
 use {
     "neovim/nvim-lspconfig",
