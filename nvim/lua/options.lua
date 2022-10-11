@@ -78,10 +78,9 @@ vim.cmd[[
     let g:gruvbox_material_enable_italic=1
     let g:gruvbox_material_palette = 'original'
     let g:gruvbox_material_background = 'medium'
-
-    set background=dark
-    colorscheme gruvbox-material
 ]]
+
+vim.cmd("colorscheme tokyonight-moon")
 
 -- DISABLE AUTO COMMENT ON INSERT
 vim.cmd [[

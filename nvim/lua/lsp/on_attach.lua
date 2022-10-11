@@ -32,11 +32,4 @@ return function(client, bufnr)
     buf_set_keymap('v', '<Leader>ca', ':<C-U>Lspsaga range_code_action<CR>', opts)
     buf_set_keymap('n', 'gr', ':TroubleToggle lsp_references <CR>', opts)
     buf_set_keymap('n', '<C-r>', ':Lspsaga rename<CR>', opts)
-
-    if client.server_capabilities.document_formatting then
-        vim.cmd('augroup Format')
-        vim.cmd('autocmd! * <buffer>')
-        vim.cmd('autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync(nil, 1000)')
-        vim.cmd('augroup END')
-    end
 end

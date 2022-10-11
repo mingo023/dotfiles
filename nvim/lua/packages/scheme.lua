@@ -14,3 +14,5 @@ use {"sainnhe/gruvbox-material"}
 -- use {"rebelot/kanagawa.nvim"}
 
 use {"EdenEast/nightfox.nvim"}
+
+use { "folke/tokyonight.nvim" }

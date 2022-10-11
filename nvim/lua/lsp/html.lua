@@ -15,9 +15,6 @@ lsp_config.html.setup({
         javascript = true
       }
     },
-    root_dir = function(startpath)
-        return M.search_ancestors(startpath, matcher)
-      end,
     settings = {},
     single_file_support = true
 })
