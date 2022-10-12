@@ -33,7 +33,14 @@ use {
         }
     end
 }
-use {"github/copilot.vim"}
+use {
+    "github/copilot.vim",
+    config = function()
+        vim.cmd [[
+            let g:copilot_no_tab_map = v:true 
+        ]]
+    end
+}
 
 use {"mg979/vim-visual-multi"}
 

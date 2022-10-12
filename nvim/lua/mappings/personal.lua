@@ -7,30 +7,16 @@ map("i", "jj", "<Esc>")
 map("v", "<C-c>", '"+y')
 
 -- remove matchings
-map("n", "<Leader>dm", ":noh <CR>", {
-    silent = true
-})
+map("n", "<Leader>dm", ":noh <CR>", {silent = true})
 
 -- search all the words match with current selection
-map("v", "/", "y/<C-R>\"<CR>N", {
-    silent = true
-})
+map("v", "/", "y/<C-R>\"<CR>N", {silent = true})
 
 -- mapping for shift multiple lines repeatedly
-map("v", "<", "<gv", {
-    silent = true
-})
-map("v", ">", ">gv", {
-    silent = true
-})
+map("v", "<", "<gv", {silent = true})
+map("v", ">", ">gv", {silent = true})
 
 map("n", "<Leader>jt", ":RunJestFocused <CR>")
-
--- custom mapping for copilot
-vim.cmd [[
-    imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
-    let g:copilot_no_tab_map = v:true 
-]]
 
 map("n", "<Leader>ff", ":EslintFixAll <CR>", {
     silent = true
