@@ -5,7 +5,9 @@ local use = packer.use
 use {
     'ray-x/go.nvim',
     requires = 'ray-x/guihua.lua',
-    config = function() require('go').setup() end
+    config = function() require('go').setup() end,
+    events = {'VimEnter'},
+    ft = 'go'
 }
 
 use {"neovim/nvim-lspconfig", config = function() require "lsp" end}

@@ -34,7 +34,7 @@ opt.shortmess:append "A"
 -- NUMBERS
 opt.signcolumn = "yes"
 opt.number = true
-opt.relativenumber = true
+opt.relativenumber = false
 opt.numberwidth = 2
 
 -- INDENLINE
