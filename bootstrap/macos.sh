@@ -21,9 +21,8 @@ fail () {
   exit
 }
 
-setup_zsh_tmux() {
+setup_tmux() {
     ln -s ~/.config/.tmux/.tmux.conf ~/.tmux.conf
-    ln -s ~/.config/zshrc/.zshrc ~/.zshrc
 }
 
 install_homebrew() {
@@ -31,10 +30,15 @@ install_homebrew() {
   if [[ $response =~ (y|yes|Y) ]];then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     brew update --force --quiet
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/minhngo/.zshrc
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/minhngo/.config/fish/config.fish
     eval "$(/opt/homebrew/bin/brew shellenv)"
     success "Installed homebrew"
   fi
+}
+
+install_fish() {
+    brew install fish
+    curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 }
 
 install_languages() {
@@ -163,7 +167,8 @@ install_golang_tools() {
     fi
 }
 
-setup_zsh_tmux
+setup_tmux
+install_fish
 install_homebrew
 install_languages
 setup_git
