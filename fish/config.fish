@@ -9,6 +9,12 @@ set -gx GOPATH $HOME/go
 set -gx GOROOT "/opt/homebrew/opt/go/libexec"
 set -gx PATH $PATH $GOPATH/bin
 
+
+set fish_path $HOME/.config/fish
+
+. $fish_path/git_aliases.fish
+ 
+
 alias ls="ls -la"
 alias rm="rm -rf"
 alias zshconfig="nvim ~/.config/zshrc/.zshrc"
