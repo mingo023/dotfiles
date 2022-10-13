@@ -6,8 +6,8 @@ set -gx PATH /opt/homebrew/bin:$PATH
 set -gx PATH $HOME/bin:/usr/local/bin:$PATH
 
 set -gx GOPATH $HOME/go
-set -gx GOROOT "$(brew --prefix golang)/libexec"
-set -x PATH $PATH $GOPATH/bin
+set -gx GOROOT "/opt/homebrew/opt/go/libexec"
+set -gx PATH $PATH $GOPATH/bin
 
 alias ls="ls -la"
 alias rm="rm -rf"
@@ -33,3 +33,9 @@ function learning
     ~/dev/learning/
 end
 
+starship init fish | source
+
+function fish_greeting
+    echo Hello dai ca 🤪🤗
+    echo The time is (set_color yellow; date +%T; set_color normal)
+end

@@ -37,7 +37,10 @@ install_homebrew() {
 }
 
 install_fish() {
+    info "Installing fish"
+
     brew install fish
+    brew install starship
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 }
 
