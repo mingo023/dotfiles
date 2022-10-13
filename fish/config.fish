@@ -12,7 +12,7 @@ set -gx PATH $PATH $GOPATH/bin
 alias ls="ls -la"
 alias rm="rm -rf"
 alias zshconfig="nvim ~/.config/zshrc/.zshrc"
-alias reload="source ~/.zshrc"
+alias reload="source ~/.config/fish/config.fish"
 alias nvconfig="nvim ~/.config/nvim"
 alias tmuxconfig="nvim ~/.config/.tmux/.tmux.conf"
 alias alconfig="nvim ~/.config/alacritty"
