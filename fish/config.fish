@@ -8,7 +8,8 @@ set -gx PATH $HOME/bin:/usr/local/bin:$PATH
 set -gx GOPATH $HOME/go
 set -gx GOROOT "/opt/homebrew/opt/go/libexec"
 set -gx PATH $PATH $GOPATH/bin
-
+set -gx PATH $PATH $HOME/.nvm/versions/node/v16.13.2/bin
+set -gx NVM_DIR $HOME/.nvm
 
 set fish_path $HOME/.config/fish
 
