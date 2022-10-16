@@ -22,6 +22,7 @@ map("n", "<Leader>ff", ":EslintFixAll <CR>", {
     silent = true
 })
 map("n", "<C-s>", ":w <CR>")
+map("v", ":", ":s/")
 
 -- override paste try to copying back to clipboard
 -- map("v", "p", "\"_dP", {
