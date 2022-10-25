@@ -2,8 +2,8 @@
 require('tokyonight').setup({
     style = 'moon',
     terminal_colors = true,
-    transparent = true,
-    styles = {sidebars = 'transparent'}
+    transparent = false,
+    -- styles = {sidebars = 'transparent'}
 })
 
 vim.cmd [[
@@ -25,7 +25,7 @@ vim.cmd [[
 
 vim.cmd("colorscheme tokyonight-moon")
 
-vim.api.nvim_set_hl(0, 'Normal', {ctermbg = NONE, bg = NONE, fg = NONE})
+-- vim.api.nvim_set_hl(0, 'Normal', {ctermbg = NONE, bg = NONE, fg = NONE})
 
 vim.api.nvim_set_hl(0, 'SignColumn', {ctermbg = 0, bg = transparent})
 vim.api.nvim_set_hl(0, 'cursorlinenr',
