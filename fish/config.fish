@@ -14,6 +14,7 @@ set -gx NVM_DIR $HOME/.nvm
 set fish_path $HOME/.config/fish
 
 . $fish_path/git_aliases.fish
+. $fish_path/custom_variables.fish
  
 
 alias ls="ls -la"
