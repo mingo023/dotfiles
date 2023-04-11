@@ -8,8 +8,8 @@ set -gx PATH $HOME/bin:/usr/local/bin:$PATH
 set -gx GOPATH $HOME/go
 set -gx GOROOT "/opt/homebrew/opt/go/libexec"
 set -gx PATH $PATH $GOPATH/bin
-set -gx PATH $PATH $HOME/.nvm/versions/node/v16.13.2/bin
 set -gx NVM_DIR $HOME/.nvm
+set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 
 set fish_path $HOME/.config/fish
 
@@ -28,6 +28,8 @@ alias tmux="tmux -u"
 alias nv='nvim'
 alias k='kubectl'
 alias lg='lazygit'
+alias ct-be='cd ~/dev/chotot/be'
+alias kp='k get pods'
 
 function work
     ~/dev/work/

@@ -39,7 +39,7 @@ opt.numberwidth = 2
 
 -- INDENLINE
 opt.expandtab = true
-opt.shiftwidth = 4
+opt.shiftwidth = 2
 opt.smartindent = true
 
 -- DISABLE BUILTIN VIM PLUGINS

@@ -15,3 +15,5 @@ use {
         require("cores.alpha")
     end
 }
+
+use { "Pocco81/true-zen.nvim" }

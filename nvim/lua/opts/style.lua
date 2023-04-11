@@ -14,7 +14,7 @@ vim.cmd [[
 ]]
 
 -- WINBAR
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+-- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 -- SCHEME
 vim.cmd [[
     let g:gruvbox_material_enable_bold=0
@@ -23,7 +23,7 @@ vim.cmd [[
     let g:gruvbox_material_background = 'medium'
 ]]
 
-vim.cmd("colorscheme tokyonight-moon")
+vim.cmd("colorscheme gruvbox-material")
 
 -- vim.api.nvim_set_hl(0, 'Normal', {ctermbg = NONE, bg = NONE, fg = NONE})
 

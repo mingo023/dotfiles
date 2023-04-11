@@ -2,13 +2,7 @@ local packer = require "packer"
 local use = packer.use
 
 -- GOLANG SETUP
-use {
-    'ray-x/go.nvim',
-    requires = 'ray-x/guihua.lua',
-    config = function() require('go').setup() end,
-    events = {'VimEnter'},
-    ft = 'go'
-}
+use { "fatih/vim-go" }
 
 use {"neovim/nvim-lspconfig", config = function() require "lsp" end}
 use {"jose-elias-alvarez/nvim-lsp-ts-utils", after = "nvim-lspconfig"}
