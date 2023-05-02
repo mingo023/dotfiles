@@ -1,11 +1,11 @@
-local packer = require("packer")
-local use = packer.use
-
-use {
+return {
+  {
     'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/plenary.nvim'}},
+    dependencies = {{'nvim-lua/plenary.nvim'}},
     config = function() require("cores.telescope") end
+  },
+  {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    build = 'make'
+  }
 }
-
-use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
-

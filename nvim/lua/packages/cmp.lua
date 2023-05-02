@@ -1,43 +1,40 @@
-local packer = require "packer"
-local use = packer.use
-
-use {
+return {
+  {
     "rafamadriz/friendly-snippets",
-    event = "InsertEnter"
-}
-use {
+    event = "InsertEnter",
+  },
+  {
     "hrsh7th/nvim-cmp",
-    after = "friendly-snippets",
+    dependencies = "friendly-snippets",
     config = function()
         require "cores.cmp"
     end
-}
-use {
+  },
+  {
     "L3MON4D3/LuaSnip",
-    wants = "friendly-snippets",
+    dependencies = "nvim-cmp",
     config = function()
         require "cores.snip"
     end,
-    after = "nvim-cmp"
-}
-use {
+  },
+  {
     "saadparwaiz1/cmp_luasnip",
-    after = "LuaSnip"
-}
-use {
+    dependencies = "LuaSnip"
+  },
+  {
     "hrsh7th/cmp-nvim-lua",
-    after = "cmp_luasnip"
-}
-use {
+    dependencies = "cmp_luasnip"
+  },
+  {
     "hrsh7th/cmp-nvim-lsp",
-    after = "cmp-nvim-lua"
-}
-use {
+    dependencies = "cmp-nvim-lua"
+  },
+  {
     "hrsh7th/cmp-buffer",
-    after = "cmp-nvim-lsp"
-}
-
-use {
+    dependencies = "cmp-nvim-lsp"
+  },
+  {
     "hrsh7th/cmp-path",
-    after = "cmp-nvim-lsp"
+    dependencies = "cmp-nvim-lsp"
+  }
 }

@@ -1,10 +1,10 @@
-local packer = require "packer"
-local use = packer.use
-
-use {
-    'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function()
-        require("cores.bufferline")
+return {
+  {
+    'akinsho/bufferline.nvim', 
+    version = "*", 
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = function() 
+      require("cores.bufferline")
     end
+  }
 }

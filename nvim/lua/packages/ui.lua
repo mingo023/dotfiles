@@ -1,19 +1,11 @@
-local packer = require "packer"
-local use = packer.use
-
-use {
+return {
+  {
     'j-hui/fidget.nvim',
     config = function()
         require"fidget".setup{}
     end
+  },
+  {
+    "Pocco81/true-zen.nvim"
+  }
 }
-
-use {
-    'goolord/alpha-nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' },
-    config = function ()
-        require("cores.alpha")
-    end
-}
-
-use { "Pocco81/true-zen.nvim" }

@@ -1,18 +1,18 @@
-local packer = require("packer")
-local use = packer.use
-
-use {
+return {
+  {
     "lewis6991/gitsigns.nvim",
     config = function()
         require("cores.gitsigns")
     end
-}
 
-use {"tpope/vim-fugitive"}
-
-use {
+  },
+  {
+    "tpope/vim-fugitive"
+  },
+  {
     "akinsho/git-conflict.nvim",
     config = function()
         require('git-conflict').setup()
     end
+  }
 }
