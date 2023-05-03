@@ -1,15 +1,9 @@
-local navic = require("nvim-navic")
-
 return function(client, bufnr)
     local function buf_set_keymap(...)
         vim.api.nvim_buf_set_keymap(bufnr, ...)
     end
     local function buf_set_option(...)
         vim.api.nvim_buf_set_option(bufnr, ...)
-    end
-
-    if client.server_capabilities.documentSymbolProvider then
-        navic.attach(client, bufnr)
     end
 
     -- Mappings.

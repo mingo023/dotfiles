@@ -13,8 +13,6 @@ vim.cmd [[
     endif
 ]]
 
--- WINBAR
--- vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 -- SCHEME
 vim.cmd [[
     let g:gruvbox_material_enable_bold=0

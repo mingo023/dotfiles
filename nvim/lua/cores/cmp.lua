@@ -12,6 +12,12 @@ cmp.setup {
             require("luasnip").lsp_expand(args.body)
         end
     },
+    window = {
+      completion = cmp.config.window.bordered({
+        border = 'rounded',
+        winhighlight = 'NormalFloat:NormalFloat,FloatBorder:NormalFloat',
+      }),
+    },
     formatting = {
         format = function(entry, vim_item)
             vim_item.kind = string.format("%s %s", require("plugins.lspkind_icons").icons[vim_item.kind], vim_item.kind)
