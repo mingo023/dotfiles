@@ -10,7 +10,7 @@ require'nvim-tree'.setup {
     hijack_cursor = true,
     update_cwd = false,
     diagnostics = {
-        enable = false,
+        enable = true,
         icons = {hint = "", info = "", warning = "", error = ""}
     },
     hijack_directories = {enable = true, auto_open = true},
