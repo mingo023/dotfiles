@@ -144,6 +144,7 @@ install_tools() {
     brew install --cask raycast
     brew install --cask spotify
     brew install --cask jetbrains-toolbox
+    brew install --cask shottr
 
     success "Installed working tools"
   fi
