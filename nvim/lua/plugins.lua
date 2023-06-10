@@ -27,6 +27,7 @@ local movement_pkg = require("packages.movement")
 local testing_pkg = require("packages.testing")
 local term_pkg = require("packages.term")
 local ui_pkg = require("packages.ui")
+local dap_pkg = require("packages.dap")
 
 local plugins = merge(
   scheme_pkg,
@@ -42,7 +43,8 @@ local plugins = merge(
   movement_pkg,
   testing_pkg,
   term_pkg,
-  ui_pkg
+  ui_pkg,
+  dap_pkg
 )
 
 require("lazy").setup(plugins)

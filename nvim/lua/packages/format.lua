@@ -21,12 +21,6 @@ return {
     end
   },
   {
-    "mhartington/formatter.nvim",
-    config = function()
-        require("cores.formatter")
-    end
-  },
-  {
     "tpope/vim-surround"
   },
   {
@@ -37,6 +31,12 @@ return {
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("cores.spectre")
+    end
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require("cores.null-ls")
     end
   }
 }

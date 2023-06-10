@@ -17,9 +17,11 @@ lsp_config.gopls.setup{
     settings = {
       gopls = {
         analyses = {
-          unusedparams = false,
+          unusedparams = true,
         },
         staticcheck = true,
+        completeUnimported = true,
+        usePlaceholders = true,
       },
     },
 }

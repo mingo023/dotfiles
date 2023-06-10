@@ -1,8 +1,5 @@
 return {
   {
-    "fatih/vim-go"
-  },
-  {
     "neovim/nvim-lspconfig",
     config = function()
       require("lsp")
@@ -33,7 +30,9 @@ return {
   },
   {
     "williamboman/mason.nvim",
-    config = function() require("mason").setup() end
+    config = function() 
+      require("mason").setup() 
+    end
   },
   {
     "folke/trouble.nvim",
