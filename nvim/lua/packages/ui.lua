@@ -17,6 +17,7 @@ return {
   },
   {
     "rcarriga/nvim-notify",
+    event = 'ColorScheme',
     config = function()
       local notify = require('notify')
       notify.setup({

@@ -9,7 +9,7 @@ null_ls.setup({
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.gofumpt,
         null_ls.builtins.formatting.goimports_reviser,
-        null_ls.builtins.formatting.golines.with({ extra_args = { "-m", "150" } }),
+        null_ls.builtins.formatting.golines.with({ extra_args = { "-m", "160" } }),
 
         null_ls.builtins.diagnostics.golangci_lint,
     },

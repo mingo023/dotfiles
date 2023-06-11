@@ -1,9 +1,5 @@
 local map = require('utils.mapping')
 
--- map("n", ",bd", ":bp|bd #<CR>", {
---     noremap = true,
---     silent = true
--- })
 map("n", ",bb", ":bufdo bwipeout <CR>", {
     noremap = true,
     silent = true
@@ -16,31 +12,24 @@ map("n", ",bp", ":bp <CR>", {
     noremap = true,
     silent = true
 })
-map("n", "<Leader>bp", ":BufferLinePick <CR>", {
+
+map("n", "<Leader>1", "<Plug>(cokeline-focus-1)", {
     noremap = true,
     silent = true
 })
-map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", {
+map("n", "<Leader>2", "<Plug>(cokeline-focus-2)", {
     noremap = true,
     silent = true
 })
-map("n", "<Leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>", {
+map("n", "<Leader>3", "<Plug>(cokeline-focus-3)", {
     noremap = true,
     silent = true
 })
-map("n", "<Leader>3", "<Cmd>BufferLineGoToBuffer 3<CR>", {
+map("n", "<Leader>4", "<Plug>(cokeline-focus-4)", {
     noremap = true,
     silent = true
 })
-map("n", "<Leader>4", "<Cmd>BufferLineGoToBuffer 4<CR>", {
-    noremap = true,
-    silent = true
-})
-map("n", "<Leader>5", "<Cmd>BufferLineGoToBuffer 5<CR>", {
-    noremap = true,
-    silent = true
-})
-map("n", "<Leader>6", "<Cmd>BufferLineGoToBuffer 6<CR>", {
+map("n", "<Leader>5", "<Plug>(cokeline-focus-5)", {
     noremap = true,
     silent = true
 })

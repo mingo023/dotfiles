@@ -8,17 +8,7 @@ return {
   {
     "rcarriga/nvim-dap-ui",
     config = function()
-      require("dapui").setup()
-      local dap, dapui = require("dap"), require("dapui")
-      dap.listeners.after.event_initialized["dapui_config"] = function()
-        dapui.open()
-      end
-      dap.listeners.before.event_terminated["dapui_config"] = function()
-        dapui.close()
-      end
-      dap.listeners.before.event_exited["dapui_config"] = function()
-        dapui.close()
-      end
+      require("cores.dapui")
     end
   },
   {
@@ -47,7 +37,7 @@ return {
           -- a string that defines the port to start delve debugger.
           -- default to string "${port}" which instructs nvim-dap
           -- to start the process in a random available port
-          port = "57083",
+          -- port = "57083",
           -- additional args to pass to dlv
           args = {}
         },
