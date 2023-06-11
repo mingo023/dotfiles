@@ -20,7 +20,15 @@ return {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
     config = function()
-      require("lspsaga").setup({})
+      require("lspsaga").setup({
+        rename = {
+          quit = "<C-c>",
+          exec = "<CR>",
+          mark = "x",
+          confirm = "<CR>",
+          in_select = false,
+        },
+      })
     end,
     dependencies = {
       {"nvim-tree/nvim-web-devicons"},

@@ -26,17 +26,23 @@ return {
   {
     "kamykn/spelunker.vim"
   },
-  {
-    "nvim-pack/nvim-spectre",
-    dependencies = "nvim-lua/plenary.nvim",
-    config = function()
-      require("cores.spectre")
-    end
-  },
+  -- {
+  --   "nvim-pack/nvim-spectre",
+  --   dependencies = "nvim-lua/plenary.nvim",
+  --   config = function()
+  --     require("cores.spectre")
+  --   end
+  -- },
   {
     "jose-elias-alvarez/null-ls.nvim",
     config = function()
       require("cores.null-ls")
+    end
+  },
+  {
+    "anuvyklack/pretty-fold.nvim",
+    config = function()
+      require("pretty-fold").setup()
     end
   }
 }

@@ -117,7 +117,8 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: Hack Nerd Font
+    family: JetBrainsMonoNL Nerd Font Mono
+    style: Regular
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -128,9 +129,7 @@ font:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font
-
-    # The `style` can be specified to pick a specific face.
+    family: JetBrainsMonoNL Nerd Font Mono
     style: Bold
 
   # Italic font face
@@ -139,8 +138,7 @@ font:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: Hack Nerd Font
-
+    family: JetBrainsMonoNL Nerd Font Mono
     # The `style` can be specified to pick a specific face.
     style: Italic
 
@@ -211,28 +209,38 @@ colors:
   # Normal colors
 
   primary:
-    background: '0x282828'
-    foreground: '0xdfbf8e'
+    background: '0x1E1D2F'
+    foreground: '0xD9E0EE'
 
+  cursor:
+    text: '0x1E1D2F'
+    cursor: '0xF5E0DC'
+
+  # Normal colors
   normal:
-    black:   '0x665c54'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe78a4e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
+    black: '0x6E6C7E'
+    red: '0xF28FAD'
+    green: '0xABE9B3'
+    yellow: '0xFAE3B0'
+    blue: '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan: '0x89DCEB'
+    white: '0xD9E0EE'
 
+  # Bright colors
   bright:
-    black:   '0x928374'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xe3a84e'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xdfbf8e'
+    black: '0x988BA2'
+    red: '0xF28FAD'
+    green: '0xABE9B3'
+    yellow: '0xFAE3B0'
+    blue: '0x96CDFB'
+    magenta: '0xF5C2E7'
+    cyan: '0x89DCEB'
+    white: '0xD9E0EE'
+
+  indexed_colors:
+    - { index: 16, color: '0xF8BD96' }
+    - { index: 17, color: '0xF5E0DC' }
 
   # Dim colors
   #

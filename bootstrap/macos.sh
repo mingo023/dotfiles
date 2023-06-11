@@ -76,6 +76,7 @@ install_font() {
     brew install --cask font-ubuntu-mono-nerd-font
     brew install --cask font-ubuntu-nerd-font
     brew install --cask font-jetbrains-mono
+    brew install --cask font-jetbrains-mono-nerd-font
     brew install --cask font-hack-nerd-font
 
     success "Installed font!"
@@ -132,7 +133,6 @@ install_tools() {
     brew install httpie
     brew install fzf
     brew install asciinema
-    brew install efm-langserver
     brew install gnu-sed
 
     success "Installed some fancy tools"
@@ -143,7 +143,6 @@ install_tools() {
     brew install --cask notion
     brew install --cask raycast
     brew install --cask spotify
-    brew install --cask jetbrains-toolbox
     brew install --cask shottr
 
     success "Installed working tools"
