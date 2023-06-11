@@ -6,7 +6,7 @@ return {
     end
   },
   {
-    "Pocco81/true-zen.nvim"
+    "folke/zen-mode.nvim",
   },
   {
     "narutoxy/silicon.lua",

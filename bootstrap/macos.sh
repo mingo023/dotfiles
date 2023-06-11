@@ -120,6 +120,12 @@ install_tmux() {
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
     chmod +x  ~/.dotfiles/terminals/tmux/session-menu
+
+    curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
+
+    /usr/bin/tic -xe tmux-256color terminfo.src
+    sudo /usr/bin/tic -xe tmux-256color terminfo.src
+    /usr/bin/tic -xe alacritty-direct,tmux-256color terminfo.src
   fi
 }
 
