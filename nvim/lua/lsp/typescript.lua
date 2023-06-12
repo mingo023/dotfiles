@@ -22,5 +22,3 @@ lsp_config.tsserver.setup({
         return vim.fn.getcwd()
     end
 })
-
-lsp_config.eslint.setup{}

@@ -31,6 +31,7 @@ lspSymbol("Warning", "⚠️")
 
 vim.diagnostic.config {
   float = { border = "rounded" },
+  virtual_text = false,
 }
 
 vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float({focusable=false})]]

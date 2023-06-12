@@ -36,5 +36,8 @@ return {
   {
     "hrsh7th/cmp-path",
     dependencies = "cmp-nvim-lsp"
+  },
+  {
+   "hrsh7th/cmp-cmdline"
   }
 }

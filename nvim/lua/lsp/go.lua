@@ -12,7 +12,14 @@ vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').
 
 lsp_config.gopls.setup{
     on_attach = function(client, bufnr)
-        on_attach(client, bufnr)
+      on_attach(client, bufnr)
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        group = augroup,
+        buffer = bufnr,
+        callback = function()
+          vim.lsp.buf.format({ bufnr = bufnr })
+        end
+      })
     end,
     settings = {
       gopls = {

@@ -1,13 +1,13 @@
 local M = {}
 
 M.icons = {
-  Text = "",
-  Method = "",
-  Function = "",
+  Text = "",
+  Method = "ƒ",
+  Function = "ƒ",
   Constructor = "",
-  Field = "ﰠ",
+  Field = "",
   Variable = "",
-  Class = "ﴯ",
+  Class = "",
   Interface = "",
   Module = "",
   Property = "ﰠ",
@@ -21,7 +21,7 @@ M.icons = {
   Reference = "",
   Folder = "",
   EnumMember = "",
-  Constant = "",
+  Constant = "ℇ",
   Struct = "פּ",
   Event = "",
   Operator = "",
