@@ -69,5 +69,8 @@ return {
     config = function() 
       require "cores.vista"
     end
+  },
+  {
+    "uarun/vim-protobuf"
   }
 }
