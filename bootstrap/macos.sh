@@ -133,6 +133,7 @@ install_tools() {
   read -r -p "Do you want to install some fancy tools ? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
     brew install ripgrep
+    brew install fd
     brew install neofetch
     brew install pgcli
     brew install bat

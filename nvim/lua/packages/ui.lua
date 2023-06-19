@@ -1,39 +1,33 @@
 return {
-  {
-    'j-hui/fidget.nvim',
-    tag = "legacy",
-    config = function()
-        require"fidget".setup{}
-    end
-  },
-  {
-    "folke/zen-mode.nvim",
-  },
-  {
-    "narutoxy/silicon.lua",
-    dependencies = { "nvim-lua/plenary.nvim" },
-    config = function()
-      require('silicon').setup({font = 'Hack=20', theme = 'Coldark-Dark'})
-    end
-  },
-  {
-    "rcarriga/nvim-notify",
-    event = 'ColorScheme',
-    config = function()
-      local notify = require('notify')
-      notify.setup({
-        stages = "fade_in_slide_out",
-        timeout = 1000,
-        background_colour = "#1e222a",
-        icons = {
-          ERROR = "",
-          WARN = "",
-          INFO = "",
-          DEBUG = "",
-          TRACE = "✎",
-        },
-      })
-      vim.notify =  notify
-    end
-  }
+	{
+		"j-hui/fidget.nvim",
+		tag = "legacy",
+		config = function()
+			require("fidget").setup({})
+		end,
+	},
+	{
+		"folke/zen-mode.nvim",
+		config = function()
+			require("zen-mode").setup({
+				window = {
+					width = 0.9,
+				},
+			})
+		end,
+	},
+	{
+		"narutoxy/silicon.lua",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		config = function()
+			require("cores.silicon")
+		end,
+	},
+	{
+		"rcarriga/nvim-notify",
+		event = "ColorScheme",
+		config = function()
+			require("cores.notify")
+		end,
+	},
 }
