@@ -1,12 +1,10 @@
 return {
-  {
-    'glepnir/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-      require('dashboard').setup {
-        -- config
-      }
-    end,
-    dependencies = { {'nvim-tree/nvim-web-devicons'}}
-  }
+	{
+		"goolord/alpha-nvim",
+		event = "VimEnter",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+                config = function()
+                  require'alpha'.setup(require'alpha.themes.startify'.config)
+                end
+	},
 }

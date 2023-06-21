@@ -151,6 +151,7 @@ install_tools() {
     brew install --cask raycast
     brew install --cask spotify
     brew install --cask shottr
+    brew install orbstack
 
     success "Installed working tools"
   fi
