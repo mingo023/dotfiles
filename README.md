@@ -13,10 +13,12 @@ cd ~/.config
 https://gist.github.com/bbqtd/a4ac060d6f6b9ea6fe3aabe735aa9d95
 
 ## Show case
-
-![Alt text](./images/neovim/File%202.png?raw=true "Title")
-![Alt text](./images/neovim/File%203.png?raw=true "Title")
-![Alt text](./images/neovim/File%204.png?raw=true "Title")
-![Alt text](./images/neovim/File%205.png?raw=true "Title")
-![Alt text](./images/neovim/File%206.png?raw=true "Title")
+### Dashboard
+![Alt text](./images/1.png?raw=true "Title")
+### Tmux sessions
+![Alt text](./images/2.png?raw=true "Title")
+### Refactor
+![Alt text](./images/3.png?raw=true "Title")
+### Lazygit
+![Alt text](./images/4.png?raw=true "Title")
 
