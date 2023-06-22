@@ -47,13 +47,10 @@ install_fish() {
 install_languages() {
   read -r -p "Do you want to install languages? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
-    brew install node
-    success "Installed NodeJs"
     brew install go
     success "Installed Golang"
   fi
 }
-
 
 setup_git() {
   read -r -p "Do you want to setup git? [y|N] " response
@@ -84,7 +81,7 @@ install_font() {
 }
 
 install_terminal() {
-  read -r -p "Do you want to install kitty? [y|N] " response
+  read -r -p "Do you want to install alacritty? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
     brew install --cask alacritty
     success "Installed alacritty!"
