@@ -50,4 +50,3 @@ local plugins = merge(
 )
 
 require("lazy").setup(plugins)
-

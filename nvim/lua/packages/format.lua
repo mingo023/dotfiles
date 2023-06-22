@@ -3,28 +3,28 @@ return {
     "windwp/nvim-autopairs",
     dependencies = "nvim-cmp",
     config = function()
-        require("cores.auto-pair")
-    end
+      require("cores.auto-pair")
+    end,
   },
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-        require("cores.indent")
-    end
+      require("cores.indent")
+    end,
   },
   {
-    'b3nj5m1n/kommentary',
+    "b3nj5m1n/kommentary",
     config = function()
-        require('kommentary.config').configure_language("default", {
-            prefer_single_line_comments = true
-        })
-    end
+      require("kommentary.config").configure_language("default", {
+        prefer_single_line_comments = true,
+      })
+    end,
   },
   {
-    "tpope/vim-surround"
+    "tpope/vim-surround",
   },
   {
-    "kamykn/spelunker.vim"
+    "kamykn/spelunker.vim",
   },
   -- {
   --   "nvim-pack/nvim-spectre",
@@ -37,12 +37,12 @@ return {
     "jose-elias-alvarez/null-ls.nvim",
     config = function()
       require("cores.null-ls")
-    end
+    end,
   },
   {
     "anuvyklack/pretty-fold.nvim",
     config = function()
       require("pretty-fold").setup()
-    end
-  }
+    end,
+  },
 }

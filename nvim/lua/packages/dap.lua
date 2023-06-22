@@ -3,13 +3,13 @@ return {
     "mfussenegger/nvim-dap",
     config = function()
       require("cores.dap")
-    end
+    end,
   },
   {
     "rcarriga/nvim-dap-ui",
     config = function()
       require("cores.dapui")
-    end
+    end,
   },
   {
     "folke/neodev.nvim",
@@ -17,14 +17,14 @@ return {
   {
     "leoluz/nvim-dap-go",
     config = function()
-      require('dap-go').setup {
+      require("dap-go").setup({
         dap_configurations = {
           {
             name = "Attach (127.0.0.1:57083)",
             type = "go",
             mode = "remote",
             request = "attach",
-            port = "57083"
+            port = "57083",
           },
         },
         delve = {
@@ -39,9 +39,9 @@ return {
           -- to start the process in a random available port
           -- port = "57083",
           -- additional args to pass to dlv
-          args = {}
+          args = {},
         },
-      }
-    end
-  }
+      })
+    end,
+  },
 }

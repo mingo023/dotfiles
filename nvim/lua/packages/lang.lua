@@ -3,18 +3,18 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       require("lsp")
-    end
+    end,
   },
   {
-    "jose-elias-alvarez/nvim-lsp-ts-utils", 
-    dependencies = "nvim-lspconfig"
+    "jose-elias-alvarez/nvim-lsp-ts-utils",
+    dependencies = "nvim-lspconfig",
   },
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function()
       require("cores.treesitter")
-    end
+    end,
   },
   {
     "glepnir/lspsaga.nvim",
@@ -31,46 +31,46 @@ return {
       })
     end,
     dependencies = {
-      {"nvim-tree/nvim-web-devicons"},
+      { "nvim-tree/nvim-web-devicons" },
       --Please make sure you install markdown and markdown_inline parser
-      {"nvim-treesitter/nvim-treesitter"}
-    }
+      { "nvim-treesitter/nvim-treesitter" },
+    },
   },
   {
     "williamboman/mason.nvim",
-    config = function() 
-      require("mason").setup() 
-    end
+    config = function()
+      require("mason").setup()
+    end,
   },
   {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-        require("trouble").setup {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
-    end
+      require("trouble").setup({
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      })
+    end,
   },
   {
     "github/copilot.vim",
     config = function()
-        vim.cmd [[
+      vim.cmd([[
             let g:copilot_no_tab_map = v:true 
-        ]]
-    end
+        ]])
+    end,
   },
   {
-    "mg979/vim-visual-multi"
+    "mg979/vim-visual-multi",
   },
   {
     "liuchengxu/vista.vim",
-    config = function() 
-      require "cores.vista"
-    end
+    config = function()
+      require("cores.vista")
+    end,
   },
   {
-    "uarun/vim-protobuf"
-  }
+    "uarun/vim-protobuf",
+  },
 }

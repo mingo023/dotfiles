@@ -6,6 +6,6 @@ return {
     },
     config = function()
       require("cores.bufferline")
-    end
-  }
+    end,
+  },
 }

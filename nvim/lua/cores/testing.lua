@@ -1,6 +1,6 @@
-require('neotest').setup({
+require("neotest").setup({
   adapters = {
-    require('neotest-jest')({
+    require("neotest-jest")({
       jestCommand = "npm run test:e2e --",
       jestConfigFile = "custom.jest.config.ts",
       env = { CI = true },
@@ -8,5 +8,5 @@ require('neotest').setup({
         return vim.fn.getcwd()
       end,
     }),
-  }
+  },
 })

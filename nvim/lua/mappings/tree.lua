@@ -1,6 +1,6 @@
-local map = require('utils.mapping')
+local map = require("utils.mapping")
 
 map("n", "<Leader>ne", ":NvimTreeToggle <CR>", {
-    noremap = true,
-    silent = true
+  noremap = true,
+  silent = true,
 })

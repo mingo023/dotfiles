@@ -13,9 +13,8 @@ opt.updatetime = 250 -- update interval for gitsigns
 opt.timeoutlen = 400
 opt.clipboard = "unnamedplus"
 opt.fillchars = {
-    eob = "x"
+  eob = "x",
 }
-
 
 -- STATUSLINE
 opt.laststatus = 3
@@ -29,7 +28,7 @@ opt.pumheight = 20
 -- SWAPFILE
 vim.g.noswapfile = true
 vim.g.nobackup = true
-opt.shortmess:append "A"
+opt.shortmess:append("A")
 
 -- NUMBERS
 opt.signcolumn = "yes"
@@ -53,7 +52,7 @@ vim.g.loaded_netrwPlugin = 0
 vim.g.loaded_spec = 0
 
 -- DISABLE AUTO COMMENT ON INSERT
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
-    pattern = {"*"},
-    command = "setlocal formatoptions-=cro"
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+  pattern = { "*" },
+  command = "setlocal formatoptions-=cro",
 })

@@ -5,9 +5,9 @@ return function(...)
 
   math.randomseed(os.time())
 
-  for i, tbl in ipairs({...}) do
+  for i, tbl in ipairs({ ... }) do
     for k, v in pairs(tbl) do
-      if type(k) == 'number' then
+      if type(k) == "number" then
         -- randomize numeric keys
         k = math.random() * i * k
       end
@@ -19,7 +19,9 @@ return function(...)
   for k, v in pairs(temp) do
     if type(k) == "number" then
       -- Sort numeric keys into order
-      if result[index] then index = index + 1 end
+      if result[index] then
+        index = index + 1
+      end
 
       k = index
     end

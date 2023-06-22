@@ -1,3 +1,3 @@
-local map = require('utils.mapping')
+local map = require("utils.mapping")
 
-map('i', '<C-J>', 'copilot#Accept()', {noremap = true, silent = true, expr = true})
+map("i", "<C-J>", "copilot#Accept()", { noremap = true, silent = true, expr = true })

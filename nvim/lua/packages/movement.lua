@@ -1,11 +1,11 @@
 return {
   {
-    'mfussenegger/nvim-treehopper'
+    "mfussenegger/nvim-treehopper",
   },
   {
-    'phaazon/hop.nvim',
+    "phaazon/hop.nvim",
     config = function()
-        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
-    end
-  }
+      require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
+    end,
+  },
 }

@@ -2,17 +2,16 @@ return {
   {
     "lewis6991/gitsigns.nvim",
     config = function()
-        require("cores.gitsigns")
-    end
-
+      require("cores.gitsigns")
+    end,
   },
   {
-    "tpope/vim-fugitive"
+    "tpope/vim-fugitive",
   },
   {
     "akinsho/git-conflict.nvim",
     config = function()
-        require('git-conflict').setup()
-    end
-  }
+      require("git-conflict").setup()
+    end,
+  },
 }

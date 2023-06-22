@@ -1,4 +1,4 @@
-local Terminal = require('toggleterm.terminal').Terminal
+local Terminal = require("toggleterm.terminal").Terminal
 local term = Terminal:new({
   direction = "float",
   float_opts = {
@@ -13,4 +13,3 @@ local term = Terminal:new({
 function _term_toggle()
   term:toggle()
 end
-
