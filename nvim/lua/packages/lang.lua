@@ -20,19 +20,10 @@ return {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
     config = function()
-      require("lspsaga").setup({
-        rename = {
-          quit = "<C-c>",
-          exec = "<CR>",
-          mark = "x",
-          confirm = "<CR>",
-          in_select = false,
-        },
-      })
+      require("cores.lspsaga")
     end,
     dependencies = {
       { "nvim-tree/nvim-web-devicons" },
-      --Please make sure you install markdown and markdown_inline parser
       { "nvim-treesitter/nvim-treesitter" },
     },
   },
@@ -46,11 +37,7 @@ return {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("trouble").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      })
+      require("trouble").setup({})
     end,
   },
   {

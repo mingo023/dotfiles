@@ -13,23 +13,6 @@ map("n", ",bp", ":bp <CR>", {
   silent = true,
 })
 
-map("n", "<Leader>1", "<Plug>(cokeline-focus-1)", {
-  noremap = true,
-  silent = true,
-})
-map("n", "<Leader>2", "<Plug>(cokeline-focus-2)", {
-  noremap = true,
-  silent = true,
-})
-map("n", "<Leader>3", "<Plug>(cokeline-focus-3)", {
-  noremap = true,
-  silent = true,
-})
-map("n", "<Leader>4", "<Plug>(cokeline-focus-4)", {
-  noremap = true,
-  silent = true,
-})
-map("n", "<Leader>5", "<Plug>(cokeline-focus-5)", {
-  noremap = true,
-  silent = true,
-})
+for i = 1,9 do
+  map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-focus-%s)'):format(i), { silent = true })
+end
