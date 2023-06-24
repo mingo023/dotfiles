@@ -3,7 +3,13 @@ return {
     "j-hui/fidget.nvim",
     tag = "legacy",
     config = function()
-      require("fidget").setup({})
+      require("fidget").setup({
+        window = {
+          border = "rounded",
+          blend = 0,
+          relative = "editor",
+        }
+      })
     end,
   },
   {

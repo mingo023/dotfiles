@@ -25,6 +25,19 @@ setup_tmux() {
     ln -s ~/.config/.tmux/.tmux.conf ~/.tmux.conf
 }
 
+setup_mac_config() {
+  # hide desktop icons
+  defaults write com.apple.finder CreateDesktop false
+  killall Finder
+
+  # reduce keyrepeat for faster typing in vim
+  defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+  defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+  # change wallpaper
+  osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/minh.ngovan/.config/wallpaper/lofi-coffee.jpg"'
+}
+
 install_homebrew() {
   read -r -p "Do you want to install homebrew? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
@@ -95,13 +108,6 @@ install_nvim() {
     brew install lua
     brew install neovim
 
-    info "Installing packer"
-    git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-    # reduce keyrepeat for faster typing in vim
-    defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-    defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
-
     success "Installed neovim"
   fi
 }
@@ -118,6 +124,7 @@ install_tmux() {
 
     chmod +x  ~/.dotfiles/terminals/tmux/session-menu
 
+    # install tmux term
     curl -LO https://invisible-island.net/datafiles/current/terminfo.src.gz && gunzip terminfo.src.gz
 
     /usr/bin/tic -xe tmux-256color terminfo.src
@@ -187,5 +194,6 @@ install_tmux
 install_tools
 install_typescript_tools
 install_golang_tools
+setup_mac_config
 
 echo "Finish Install! 🎉 🚀"
