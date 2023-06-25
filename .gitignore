@@ -4,11 +4,8 @@ configstore
 iterm2
 pgcli
 .DS_Store
-github-copilot
-karabiner
-raycast
-flutter
 gcloud
 medusa
 neofetch
 .tmux.conf
+raycast
