@@ -5,9 +5,11 @@ end
 set -gx PATH /opt/homebrew/bin:$PATH
 set -gx PATH $HOME/bin:/usr/local/bin:$PATH
 
+# GO Setup
 set -gx GOPATH $HOME/go
 set -gx GOROOT "/opt/homebrew/opt/go/libexec"
 set -gx PATH $PATH $GOPATH/bin
+
 set -gx NVM_DIR $HOME/.nvm
 set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 
@@ -15,7 +17,6 @@ set fish_path $HOME/.config/fish
 
 . $fish_path/git_aliases.fish
 . $fish_path/custom_variables.fish
- 
 
 alias ls="ls -la"
 alias rm="rm -rf"
@@ -46,6 +47,6 @@ end
 starship init fish | source
 
 function fish_greeting
-    echo Hello dai ca 🤪🤗
+    echo "Hope you do well today!"
     echo The time is (set_color yellow; date +%T; set_color normal)
 end

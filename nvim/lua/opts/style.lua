@@ -1,4 +1,3 @@
------ TOKYNIGHT CONFIG ------------
 vim.cmd([[
     syntax enable
     if has('termguicolors')

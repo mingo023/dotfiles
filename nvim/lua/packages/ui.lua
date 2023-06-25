@@ -4,6 +4,9 @@ return {
     tag = "legacy",
     config = function()
       require("fidget").setup({
+        text = {
+          spinner = "dots_ellipsis"
+        },
         window = {
           border = "rounded",
           blend = 0,
