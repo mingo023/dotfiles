@@ -111,7 +111,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "j"
@@ -230,7 +230,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "k"
@@ -349,7 +349,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "h"
@@ -468,7 +468,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "l"
@@ -532,7 +532,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "v",
+                                    "key_code": "1",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -555,7 +555,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "v"
@@ -640,7 +640,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "b"
@@ -702,7 +702,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "n",
+                                    "key_code": "2",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -725,7 +725,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "n"
@@ -821,7 +821,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "s"
@@ -894,7 +894,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "f",
+                                    "key_code": "left_shift",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -904,7 +904,7 @@
                                 "to": [
                                     {
                                         "mouse_key": {
-                                            "speed_multiplier": 2.0
+                                            "speed_multiplier": 1.5
                                         }
                                     }
                                 ],
@@ -919,7 +919,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "f"
@@ -1008,7 +1008,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "g"
@@ -1100,7 +1100,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "u"
@@ -1196,7 +1196,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "i"
@@ -1293,7 +1293,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "o"
@@ -1390,7 +1390,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "p"
