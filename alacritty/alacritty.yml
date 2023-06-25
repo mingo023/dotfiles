@@ -702,6 +702,7 @@ key_bindings:
   - { key: T, mods: Command, chars: "\x02\x63" }
   - { key: W, mods: Command, chars: "\x01\x78" }
   - { key: J, mods: Command, chars: "\x20\x74\x6b" }
+  - { key: S, mods: Command, chars: "\x3a\x77\x0a" }
 
   # - { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }

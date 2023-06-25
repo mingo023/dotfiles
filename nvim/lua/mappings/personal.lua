@@ -1,8 +1,5 @@
 local map = require("utils.mapping")
 
--- escape from insert mode
-map("i", "jj", "<Esc>")
-
 -- enable copy to clipboard
 map("v", "<C-c>", '"+y')
 
@@ -28,3 +25,6 @@ map("v", ":", ":s/")
 -- map("v", "p", "\"_dP", {
 --     silent = true
 -- })
+
+-- remap :w to <cmd+s> (check at: ~/.config/alacritty/alacritty.yml:705)
+map("c", "w<CR>", 'echo "🚨 use <cmd+s> instead"<CR>')
