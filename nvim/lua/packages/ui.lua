@@ -8,7 +8,6 @@ return {
           spinner = "dots_ellipsis"
         },
         window = {
-          border = "rounded",
           blend = 0,
           relative = "editor",
         }

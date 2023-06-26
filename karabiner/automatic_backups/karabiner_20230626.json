@@ -18,6 +18,32 @@
                 },
                 "rules": [
                     {
+                        "description": "Caps Lock to Escape on single press, Caps Lock on press and hold.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "escape"
+                                    }
+                                ],
+                                "to_if_held_down": [
+                                    {
+                                        "key_code": "caps_lock"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "available_since": "13.6.0",
                         "description": "Mouse Keys Mode v4 (rev 3)",
                         "manipulators": [
@@ -85,7 +111,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "j"
@@ -204,7 +230,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "k"
@@ -323,7 +349,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "h"
@@ -442,7 +468,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "l"
@@ -529,10 +555,10 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
-                                            "key_code": "e"
+                                            "key_code": "v"
                                         }
                                     ],
                                     "simultaneous_options": {
@@ -614,7 +640,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "b"
@@ -691,68 +717,6 @@
                                 "type": "basic"
                             },
                             {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "d"
-                                        },
-                                        {
-                                            "key_code": "r"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "mouse_keys_mode_v4",
-                                                    "value": 0
-                                                }
-                                            },
-                                            {
-                                                "set_variable": {
-                                                    "name": "mouse_keys_mode_v4_scroll",
-                                                    "value": 0
-                                                }
-                                            },
-                                            {
-                                                "set_notification_message": {
-                                                    "id": "mouse_keys_mode_v4",
-                                                    "text": ""
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "mouse_keys_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "mouse_keys_mode_v4",
-                                            "text": "Mouse Keys Mode v4"
-                                        }
-                                    },
-                                    {
-                                        "pointing_button": "button2"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
                                 "conditions": [
                                     {
                                         "name": "mouse_keys_mode_v4",
@@ -795,7 +759,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "s"
@@ -878,7 +842,7 @@
                                 "to": [
                                     {
                                         "mouse_key": {
-                                            "speed_multiplier": 2.0
+                                            "speed_multiplier": 2.5
                                         }
                                     }
                                 ],
@@ -893,7 +857,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "f"
@@ -942,7 +906,7 @@
                                     },
                                     {
                                         "mouse_key": {
-                                            "speed_multiplier": 2.0
+                                            "speed_multiplier": 5
                                         }
                                     }
                                 ],
@@ -982,7 +946,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "g"
@@ -1074,7 +1038,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "u"
@@ -1170,7 +1134,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "i"
@@ -1267,7 +1231,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "o"
@@ -1364,7 +1328,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "p"

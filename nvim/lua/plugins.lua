@@ -15,7 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local scheme_pkg = require("packages.scheme")
 local lang_pkg = require("packages.lang")
-local bufferline_pkg = require("packages.bufferline")
 local cmp_pkg = require("packages.cmp")
 local format_pkg = require("packages.format")
 local tree_pkg = require("packages.tree")
@@ -33,7 +32,6 @@ local dashboard_pkg = require("packages.dashboard")
 local plugins = merge(
   scheme_pkg,
   lang_pkg,
-  bufferline_pkg,
   cmp_pkg,
   format_pkg,
   tree_pkg,

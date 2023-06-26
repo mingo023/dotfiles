@@ -13,6 +13,6 @@ map("n", ",bp", ":bp <CR>", {
   silent = true,
 })
 
-for i = 1,9 do
-  map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-focus-%s)'):format(i), { silent = true })
-end
+-- for i = 1,9 do
+--   map('n', ('<Leader>%s'):format(i), ('<Plug>(cokeline-focus-%s)'):format(i), { silent = true })
+-- end
