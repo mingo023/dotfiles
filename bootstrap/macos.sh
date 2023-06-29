@@ -156,6 +156,7 @@ install_tools() {
     brew install --cask spotify
     brew install --cask shottr
     brew install orbstack
+    brew install --cask betterdisplay
 
     success "Installed working tools"
   fi

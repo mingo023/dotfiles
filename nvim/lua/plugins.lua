@@ -28,6 +28,7 @@ local term_pkg = require("packages.term")
 local ui_pkg = require("packages.ui")
 local dap_pkg = require("packages.dap")
 local dashboard_pkg = require("packages.dashboard")
+local bufferline_pkg = require("packages.bufferline")
 
 local plugins = merge(
   scheme_pkg,
@@ -44,7 +45,8 @@ local plugins = merge(
   term_pkg,
   ui_pkg,
   dap_pkg,
-  dashboard_pkg
+  dashboard_pkg,
+  bufferline_pkg
 )
 
 require("lazy").setup(plugins)

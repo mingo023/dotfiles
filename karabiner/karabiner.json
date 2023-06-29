@@ -85,7 +85,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "j"
@@ -204,7 +204,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "k"
@@ -323,7 +323,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "h"
@@ -442,7 +442,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "l"
@@ -529,7 +529,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "e"
@@ -614,7 +614,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "b"
@@ -699,7 +699,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "r"
@@ -795,7 +795,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "s"
@@ -878,7 +878,7 @@
                                 "to": [
                                     {
                                         "mouse_key": {
-                                            "speed_multiplier": 2.0
+                                            "speed_multiplier": 3.0
                                         }
                                     }
                                 ],
@@ -893,7 +893,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "f"
@@ -982,7 +982,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "g"
@@ -1074,7 +1074,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "u"
@@ -1170,7 +1170,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "i"
@@ -1267,7 +1267,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "o"
@@ -1364,7 +1364,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "d"
+                                            "key_code": "right_command"
                                         },
                                         {
                                             "key_code": "p"
