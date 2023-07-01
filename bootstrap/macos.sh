@@ -157,6 +157,7 @@ install_tools() {
     brew install --cask shottr
     brew install orbstack
     brew install --cask betterdisplay
+    brew install MonitorControl
 
     success "Installed working tools"
   fi

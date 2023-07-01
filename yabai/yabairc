@@ -1,82 +1,53 @@
 #!/usr/bin/env sh
 
-sudo yabai --load-sa
-yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+# ██╗   ██╗ █████╗ ██████╗  █████╗ ██╗
+# ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗██║
+#  ╚████╔╝ ███████║██████╔╝███████║██║
+#   ╚██╔╝  ██╔══██║██╔══██╗██╔══██║██║
+#    ██║   ██║  ██║██████╔╝██║  ██║██║
+#    ╚═╝   ╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝
+# A tiling window manager for macOS
+# https://github.com/koekeishiya/yabai
 
-yabai -m config mouse_follows_focus          off
-yabai -m config focus_follows_mouse          off
-yabai -m config window_origin_display        default
-yabai -m config window_placement             second_child
-yabai -m config window_topmost               off
-yabai -m config window_shadow                on
-yabai -m config window_opacity               off
-yabai -m config window_opacity_duration      0.0
-yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.90
-yabai -m config window_border                on
-yabai -m config window_border_width          2
-yabai -m config active_window_border_color   0xff48e566
-yabai -m config split_ratio                  0.50
-yabai -m config auto_balance                 off
-yabai -m config mouse_modifier               fn
-yabai -m config mouse_action1                move
-yabai -m config mouse_action2                resize
-yabai -m config mouse_drop_action            swap
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# global settings
+yabai -m config mouse_follows_focus off
+yabai -m config focus_follows_mouse off
+yabai -m config window_origin_display default
+yabai -m config window_placement second_child
+yabai -m config window_topmost off
+yabai -m config window_shadow on
+yabai -m config window_opacity off
+yabai -m config window_opacity_duration 0.0
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.90
+yabai -m config window_border on
+yabai -m config window_border_width 6
+yabai -m config active_window_border_color 0xff775759
+yabai -m config normal_window_border_color 0xff555555
+yabai -m config insert_feedback_color 0xffd75f5f
+yabai -m config split_ratio 0.50
+yabai -m config auto_balance off
+yabai -m config mouse_modifier fn
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config mouse_drop_action swap
 
 # general space settings
-yabai -m config layout                       bsp
-yabai -m config top_padding                  45
-yabai -m config bottom_padding               30
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
-yabai -m config window_gap                   06
+yabai -m config layout stack
+yabai -m config top_padding 15
+yabai -m config bottom_padding 15
+yabai -m config left_padding 15
+yabai -m config right_padding 15
+yabai -m config window_gap 15
 
-# Rules
-
-# Data & Cloud
-yabai -m rule --add app="^Docker$" manage=off                  space=1
-yabai -m rule --add app="^DataGrip$" manage=off                space=1
-yabai -m rule --add app="^pgAdmin$" manage=off                 space=1
-
-# Coding
-yabai -m rule --add app="kitty" title="Kitty"                  space=2
-yabai -m rule --add app="Simulator" manage=off                 space=2
-yabai -m rule --add app="Terminal" manage=off                  space=2
-yabai -m rule --add app="^Xcode$" manage=off                   space=2
-yabai -m rule --add app="^Postman$" manage=off                 space=2
-yabai -m rule --add app="^Burp$" manage=off                    space=2
-yabai -m rule --add app="Visual Studio Code" manage=off        space=2
-
-# Information
-yabai -m rule --add app="^Google$"     manage=off              space=3
-yabai -m rule --add app="Preview" manage=off                   space=3
-yabai -m rule --add app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off space=3
-
-# Communication
-yabai -m rule --add app="Slack" title="Slack"                  space=4
-yabai -m rule --add app="zoom.us" manage=off                   space=4
-yabai -m rule --add app="Skype" manage=off                     space=4
-yabai -m rule --add app="Telegram" manage=off                  space=4
-yabai -m rule --add app="Discord"                              space=2
-yabai -m rule --add app="Microsoft Outlook"                    space=4
-yabai -m rule --add app="Microsoft\ Teams" manage=off         space=4
-
-# Music and Notes
-yabai -m rule --add app="Notion"           manage=off          space=5
-yabai -m rule --add app="Spotify"          manage=off          space=5
-yabai -m rule --add app="QuickTime Player" manage=off          space=5
-yabai -m rule --add app="VLC"              mange=off           space=5
-
-# Others
-yabai -m rule --add label="Finder" app="^Finder$" manage=off
-yabai -m rule --add app="^System Preferences$" manage=off
-yabai -m rule --add label="Alfred Preferences" app="^Alfred Preferences$" manage=off
-yabai -m rule --add label="App Store" app="^App Store$" manage=off
-yabai -m rule --add app="^Activity Monitor$" manage=off
-yabai -m rule --add label="Calculator" app="^Calculator$" manage=off
-
-
-# show digital colour meter topmost and on all spaces
-yabai -m rule --add app="^Digital Colou?r Meter$" sticky=on
+# apps to not manage (ignore)
+yabai -m rule --add app="^System Settings$" manage=off
+yabai -m rule --add app="^Archive Utility$" manage=off
+yabai -m rule --add app="^Logi Options$" manage=off
+yabai -m rule --add app="Raycast" manage=off
+yabai -m rule --add app="Alacritty" manage=off
 
 echo "yabai configuration loaded.."

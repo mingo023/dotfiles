@@ -113,3 +113,12 @@ param
 vals
 httpclient
 logcontext
+unscoped
+lifecycle
+infof
+addr
+omitempty
+foreignkey
+onboarded
+onboarded
+debugw
