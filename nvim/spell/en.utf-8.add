@@ -130,3 +130,5 @@ cronjob
 mongo
 fatalf
 mongodb
+elasticsearch
+elasticsearch
