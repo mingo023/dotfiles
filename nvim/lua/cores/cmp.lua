@@ -28,6 +28,7 @@ cmp.setup({
         nvim_lua = "[Lua]",
         buffer = "[BUF]",
         luasnip = "[Snip]",
+        ['vim-dadbod-completion'] = '[DB]',
       })[entry.source.name]
 
       return vim_item
@@ -79,6 +80,15 @@ cmp.setup({
   },
 })
 
+local autocomplete_group = vim.api.nvim_create_augroup('vimrc_autocompletion', { clear = true })
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'sql', 'mysql', 'plsql' },
+  callback = function()
+    cmp.setup.buffer({ sources = { { name = 'vim-dadbod-completion' } } })
+  end,
+  group = autocomplete_group,
+})
+
 cmp.setup.cmdline("/", {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
@@ -99,3 +109,4 @@ cmp.setup.cmdline(":", {
     },
   }),
 })
+

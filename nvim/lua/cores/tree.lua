@@ -11,6 +11,13 @@ require("nvim-tree").setup({
   open_on_tab = false,
   hijack_cursor = true,
   update_cwd = false,
+  actions = {
+    open_file = {
+      window_picker = {
+        enable = false,
+      },
+    },
+  },
   diagnostics = {
     enable = true,
     icons = { hint = "", info = "", warning = "", error = "" },

@@ -141,3 +141,6 @@ oauh
 oauth
 envconfig
 whitespace
+bufferline
+statusline
+keymap
