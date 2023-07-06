@@ -8,8 +8,4 @@ return {
       require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
     end,
   },
-  {
-    "chrisgrieser/nvim-spider",
-    lazy = true
-  }
 }
