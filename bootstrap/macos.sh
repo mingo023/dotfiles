@@ -145,6 +145,7 @@ install_tools() {
     brew install fzf
     brew install asciinema
     brew install gnu-sed
+    brew install exa
 
     success "Installed some fancy tools"
 

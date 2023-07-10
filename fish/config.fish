@@ -18,7 +18,7 @@ set fish_path $HOME/.config/fish
 . $fish_path/git_aliases.fish
 . $fish_path/custom_variables.fish
 
-alias ls="ls -la"
+alias ls="exa -l --icons"
 alias rm="rm -rf"
 alias zshconfig="nvim ~/.config/zshrc/.zshrc"
 alias reload="source ~/.config/fish/config.fish"
