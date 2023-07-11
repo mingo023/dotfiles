@@ -50,3 +50,9 @@ function fish_greeting
     echo "Hope you do well today!"
     echo The time is (set_color yellow; date +%T; set_color normal)
 end
+
+function wpp
+  set home $HOME
+  set wallpaper (exa $home/.config/wallpapers | fzf)
+  osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$home/.config/wallpapers/$wallpaper\""
+end
