@@ -85,7 +85,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "j"
@@ -192,7 +192,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "k"
@@ -299,7 +299,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "h"
@@ -406,7 +406,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "l"
@@ -458,7 +458,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "e",
+                                    "key_code": "d",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -481,10 +481,10 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
-                                            "key_code": "e"
+                                            "key_code": "d"
                                         }
                                     ],
                                     "simultaneous_options": {
@@ -554,7 +554,7 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "r",
+                                    "key_code": "f",
                                     "modifiers": {
                                         "optional": [
                                             "any"
@@ -577,10 +577,10 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
-                                            "key_code": "r"
+                                            "key_code": "f"
                                         }
                                     ],
                                     "simultaneous_options": {
@@ -661,7 +661,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "s"
@@ -772,7 +772,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "g"
@@ -852,7 +852,7 @@
                                     },
                                     "simultaneous": [
                                         {
-                                            "key_code": "right_command"
+                                            "key_code": "left_command"
                                         },
                                         {
                                             "key_code": "u"
@@ -890,91 +890,6 @@
                                     {
                                         "software_function": {
                                             "set_mouse_cursor_position": {
-                                                "x": "50%",
-                                                "y": "50%"
-                                            }
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "mouse_keys_mode_v4",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "software_function": {
-                                            "set_mouse_cursor_position": {
-                                                "screen": 0,
-                                                "x": "50%",
-                                                "y": "50%"
-                                            }
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    },
-                                    "simultaneous": [
-                                        {
-                                            "key_code": "right_command"
-                                        },
-                                        {
-                                            "key_code": "i"
-                                        }
-                                    ],
-                                    "simultaneous_options": {
-                                        "key_down_order": "strict",
-                                        "key_up_order": "strict_inverse",
-                                        "to_after_key_up": [
-                                            {
-                                                "set_variable": {
-                                                    "name": "mouse_keys_mode_v4",
-                                                    "value": 0
-                                                }
-                                            },
-                                            {
-                                                "set_variable": {
-                                                    "name": "mouse_keys_mode_v4_scroll",
-                                                    "value": 0
-                                                }
-                                            }
-                                        ]
-                                    }
-                                },
-                                "parameters": {
-                                    "basic.simultaneous_threshold_milliseconds": 500
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "mouse_keys_mode_v4",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "software_function": {
-                                            "set_mouse_cursor_position": {
-                                                "screen": 0,
                                                 "x": "50%",
                                                 "y": "50%"
                                             }
@@ -1356,7 +1271,7 @@
                             },
                             "to": [
                                 {
-                                    "key_code": "right_command"
+                                    "key_code": "left_command"
                                 }
                             ]
                         },
@@ -1425,7 +1340,7 @@
                             },
                             "to": [
                                 {
-                                    "key_code": "right_command"
+                                    "key_code": "left_command"
                                 }
                             ]
                         },
