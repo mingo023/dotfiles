@@ -19,7 +19,7 @@ return {
     config = function()
       require("zen-mode").setup({
         window = {
-          width = 1,
+          width = 0.8,
         },
       })
     end,
@@ -38,4 +38,10 @@ return {
       require("cores.notify")
     end,
   },
+  {
+    "levouh/tint.nvim",
+    config = function()
+      require("cores.tint")
+    end
+  }
 }

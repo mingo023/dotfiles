@@ -6,6 +6,7 @@ map("i", "jj", "<ESC>", { silent = true })
 map("v", "<C-c>", '"+y')
 
 -- remove matchings map("n", "<Leader>dm", ":noh <CR>", { silent = true })
+map("n", "<Leader>dm", ":noh <CR>", { silent = true })
 
 -- search all the words match with current selection
 map("v", "/", 'y/<C-R>"<CR>N', { silent = true })

@@ -35,13 +35,13 @@ require("dapui").setup({
           id = "breakpoints",
           size = 0.25,
         },
-        {
-          id = "stacks",
-          size = 0.25,
-        },
+        -- {
+        --   id = "stacks",
+        --   size = 0.25,
+        -- },
         {
           id = "scopes",
-          size = 0.50,
+          size = 0.75,
         },
       },
       position = "right",
