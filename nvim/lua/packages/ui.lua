@@ -5,12 +5,12 @@ return {
     config = function()
       require("fidget").setup({
         text = {
-          spinner = "dots_ellipsis"
+          spinner = "dots_ellipsis",
         },
         window = {
           blend = 0,
           relative = "editor",
-        }
+        },
       })
     end,
   },
@@ -38,10 +38,4 @@ return {
       require("cores.notify")
     end,
   },
-  {
-    "levouh/tint.nvim",
-    config = function()
-      require("cores.tint")
-    end
-  }
 }

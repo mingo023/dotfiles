@@ -8,4 +8,7 @@ return {
       require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
     end,
   },
+  {
+    "alexghergh/nvim-tmux-navigation"
+  },
 }

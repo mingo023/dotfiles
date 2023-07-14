@@ -1012,10 +1012,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "close_bracket",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_shift"],
+                                        "key_code": "close_bracket"
                                     }
                                 ],
                                 "type": "basic"
@@ -1038,10 +1036,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "open_bracket",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_shift"],
+                                        "key_code": "open_bracket"
                                     }
                                 ],
                                 "type": "basic"
@@ -1064,10 +1060,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "0",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_shift"],
+                                        "key_code": "0"
                                     }
                                 ],
                                 "type": "basic"
@@ -1090,10 +1084,8 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "9",
-                                        "modifiers": [
-                                            "left_shift"
-                                        ]
+                                        "modifiers": ["left_shift"],
+                                        "key_code": "9"
                                     }
                                 ],
                                 "type": "basic"
@@ -1432,16 +1424,6 @@
                             "to": [
                                 {
                                     "key_code": "right_command"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
-                                "key_code": "delete_or_backspace"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "vk_none"
                                 }
                             ]
                         }
