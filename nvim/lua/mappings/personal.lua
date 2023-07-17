@@ -36,3 +36,7 @@ map("n", "<A-Right>", ":vertical resize -5<CR>")
 map("n", "<A-Up>", ":resize +5<CR>")
 map("n", "<A-Down>", ":resize -5<CR>")
 
+-- quick save and quit
+map("n", "<C-q>", ":qa! <CR>")
+map("i", "<C-q>", "<Esc>:qa! <CR>")
+
