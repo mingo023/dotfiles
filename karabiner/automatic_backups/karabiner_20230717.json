@@ -1407,16 +1407,6 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "delete_or_backspace"
-                            },
-                            "to": [
-                                {
-                                    "key_code": "vk_none"
-                                }
-                            ]
-                        },
-                        {
-                            "from": {
                                 "key_code": "left_command"
                             },
                             "to": [
@@ -1442,6 +1432,16 @@
                             "to": [
                                 {
                                     "key_code": "right_command"
+                                }
+                            ]
+                        },
+                        {
+                            "from": {
+                                "key_code": "delete_or_backspace"
+                            },
+                            "to": [
+                                {
+                                    "key_code": "vk_none"
                                 }
                             ]
                         }
@@ -1510,7 +1510,7 @@
                             },
                             "to": [
                                 {
-                                    "key_code": "right_command"
+                                    "key_code": "left_command"
                                 }
                             ]
                         }
