@@ -26,7 +26,6 @@ local movement_pkg = require("packages.movement")
 local testing_pkg = require("packages.testing")
 local term_pkg = require("packages.term")
 local ui_pkg = require("packages.ui")
-local dap_pkg = require("packages.dap")
 local dashboard_pkg = require("packages.dashboard")
 local bufferline_pkg = require("packages.bufferline")
 local db_pkg = require("packages.db")
@@ -45,7 +44,6 @@ local plugins = merge(
   testing_pkg,
   term_pkg,
   ui_pkg,
-  dap_pkg,
   dashboard_pkg,
   bufferline_pkg,
   db_pkg
