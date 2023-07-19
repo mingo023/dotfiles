@@ -162,3 +162,7 @@ filepath
 msgs
 msgs
 qual
+subcat
+warnf
+bcrypt
+warnw
