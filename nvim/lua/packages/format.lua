@@ -44,8 +44,5 @@ return {
     config = function()
       require("pretty-fold").setup()
     end,
-  },
-  {
-    "gpanders/editorconfig.nvim"
   }
 }

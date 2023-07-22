@@ -51,12 +51,12 @@ return {
   {
     "mg979/vim-visual-multi",
   },
-  {
-    "liuchengxu/vista.vim",
-    config = function()
-      require("cores.vista")
-    end,
-  },
+  -- {
+  --   "liuchengxu/vista.vim",
+  --   config = function()
+  --     require("cores.vista")
+  --   end,
+  -- },
   {
     "uarun/vim-protobuf",
   },

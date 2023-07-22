@@ -1,5 +1,4 @@
 return {
-  { "preservim/vimux" },
   {
     "folke/which-key.nvim",
     config = function()

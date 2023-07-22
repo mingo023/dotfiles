@@ -25,6 +25,8 @@ opt.pumheight = 20
 -- CURSOR
 -- opt.gcr = 'a:blinkon0'
 
+vim.g.editorconfig = true
+
 -- SWAPFILE
 vim.g.noswapfile = true
 vim.g.nobackup = true
