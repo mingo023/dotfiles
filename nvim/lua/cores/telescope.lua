@@ -36,13 +36,21 @@ telescope.setup({
         -- ["<C-t>"] = trouble.open_with_trouble
       },
     },
-    layout_config = {
-      height = 0.8,
-      width = 0.6,
-      vertical = { preview_height = 0.7 },
-    },
     initial_mode = "insert",
-    layout_strategy = "vertical",
+  },
+  pickers = {
+    git_files = {
+      theme = "ivy",
+    },
+    live_grep = {
+      theme = "ivy",
+    },
+    lsp_references = {
+      theme = "ivy",
+    },
+    lsp_document_symbols = {
+      theme = "ivy",
+    },
   },
   extensions = {
     fzf = {

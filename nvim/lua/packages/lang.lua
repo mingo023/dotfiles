@@ -60,7 +60,4 @@ return {
   {
     "uarun/vim-protobuf",
   },
-  {
-    "olexsmir/gopher.nvim",
-  },
 }
