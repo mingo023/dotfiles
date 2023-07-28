@@ -16,7 +16,7 @@ telescope.setup({
       i = {
         ["<C-d>"] = actions.close,
         ["<Esc>"] = actions.close,
-        ["<C-j>"] = actions.move_selection_next,
+        -- ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-b>"] = actions.preview_scrolling_up,
         -- ["<C-f>"] = actions.preview_scrolling_down,
@@ -27,7 +27,7 @@ telescope.setup({
       n = {
         ["<C-d>"] = actions.close,
         ["<Esc>"] = actions.close,
-        ["<C-j>"] = actions.move_selection_next,
+        -- ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-b>"] = actions.preview_scrolling_up,
         -- ["<C-f>"] = actions.preview_scrolling_down,
@@ -40,6 +40,9 @@ telescope.setup({
   },
   pickers = {
     git_files = {
+      theme = "ivy",
+    },
+    find_files = {
       theme = "ivy",
     },
     live_grep = {
