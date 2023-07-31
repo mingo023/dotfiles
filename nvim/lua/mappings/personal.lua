@@ -40,3 +40,5 @@ map("n", "<A-Down>", ":resize -5<CR>")
 map("n", "<C-q>", ":qa! <CR>")
 map("i", "<C-q>", "<Esc>:qa! <CR>")
 
+map("n", "j", "gj")
+map("n", "k", "gk")
