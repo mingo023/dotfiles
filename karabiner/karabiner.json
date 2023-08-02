@@ -1130,6 +1130,29 @@
                                     }
                                 ],
                                 "from": {
+                                    "key_code": "spacebar",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "caps_lock pressed",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
                                     "key_code": "h",
                                     "modifiers": {
                                         "optional": [
