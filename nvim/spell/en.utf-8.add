@@ -182,3 +182,5 @@ segmentio
 query
 goroutine
 mfdates
+hono
+networkidle

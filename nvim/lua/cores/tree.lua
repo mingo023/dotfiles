@@ -32,7 +32,7 @@ require("nvim-tree").setup({
   system_open = { cmd = nil, args = {} },
   renderer = { indent_markers = { enable = true }, highlight_git = true },
   view = {
-    adaptive_size = true,
+    adaptive_size = false,
     side = "left",
     mappings = { custom_only = false, list = {} },
   },
