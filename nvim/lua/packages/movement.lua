@@ -9,7 +9,7 @@ return {
   --   end,
   -- },
   {
-    "alexghergh/nvim-tmux-navigation",
+    "christoomey/vim-tmux-navigator",
   },
   {
     "folke/flash.nvim",
