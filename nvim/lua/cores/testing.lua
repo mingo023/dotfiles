@@ -1,5 +1,6 @@
 require("neotest").setup({
   adapters = {
+    require("neotest-rspec"),
     require("neotest-jest")({
       jestCommand = "npm run test:e2e --",
       jestConfigFile = "custom.jest.config.ts",

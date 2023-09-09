@@ -51,6 +51,9 @@ return {
   {
     "mg979/vim-visual-multi",
   },
+  {
+    "tpope/vim-rails",
+  },
   -- {
   --   "liuchengxu/vista.vim",
   --   config = function()
