@@ -1,7 +1,7 @@
 return {
-  {
-    "mfussenegger/nvim-treehopper",
-  },
+  -- {
+  --   "mfussenegger/nvim-treehopper",
+  -- },
   -- {
   --   "phaazon/hop.nvim",
   --   config = function()

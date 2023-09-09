@@ -185,3 +185,6 @@ mfdates
 hono
 networkidle
 intn
+sigint
+syscall
+sigterm

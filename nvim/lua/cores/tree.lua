@@ -1,8 +1,3 @@
-local present, tree_c = pcall(require, "nvim-tree.config")
-if not present then
-  return
-end
-
 local g = vim.g
 
 require("nvim-tree").setup({
@@ -34,7 +29,6 @@ require("nvim-tree").setup({
   view = {
     adaptive_size = false,
     side = "left",
-    mappings = { custom_only = false, list = {} },
   },
 })
 
