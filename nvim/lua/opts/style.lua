@@ -1,5 +1,5 @@
 vim.cmd([[
-    syntax enable
+    syntax off
     if has('termguicolors')
       set termguicolors
     endif
@@ -15,4 +15,3 @@ vim.api.nvim_set_hl(0, "NotificationError", { ctermbg = 0, bg = transparent, fg 
 vim.api.nvim_set_hl(0, "cursorlinenr", { ctermbg = bold, bg = transparent, fg = "#03fc0f" })
 
 vim.cmd.colorscheme("catppuccin-macchiato")
-

@@ -185,9 +185,9 @@ install_golang_tools() {
     fi
 }
 
+install_homebrew
 setup_tmux
 install_fish
-install_homebrew
 install_languages
 setup_git
 install_font

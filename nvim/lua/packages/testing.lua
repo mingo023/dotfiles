@@ -12,4 +12,14 @@ return {
       require("cores.testing")
     end,
   },
+  {
+    "vim-test/vim-test",
+    dependencies = {
+      "preservim/vimux",
+    },
+    config = function()
+      -- set strategy
+      vim.g["test#strategy"] = "vimux"
+    end,
+  },
 }
