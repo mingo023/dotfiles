@@ -16,7 +16,6 @@ cmp.setup({
   window = {
     completion = cmp.config.window.bordered({
       border = "rounded",
-      winhighlight = "NormalFloat:NormalFloat,FloatBorder:NormalFloat",
     }),
   },
   formatting = {
