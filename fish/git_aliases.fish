@@ -12,7 +12,6 @@ function current_repository
 end
 
 alias gst='git status'
-alias ggpush='git push origin (current_branch)'
 alias ggpull='git pull origin (current_branch)'
 alias gco='git checkout'
 alias gco='git checkout'
@@ -23,3 +22,22 @@ alias gd='git diff'
 alias gcmsg='git commit -m'
 alias md='mkdir -p'
 alias gfo='git fetch origin'
+
+function ggpush
+    # Check if the last argument is '--force'
+
+    set arg "$argv[-1]"
+    if test "$arg" = "--force"; or test "$arg" = "-f"
+        echo "🚧 use --force-with-lease instead of --force <ngungok>"
+        read -l -P '❔ Do you want to git push with --force-with-lease? [y/N] ' confirm
+        switch $confirm
+          case Y y
+            git push --force-with-lease origin (current_branch)
+          case '' N n
+            return 1
+        end
+    else
+        # If '--force' is not the last argument, execute the git push command
+        git push origin (current_branch)
+    end
+end
