@@ -11,7 +11,7 @@ telescope.setup({
     winblend = 0,
     hidden = true,
     -- preview = false,
-    file_ignore_patterns = { "node_modules" },
+    file_ignore_patterns = { "node_modules", "tags" },
     mappings = {
       i = {
         ["<C-d>"] = actions.close,
@@ -52,6 +52,9 @@ telescope.setup({
       theme = "ivy",
     },
     lsp_document_symbols = {
+      theme = "ivy",
+    },
+    buffers = {
       theme = "ivy",
     },
   },

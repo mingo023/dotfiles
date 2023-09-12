@@ -1,7 +1,14 @@
 local map = vim.keymap.set
 local telescope_builtin = require("telescope.builtin")
 
-map("n", "<Leader>fb", ":Telescope buffers <CR>")
+map("n", "<Leader>fb", function()
+  telescope_builtin.buffers({
+    show_all_buffers = true,
+    sort_lastused = true,
+    ignore_current_buffer = true,
+    prompt_prefix = "🔍 ",
+  })
+end, { silent = true })
 
 map("n", "<C-p>", function()
   telescope_builtin.find_files({
