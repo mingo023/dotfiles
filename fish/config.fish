@@ -14,8 +14,8 @@ set -gx PATH $PATH $GOPATH/bin
 
 
 # Ruby setup
-set -gx GEM_HOME $HOME/.gem
-set -gx PATH $PATH:$(ruby -e 'print Gem.user_dir')/bin
+# set -gx GEM_HOME $HOME/.gem
+# set -gx PATH $PATH:$(ruby -e 'print Gem.user_dir')/bin
 
 
 set -gx NVM_DIR $HOME/.nvm

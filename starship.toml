@@ -1,3 +1,5 @@
+format = "$directory$git_branch$git_status"
+
 [git_status]
 conflicted = '🏳'
 ahead = '🏎💨'
@@ -11,4 +13,3 @@ staged = '[++\($count\)](green)'
 renamed = '👅'
 deleted = '🗑'
 
-format = "$directory$git_branch$all_status"
