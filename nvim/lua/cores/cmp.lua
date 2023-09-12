@@ -27,7 +27,7 @@ cmp.setup({
         nvim_lua = "[Lua]",
         buffer = "[BUF]",
         luasnip = "[Snip]",
-        ['vim-dadbod-completion'] = '[DB]',
+        ["vim-dadbod-completion"] = "[DB]",
       })[entry.source.name]
 
       return vim_item
@@ -76,14 +76,29 @@ cmp.setup({
     {
       name = "path",
     },
+    {
+      name = "tags",
+      option = {
+        -- this is the default options, change them if you want.
+        -- Delayed time after user input, in milliseconds.
+        complete_defer = 100,
+        -- Max items when searching `taglist`.
+        max_items = 10,
+        -- Use exact word match when searching `taglist`, for better searching
+        -- performance.
+        exact_match = false,
+        -- Prioritize searching result for current buffer.
+        current_buffer_only = false,
+      },
+    },
   },
 })
 
-local autocomplete_group = vim.api.nvim_create_augroup('vimrc_autocompletion', { clear = true })
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'sql', 'mysql', 'plsql' },
+local autocomplete_group = vim.api.nvim_create_augroup("vimrc_autocompletion", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "sql", "mysql", "plsql" },
   callback = function()
-    cmp.setup.buffer({ sources = { { name = 'vim-dadbod-completion' } } })
+    cmp.setup.buffer({ sources = { { name = "vim-dadbod-completion" } } })
   end,
   group = autocomplete_group,
 })
@@ -108,4 +123,3 @@ cmp.setup.cmdline(":", {
     },
   }),
 })
-

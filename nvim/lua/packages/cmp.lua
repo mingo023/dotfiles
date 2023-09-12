@@ -40,4 +40,7 @@ return {
   {
     "hrsh7th/cmp-cmdline",
   },
+  {
+    "quangnguyen30192/cmp-nvim-tags"
+  }
 }

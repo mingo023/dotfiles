@@ -22,7 +22,7 @@ fail () {
 }
 
 setup_tmux() {
-    ln -s ~/.config/.tmux/.tmux.conf ~/.tmux.conf
+  ln -s ~/.config/.tmux/.tmux.conf ~/.tmux.conf
 }
 
 setup_mac_config() {
@@ -35,17 +35,14 @@ setup_mac_config() {
   defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 
   # change wallpaper
-  osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/minh.ngovan/.config/wallpaper/lofi-coffee.jpg"'
+  # osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/minh.ngovan/.config/wallpaper/lofi-coffee.jpg"'
 }
 
 install_homebrew() {
   read -r -p "Do you want to install homebrew? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    brew update --force --quiet
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/minhngo/.config/fish/config.fish
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    success "Installed homebrew"
+    success "🎊 Installed homebrew Successfully, please do brew's constructions"
   fi
 }
 
@@ -55,6 +52,10 @@ install_fish() {
     brew install fish
     brew install starship
     curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+
+    # set fish as default shell
+    sudo sh -c "echo '/opt/homebrew/bin/fish' >> /etc/shells"
+    chsh -s /opt/homebrew/bin/fish
 }
 
 install_languages() {
@@ -116,7 +117,7 @@ install_tmux() {
   read -r -p "Do you want to install tmux? [y|N] " response
   if [[ $response =~ (y|yes|Y) ]];then
     brew install tmux
-    rm ~/.tmux.conf
+    rm -f ~/.tmux.conf
     cd ~/.dotfiles/terminals && stow tmux -t ~/
 
     rm -rf ~/.tmux/plugins/tpm
@@ -165,26 +166,39 @@ install_tools() {
 }
 
 install_typescript_tools() {
-    read -r -p "Do you want to install typescript tools? [y|N] " response
-    if [[ $response =~ (y|yes|Y) ]];then
-        npm i -g typescript
-        npm i -g vscode-eslint-language-server
-        npm i -g prettier
-        npm i -g typescript-language-server typescript
+  read -r -p "Do you want to install typescript tools? [y|N] " response
+  if [[ $response =~ (y|yes|Y) ]];then
+      npm i -g typescript
+      npm i -g vscode-eslint-language-server
+      npm i -g prettier
+      npm i -g typescript-language-server typescript
 
-        success "Installed typescript tools"
-    fi
+      success "Installed typescript tools"
+  fi
 }
 
 install_golang_tools() {
-    read -r -p "Do you want to install golang tools? [y|N] " response
-    if [[ $response =~ (y|yes|Y) ]];then
-        go install golang.org/x/tools/gopls@latest
+  read -r -p "Do you want to install golang tools? [y|N] " response
+  if [[ $response =~ (y|yes|Y) ]];then
+      go install golang.org/x/tools/gopls@latest
 
-        success "Installed golang tools"
-    fi
+      success "Installed golang tools"
+  fi
 }
 
+install_ctags_ruby() {
+  read -r -p "Do you want to ruby ctags to support neovim? [y|N] " response
+  if [[ $response =~ (y|yes|Y) ]];then
+    brew install universal-ctags
+
+    git clone https://github.com/tmm1/ripper-tags ~/ripper-tags
+
+    sudo ln -s ~/ripper-tags/bin/ripper-tags /usr/local/bin/ripper-tags
+  fi
+}
+
+
+setup_mac_config
 install_homebrew
 setup_tmux
 install_fish
@@ -197,6 +211,6 @@ install_tmux
 install_tools
 install_typescript_tools
 install_golang_tools
-setup_mac_config
+install_ctags_ruby
 
 echo "Finish Install! 🎉 🚀"
