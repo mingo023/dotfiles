@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-status --is-interactive; and rbenv init - fish | source
+# status --is-interactive; and rbenv init - fish | source
 
 set -gx PATH /opt/homebrew/bin:$PATH
 set -gx PATH $HOME/bin:/usr/local/bin:$PATH
@@ -18,7 +18,6 @@ set -gx PATH $PATH $GOPATH/bin
 # set -gx PATH $PATH:$(ruby -e 'print Gem.user_dir')/bin
 
 
-set -gx NVM_DIR $HOME/.nvm
 set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 
 set fish_path $HOME/.config/fish
@@ -62,3 +61,5 @@ function wpp
   set wallpaper (exa $home/.config/wallpapers | fzf)
   osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$home/.config/wallpapers/$wallpaper\""
 end
+
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
