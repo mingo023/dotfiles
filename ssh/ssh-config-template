@@ -1,0 +1,4 @@
+Host github.com-me
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/nvminh023

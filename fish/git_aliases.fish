@@ -29,9 +29,10 @@ function ggpush
     set arg "$argv[-1]"
     if test "$arg" = "--force"; or test "$arg" = "-f"
         echo "🚧 use --force-with-lease instead of --force <ngungok>"
-        read -l -P '❔ Do you want to git push with --force-with-lease? [y/N] ' confirm
+        read -l -P '❔ Do you want to git push with --force-with-lease? Type: current-branch to push 💭: ' confirm
         switch $confirm
-          case Y y
+          case (current_branch)
+            set_color blue; echo "🚀 git push --force-with-lease origin (current_branch)"; set_color normal
             git push --force-with-lease origin (current_branch)
           case '' N n
             return 1
