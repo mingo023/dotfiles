@@ -13,7 +13,9 @@ map("n", ",bp", ":bp <CR>", {
   silent = true,
 })
 
-map("n", "<Leader>p", ":BufferLinePick <CR>", {
-  noremap = true,
-  silent = true,
-})
+for i = 1,9 do
+  map("n", ("<Leader>%s"):format(i), ("<Cmd>BufferLineGoToBuffer %s<CR>"):format(i), {
+    noremap = true,
+    silent = true,
+  })
+end
