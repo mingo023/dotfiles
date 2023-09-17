@@ -88,6 +88,7 @@ install_font() {
     brew install --cask font-jetbrains-mono
     brew install --cask font-jetbrains-mono-nerd-font
     brew install --cask font-hack-nerd-font
+    brew install --cask sf-symbols
 
     success "Installed font!"
   fi
