@@ -1,11 +1,11 @@
 return {
   {
-    "willothy/nvim-cokeline",
+    "akinsho/bufferline.nvim",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
     config = function()
-      require("cores.bufferline")
+      require("bufferline").setup()
     end,
   },
 }
