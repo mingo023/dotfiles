@@ -26,7 +26,6 @@ return {
   },
   {
     "narutoxy/silicon.lua",
-    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("cores.silicon")
     end,

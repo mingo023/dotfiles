@@ -1,11 +1,11 @@
 return {
-  {
-    "willothy/nvim-cokeline",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      require("cores.bufferline")
-    end,
-  },
+  -- {
+  --   "willothy/nvim-cokeline",
+  --   dependencies = {
+  --     "nvim-tree/nvim-web-devicons",
+  --   },
+  --   config = function()
+  --     require("cores.bufferline")
+  --   end,
+  -- },
 }

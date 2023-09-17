@@ -1,4 +1,4 @@
 require("silicon").setup({
-  font = "JetBrainsMonoNL Nerd Font Mono=20",
-  theme = "Gruvbox Material",
+  font = "Hack=20",
+  theme = "OneHalfDark",
 })

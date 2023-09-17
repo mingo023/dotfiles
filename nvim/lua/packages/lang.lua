@@ -17,6 +17,9 @@ return {
     end,
   },
   {
+    "nvim-treesitter/nvim-treesitter-context"
+  },
+  {
     "glepnir/lspsaga.nvim",
     event = "LspAttach",
     config = function()
