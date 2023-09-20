@@ -13,14 +13,10 @@ end, { silent = true })
 map("n", "<C-p>", function()
   telescope_builtin.find_files({
     find_command = {
-      "rg",
-      "--ignore",
-      "--hidden",
-      "-uu",
-      "--glob=!.git/",
-      "--glob=!.build/",
-      "--glob=!.idea/",
-      "--files",
+      "fd",
+      "--type",
+      "f",
+      "--follow",
     },
     prompt_prefix = "🔍 ",
   })
