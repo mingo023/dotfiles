@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SPACE_ICONS=("􀯠" "􀩼" "􀰳" "4" "5")
+SPACE_ICONS=("􀵵" "􀩼" "􀌴" "4" "5")
 
 LABEL="JetBrainsMono Nerd Font Mono"
 

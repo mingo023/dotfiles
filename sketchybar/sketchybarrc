@@ -13,7 +13,7 @@ sketchybar --bar     height=24                                            \
                      padding_left=4                                       \
                      padding_right=4                                      \
                      color=0xff1e1e1e                                     \
-                     position=top                                      \
+                     position=bottom                                      \
                      sticky=on                                            \
                      font_smoothing=on                                    \
                                                                           \
@@ -42,9 +42,6 @@ source "$ITEM_DIR/mic.sh"
 source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/airpodsbattery.sh"
-source "$ITEM_DIR/disk.sh"
-source "$ITEM_DIR/mem.sh"
-source "$ITEM_DIR/cpu.sh"
 
 # initializing
 sketchybar --update

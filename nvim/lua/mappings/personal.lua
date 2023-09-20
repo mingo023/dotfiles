@@ -29,7 +29,7 @@ map("v", ":", ":s/")
 -- })
 
 -- remap :w to <cmd+s> (check at: ~/.config/alacritty/alacritty.yml:705)
-map("c", "w<CR>", 'echo "🚨 use <cmd+s> instead"<CR>')
+-- map("c", "w<CR>", 'echo "🚨 use <cmd+s> instead"<CR>')
 
 map("n", "<A-Left>", ":vertical resize +5<CR>")
 map("n", "<A-Right>", ":vertical resize -5<CR>")
