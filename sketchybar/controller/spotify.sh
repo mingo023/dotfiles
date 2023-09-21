@@ -40,7 +40,8 @@ update_track() {
         fi
         sketchybar --set $NAME label="${TRACK}  ${ARTIST} " label.drawing=yes icon.color=0xffa6da95 icon= 
     else
-        sketchybar --set $NAME label="No Music " icon.color=0xffeed49f icon= 
+        # set empty label and icon
+        sketchybar --set $NAME label="" icon=""
     fi
 }
 

@@ -53,4 +53,6 @@ yabai -m rule --add app="Finder" manage=off
 yabai -m rule --add app="Preview" manage=off
 yabai -m rule --add app="Telegram Web" manage=off
 yabai -m rule --add app="Telegram" manage=off
+yabai -m rule --add app="Spotify" manage=off
+
 echo "yabai configuration loaded.."
