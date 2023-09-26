@@ -1,5 +1,5 @@
 vim.cmd([[
-    syntax off
+    syntax on
     if has('termguicolors')
       set termguicolors
     endif

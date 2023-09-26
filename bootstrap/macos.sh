@@ -160,6 +160,7 @@ install_tools() {
     brew install orbstack
     brew install --cask betterdisplay
     brew install MonitorControl
+    brew install --cask obsidian
 
     success "Installed working tools"
   fi
