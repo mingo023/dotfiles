@@ -4,9 +4,9 @@ vim.cmd([[
       set termguicolors
     endif
 ]])
-
+vim.cmd("let g:gruvbox_material_foreground='mix'")
 vim.cmd("let g:gruvbox_material_background = 'medium'")
-vim.cmd.colorscheme("slate")
+vim.cmd.colorscheme("gruvbox-material")
 
 vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = 0, bg = transparent, fg = transparent })
 

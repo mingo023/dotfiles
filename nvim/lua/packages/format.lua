@@ -26,13 +26,13 @@ return {
   {
     "kamykn/spelunker.vim",
   },
-  -- {
-  --   "nvim-pack/nvim-spectre",
-  --   dependencies = "nvim-lua/plenary.nvim",
-  --   config = function()
-  --     require("cores.spectre")
-  --   end
-  -- },
+  {
+    "nvim-pack/nvim-spectre",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      require('spectre').setup()
+    end
+  },
   {
     "jose-elias-alvarez/null-ls.nvim",
     config = function()

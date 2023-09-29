@@ -12,6 +12,9 @@ set -gx GOPATH $HOME/go
 set -gx GOROOT "/opt/homebrew/opt/go/libexec"
 set -gx PATH $PATH $GOPATH/bin
 
+# config for HF projects
+set -gx PATH ".git/safe/../../bin:$PATH"
+
 
 # Ruby setup
 # set -gx GEM_HOME $HOME/.gem
