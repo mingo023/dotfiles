@@ -8,7 +8,7 @@ GREEN="0xffa6da95"
 
 # Check if the Warp VPN status is "on" or "off"
 if [[ $status == *"warp=on"* ]]; then
-  sketchybar --set $NAME label="WARP" label.color=$GREEN
+  sketchybar --set $NAME label="WARP /" label.color=$GREEN
 else
-  sketchybar --set $NAME label="WARP" label.color=$NORD4
+  sketchybar --set $NAME label="WARP /" label.color=$NORD4
 fi

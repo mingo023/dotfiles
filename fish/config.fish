@@ -41,6 +41,7 @@ alias k='kubectl'
 alias lg='lazygit'
 alias ct-be='cd ~/dev/chotot/be'
 alias kp='k get pods'
+alias t='task'
 
 function work
     ~/dev/work/
