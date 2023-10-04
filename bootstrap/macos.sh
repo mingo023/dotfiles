@@ -152,6 +152,7 @@ install_tools() {
     success "Installed some fancy tools"
 
     brew install --cask google-chrome
+    brew install --cask arc
     brew install --cask visual-studio-code
     brew install --cask postman
     brew install --cask notion
