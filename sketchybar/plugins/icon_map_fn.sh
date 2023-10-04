@@ -39,6 +39,9 @@ function icon_map() {
   "Spotify")
     icon_result=":spotify:"
     ;;
+  "Arc")
+    icon_result=":arc:"
+    ;;
   "Calibre")
     icon_result=":book:"
     ;;
