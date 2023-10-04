@@ -147,6 +147,7 @@ install_tools() {
     brew install asciinema
     brew install gnu-sed
     brew install exa
+    brew install git-delta
 
     success "Installed some fancy tools"
 
