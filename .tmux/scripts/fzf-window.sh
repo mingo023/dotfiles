@@ -29,7 +29,7 @@ elif [[ "$action" == "move" ]]; then
 else
     FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS --header='Select target window.'"
     windows=$(echo "$windows" | grep -v "^$current_window")
-    target_origin=$(printf "%s\n[cancel]" "$windows" | eval "$TMUX_FZF_BIN $TMUX_FZF_OPTIONS $TMUX_FZF_PREVIEW_OPTIONS")
+    target_origin=$(printf "%s\n[cancel]" "$windows" | eval "$TMUX_FZF_BIN $TMUX_FZF_OPTIONS")
     [[ "$target_origin" == "[cancel]" || -z "$target_origin" ]] && exit
     target=$(echo "$target_origin" | sed 's/: .*//')
     echo "$target" | sed 's/:.*//g' | xargs -I{} tmux switch-client -t {}
