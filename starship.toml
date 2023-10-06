@@ -1,4 +1,9 @@
-format = "$directory$git_branch$git_status"
+format = """
+$directory\
+$git_branch\
+$git_status
+$character
+"""
 
 [git_status]
 conflicted = '🏳'
@@ -12,4 +17,3 @@ modified = '📝'
 staged = '[++\($count\)](green)'
 renamed = '👅'
 deleted = '🗑'
-

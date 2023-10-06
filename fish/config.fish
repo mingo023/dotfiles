@@ -56,7 +56,7 @@ function learning
     ~/dev/learning/
 end
 
-# starship init fish | source
+starship init fish | source
 
 function fish_greeting
 end
