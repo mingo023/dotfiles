@@ -4,14 +4,36 @@ local trouble = require("trouble.providers.telescope")
 
 telescope.setup({
   defaults = {
-    prompt_prefix = "   ",
+    file_ignore_patterns = {
+      ".git/", ".cache", "%.o", "%.a", "%.out", "%.class", "%.pdf", "%.mkv",
+      "%.mp4", "%.zip"
+    },
+    vimgrep_arguments = {
+      "rg", "--color=never", "--no-heading", "--with-filename", "--line-number",
+      "--column", "--smart-case"
+    },
     selection_caret = " ❯ ",
-    entry_prefix = "   ",
-    sorting_strategy = "ascending",
+    path_display = {'truncate'},
+    sorting_strategy = 'ascending',
+    file_sorter = require("telescope.sorters").get_fzy_sorter,
     winblend = 0,
-    hidden = true,
-    -- preview = false,
-    file_ignore_patterns = { "node_modules", "tags" },
+    color_devicons = true,
+    use_less = true,
+    set_env = {["COLORTERM"] = "truecolor"}, -- default = nil,
+    initial_mode = "insert",
+    results_title = false,
+    border = true,
+    borderchars = {
+      prompt = {" ", " ", "─", " ", " ", " ", "─", "─"},
+      results = {"─", " ", " ", " ", "─", "─", " ", " "},
+      preview = {"─", " ", "─", "│", "┬", "─", "─", "╰"}
+    },
+    layout_strategy = 'bottom_pane',
+    layout_config = {
+      height = 0.2,
+      preview_width = 0.5,
+      prompt_position = "bottom"
+    },
     mappings = {
       i = {
         ["<C-d>"] = actions.close,
@@ -36,27 +58,6 @@ telescope.setup({
         -- ["<C-t>"] = trouble.open_with_trouble
       },
     },
-    initial_mode = "insert",
-  },
-  pickers = {
-    git_files = {
-      theme = "ivy",
-    },
-    find_files = {
-      theme = "ivy",
-    },
-    live_grep = {
-      theme = "ivy",
-    },
-    lsp_references = {
-      theme = "ivy",
-    },
-    lsp_document_symbols = {
-      theme = "ivy",
-    },
-    buffers = {
-      theme = "ivy",
-    },
   },
   extensions = {
     fzf = {
@@ -70,3 +71,4 @@ telescope.setup({
 })
 
 require("telescope").load_extension("fzf")
+
