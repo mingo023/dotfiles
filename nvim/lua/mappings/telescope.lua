@@ -6,7 +6,6 @@ map("n", "<Leader>fb", function()
     show_all_buffers = true,
     sort_lastused = true,
     ignore_current_buffer = true,
-    prompt_prefix = "🔍 ",
   })
 end, { silent = true })
 
@@ -18,14 +17,12 @@ map("n", "<C-p>", function()
       "f",
       "--follow",
     },
-    prompt_prefix = "🔍 ",
   })
 end, { silent = true })
 
 map("n", "<Leader>fg", function()
   telescope_builtin.live_grep({
     find_command = { "rg", "--ignore", "--hidden", "--files" },
-    prompt_prefix = "🔍 ",
   })
 end, { silent = true })
 

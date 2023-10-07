@@ -15,4 +15,7 @@ return {
       require("cores.theme")
     end,
   },
+  {
+    "Mofiqul/vscode.nvim",
+  },
 }

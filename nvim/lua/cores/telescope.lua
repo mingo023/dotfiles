@@ -13,6 +13,7 @@ telescope.setup({
       "--column", "--smart-case"
     },
     selection_caret = " ❯ ",
+    prompt_prefix=" 👀 ",
     path_display = {'truncate'},
     sorting_strategy = 'ascending',
     file_sorter = require("telescope.sorters").get_fzy_sorter,

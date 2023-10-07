@@ -18,13 +18,13 @@ return {
     keys = {
       {
         "s",
-        mode = { "n", "x", "o" },
+        mode = { "n" },
         function()
           require("flash").jump()
         end,
         desc = "Flash",
       },
-      { "S", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      { "S", mode = { "n" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
     },
   },
 }
