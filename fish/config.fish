@@ -12,6 +12,7 @@ set -gx GOPATH $HOME/go
 set -gx GOROOT "/opt/homebrew/opt/go/libexec"
 set -gx PATH $PATH $GOPATH/bin
 set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx AWS_PROFILE lawbite
 
 # config for HF projects
 set -gx PATH ".git/safe/../../bin:$PATH"

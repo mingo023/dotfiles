@@ -36,3 +36,11 @@ map("n", "<Leader>sp", function()
     },
   })
 end, { silent = true })
+
+function relative_paths()
+  local opts = {}
+  opts.cwd = vim.fn.expand("%:p:h")
+  require("telescope.builtin").find_files(opts)
+end
+
+map("n", ",e", relative_paths, { silent = true })
