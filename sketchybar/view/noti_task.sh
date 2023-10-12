@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-sketchybar --add item taskwarrior left                               \
+sketchybar --add item taskwarrior right                               \
            --set      taskwarrior script="$PLUGIN_DIR/noti_task.sh"  \
                                   update_freq=120                    \
                                   padding_left=2                     \
@@ -9,4 +9,3 @@ sketchybar --add item taskwarrior left                               \
                                   background.height=24               \
                                   icon=󱃔                    \
                                   icon.color=0xff${GREEN:1}            \
-                                  label.color=0xff${GREEN:1}            \

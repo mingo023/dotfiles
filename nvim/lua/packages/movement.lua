@@ -12,6 +12,10 @@ return {
     "christoomey/vim-tmux-navigator",
   },
   {
+    "ThePrimeagen/harpoon",
+    dependencies = { { "nvim-lua/plenary.nvim" } },
+  },
+  {
     "folke/flash.nvim",
     event = "VeryLazy",
     opts = {},
@@ -24,7 +28,14 @@ return {
         end,
         desc = "Flash",
       },
-      { "S", mode = { "n" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+      {
+        "S",
+        mode = { "n" },
+        function()
+          require("flash").treesitter()
+        end,
+        desc = "Flash Treesitter",
+      },
     },
   },
 }
