@@ -37,4 +37,7 @@ return {
       require("cores.notify")
     end,
   },
+  {
+    "onsails/lspkind.nvim",
+  }
 }

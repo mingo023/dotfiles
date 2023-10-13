@@ -1,3 +1,4 @@
+local lspkind = require('lspkind')
 local present, cmp = pcall(require, "cmp")
 
 if not present then
@@ -20,7 +21,7 @@ cmp.setup({
   },
   formatting = {
     format = function(entry, vim_item)
-      vim_item.kind = string.format("%s %s", require("plugins.lspkind_icons").icons[vim_item.kind], vim_item.kind)
+      vim_item.kind = lspkind.symbolic(vim_item.kind, {})
 
       vim_item.menu = ({
         nvim_lsp = "[LSP]",
