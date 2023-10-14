@@ -48,30 +48,15 @@ gitsigns.setup({
     -- Actions
     map("n", "<leader>hs", gs.stage_hunk)
     map("n", "<leader>hr", gs.reset_hunk)
-    map("v", "<leader>hs", function()
-      gs.stage_hunk({ vim.fn.line("."), vim.fn.line("v") })
-    end)
     map("v", "<leader>hr", function()
       gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
     end)
-    map("n", "<leader>hS", gs.stage_buffer)
-    map("n", "<leader>hu", gs.undo_stage_hunk)
-    map("n", "<leader>hR", gs.reset_buffer)
     map("n", "<leader>hp", gs.preview_hunk)
-    map("n", "<leader>hb", function()
-      gs.blame_line({ full = true })
-    end)
-    map("n", "<leader>tb", gs.toggle_current_line_blame)
-    map("n", "<leader>hd", gs.diffthis)
-    map("n", "<leader>hD", function()
-      gs.diffthis("~")
-    end)
-
-    -- Text object
-    map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
+    map("n", "<Leader>hl", ":Gitsigns setqflist<CR>")
   end,
 })
 
 vim.api.nvim_set_hl(0, "GitSignsAdd", { ctermbg = 0, bg = transparent, fg = "#69FF94" })
 vim.api.nvim_set_hl(0, "GitSignsChange", { ctermbg = 0, bg = transparent, fg = "#E5C07B" })
 vim.api.nvim_set_hl(0, "GitSignsDelete", { ctermbg = 0, bg = transparent, fg = "#E06C75" })
+

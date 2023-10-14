@@ -7,51 +7,16 @@ shift + alt - z : open -a /Applications/zoom.us.app
 shift + alt - p : open -a /Applications/Postman.app
 shift + alt - d : open -a /Applications/Discord.app
 shift + alt - n : open -a /Applications/Notion.app
-shift + alt - d : open -a /Users/minh.ngovan/Library/Application\ Support/JetBrains/Toolbox/apps/datagrip/ch-0/222.4167.25/Datagrip.app/
-# shift + alt - g : open -a /Users/minh.ngovan/Library/Application\ Support/JetBrains/Toolbox/apps/Goland/ch-0/223.8836.56/Goland.app/
-# shift + alt - f : open -a /Applications/Firefox.app
 
-# Make window native fullscreen
-alt - f         : yabai -m window --toggle zoom-fullscreen
-
-# Navigation
-cmd + shift - h : yabai -m window --focus west
-cmd + shift - j : yabai -m window --focus south
-cmd + shift - k : yabai -m window --focus north
-cmd + shift - l : yabai -m window --focus east
-
-alt - r : yabai -m space --rotate 90
-
-# Focus Space
-
-shift + ctrl - j: yabai -m window --focus stack.next || yabai -m window --focus stack.first
-shift + ctrl - k: yabai -m window --focus stack.prev || yabai -m window --focus stack.last
-shift + ctrl - 1: yabai -m window --focus 1
-shift + ctrl - 2: yabai -m window --focus 2
-
-# Resize windows
-shift + alt - h : \
-    yabai -m window --resize left:-20:0 ; \
-    yabai -m window --resize right:-20:0
-
-shift + alt - j : \
-    yabai -m window --resize bottom:0:20 ; \
-    yabai -m window --resize top:0:20
-
-shift + alt - k : \
-    yabai -m window --resize top:0:-20 ; \
-    yabai -m window --resize bottom:0:-20
-
-shift + alt - l : \
-    yabai -m window --resize right:20:0 ; \
-    yabai -m window --resize left:20:0
-
-# # equalize size of windows
-shift + alt - 0 : yabai -m space --balance
+shift + ctrl - 1 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.["stack-index"] == 1) | .id')
+shift + ctrl - 2 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.["stack-index"] == 2) | .id')
+shift + ctrl - 3 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.["stack-index"] == 3) | .id')
+shift + ctrl - 4 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.["stack-index"] == 4) | .id')
+shift + ctrl - 5 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.["stack-index"] == 5) | .id')
 
 # Restart Yabai
 shift + lctrl + alt - r :
     /usr/bin/env osascript <<< \
-        "display notification \"Mother fucker rock it now\" with title \"Louis Hacker\"";\
+        "display notification \"Mother fucker rock it now\" with title \"Mint\"";\
         sudo yabai --load-sa;\
         launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"; \
