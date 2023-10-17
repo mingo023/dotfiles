@@ -190,7 +190,7 @@ colors:
   # Normal colors
 
   primary:
-    background: '0x282828'
+    background: '#1D2021'
     foreground: '0xd4be98'
   normal:
     black:   '0x3c3836'
