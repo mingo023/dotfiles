@@ -80,6 +80,8 @@ require("catppuccin").setup({
   custom_highlights = function(colors)
     return {
       NormalFloat = { bg = colors.crust },
+      DiffAdd = { bg = colors.surface0, fg = colors.green },
+      DiffText = { bg = colors.surface0, fg = colors.blue },
       FloatBorder = { bg = colors.crust, fg = colors.crust },
       VertSplit = { bg = colors.base, fg = colors.surface0 },
       CursorLineNr = { fg = colors.mauve, style = { "bold" } },
