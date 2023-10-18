@@ -9,7 +9,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require("cores.indent")
+      require('cores.indent')
     end,
   },
   {
@@ -21,7 +21,13 @@ return {
     end,
   },
   {
-    "tpope/vim-surround",
+    "kylechui/nvim-surround",
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end,
   },
   {
     "kamykn/spelunker.vim",
@@ -30,8 +36,8 @@ return {
     "nvim-pack/nvim-spectre",
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
-      require('spectre').setup()
-    end
+      require("spectre").setup()
+    end,
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
@@ -44,5 +50,5 @@ return {
     config = function()
       require("pretty-fold").setup()
     end,
-  }
+  },
 }
