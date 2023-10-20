@@ -28,6 +28,7 @@ set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 set fish_path $HOME/.config/fish
 
 . $fish_path/git_aliases.fish
+. $fish_path/functions/fzf_pass.fish
 . $fish_path/custom_variables.fish
 
 alias ls="exa -l --icons"

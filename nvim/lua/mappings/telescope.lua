@@ -37,6 +37,8 @@ map("n", "<Leader>sp", function()
   })
 end, { silent = true })
 
+map("", ",g", ":Telescope git_status <CR>", { silent = true })
+
 function relative_paths()
   local opts = {}
   opts.cwd = vim.fn.expand("%:p:h")
