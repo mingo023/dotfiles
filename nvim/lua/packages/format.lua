@@ -9,7 +9,7 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require('cores.indent')
+      require("cores.indent")
     end,
   },
   {
@@ -21,13 +21,24 @@ return {
     end,
   },
   {
-    "kylechui/nvim-surround",
-    event = "VeryLazy",
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("nvim-surround").setup({
-        -- Configuration here, or leave empty to use defaults
+      require("todo-comments").setup({
+        signs = false,
+        colors = {
+          error = { "DiagnosticError", "ErrorMsg", "#DC2626" },
+          warning = { "DiagnosticWarning", "WarningMsg", "#FBBF24" },
+          info = { "DiagnosticInfo", "#2563EB" },
+          hint = { "DiagnosticHint", "#10B981" },
+          default = { "Identifier", "#7C3AED" },
+        },
       })
     end,
+  },
+  {
+    "tpope/vim-surround",
+    event = "VeryLazy",
   },
   {
     "kamykn/spelunker.vim",

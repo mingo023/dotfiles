@@ -7,4 +7,4 @@ sketchybar --add item taskwarrior right                               \
                                   padding_right=2                    \
                                   background.border_width=0          \
                                   background.height=24               \
-                                  icon=📒                    \
+                                  icon="􀧵"                    \

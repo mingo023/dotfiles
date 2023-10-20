@@ -24,9 +24,9 @@ map("n", "<C-s>", ":w <CR>")
 map("v", ":", ":s/")
 
 -- override paste try to copying back to clipboard
--- map("v", "p", "\"_dP", {
---     silent = true
--- })
+map("v", "p", "\"_dP", {
+    silent = true
+})
 
 -- remap :w to <cmd+s> (check at: ~/.config/alacritty/alacritty.yml:705)
 -- map("c", "w<CR>", 'echo "🚨 use <cmd+s> instead"<CR>')
@@ -42,3 +42,6 @@ map("i", "<C-q>", "<Esc>:qa! <CR>")
 
 map("n", "j", "gj")
 map("n", "k", "gk")
+
+-- replace under cursor word
+map("n", "<Leader>r", ":%s/\\<<C-r><C-w>\\>/")
