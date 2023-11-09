@@ -15,7 +15,7 @@ return {
         highlights = {
           incoming = "DiffAdd",
           current = "DiffChange",
-        }
+        },
       })
     end,
   },

@@ -1,6 +1,12 @@
 local lsp_config = require("lspconfig")
 local on_attach = require("lsp/on_attach")
 
+vim.cmd([[
+autocmd BufEnter *.ts  setlocal
+    \ shiftwidth=4
+    \ filetype=typescript
+]])
+
 lsp_config.tsserver.setup({
   on_attach = function(client, bufnr)
     client.server_capabilities.document_formatting = false

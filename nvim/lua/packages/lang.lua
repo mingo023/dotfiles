@@ -20,7 +20,7 @@ return {
     "nvim-treesitter/nvim-treesitter-context"
   },
   {
-    "glepnir/lspsaga.nvim",
+    "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     config = function()
       require("cores.lspsaga")

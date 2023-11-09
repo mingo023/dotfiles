@@ -14,10 +14,8 @@ null_ls.setup({
     null_ls.builtins.formatting.golines.with({ extra_args = { "-m", "120" } }),
     null_ls.builtins.diagnostics.golangci_lint,
 
-    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.prettier,
     null_ls.builtins.diagnostics.eslint_d,
-
-    -- null_ls.builtins.formatting.rubocop,
   },
   on_attach = on_attach,
 })

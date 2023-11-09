@@ -8,7 +8,6 @@ autocmd BufEnter *.go  setlocal
     \ filetype=go
 ]])
 
-
 lsp_config.gopls.setup({
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)

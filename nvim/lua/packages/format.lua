@@ -38,7 +38,6 @@ return {
   },
   {
     "tpope/vim-surround",
-    event = "VeryLazy",
   },
   {
     "kamykn/spelunker.vim",
@@ -60,6 +59,14 @@ return {
     "anuvyklack/pretty-fold.nvim",
     config = function()
       require("pretty-fold").setup()
+    end,
+  },
+  {
+    "Wansmer/treesj",
+    keys = { "<space>m", "<space>j", "<space>s" },
+    dependencies = { "nvim-treesitter/nvim-treesitter" },
+    config = function()
+      require("treesj").setup({})
     end,
   },
 }

@@ -732,7 +732,7 @@
                                 "to": [
                                     {
                                         "mouse_key": {
-                                            "speed_multiplier": 3.0
+                                            "speed_multiplier": 3.3
                                         }
                                     }
                                 ],

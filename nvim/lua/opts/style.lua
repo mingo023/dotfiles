@@ -8,7 +8,7 @@ vim.cmd([[
 -- vim.cmd("let g:gruvbox_material_foreground='mix'")
 -- vim.cmd("let g:gruvbox_material_background = 'medium'")
 
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("kanagawa")
 
 vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = 0, bg = transparent, fg = transparent })
 
