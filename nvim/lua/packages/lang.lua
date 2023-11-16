@@ -17,7 +17,7 @@ return {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter-context"
+    "nvim-treesitter/nvim-treesitter-context",
   },
   {
     "nvimdev/lspsaga.nvim",
@@ -45,6 +45,7 @@ return {
   },
   {
     "github/copilot.vim",
+    version = "v1.10.2",
     config = function()
       vim.cmd([[
             let g:copilot_no_tab_map = v:true 
@@ -57,12 +58,6 @@ return {
   {
     "tpope/vim-rails",
   },
-  -- {
-  --   "liuchengxu/vista.vim",
-  --   config = function()
-  --     require("cores.vista")
-  --   end,
-  -- },
   {
     "uarun/vim-protobuf",
   },
