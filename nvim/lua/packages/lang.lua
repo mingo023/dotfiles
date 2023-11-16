@@ -44,12 +44,24 @@ return {
     end,
   },
   {
-    "github/copilot.vim",
-    version = "v1.10.2",
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
     config = function()
-      vim.cmd([[
-            let g:copilot_no_tab_map = v:true 
-        ]])
+      require("copilot").setup({
+        suggestion = {
+          enabled = true,
+          auto_trigger = true,
+          debounce = 24,
+          keymap = {
+            accept = "<C-j>",
+            next = "<C-e>",
+            prev = "<C-r>",
+          },
+        },
+        copilot_node_command = vim.fn.expand("$HOME") .. "/.asdf/installs/nodejs/18.18.2/bin/node", -- Node.js version must be > 18.x
+        server_opts_overrides = {},
+      })
     end,
   },
   {
