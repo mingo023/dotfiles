@@ -1,4 +1,4 @@
-local lspkind = require('lspkind')
+local lspkind = require("lspkind")
 local present, cmp = pcall(require, "cmp")
 
 if not present then
@@ -15,6 +15,9 @@ cmp.setup({
     end,
   },
   window = {
+    documentation = cmp.config.window.bordered({
+      border = "rounded",
+    }),
     completion = cmp.config.window.bordered({
       border = "rounded",
     }),
