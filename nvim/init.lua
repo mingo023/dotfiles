@@ -1,3 +1,3 @@
+require("opts")
 require("plugins")
 require("mappings")
-require("opts")

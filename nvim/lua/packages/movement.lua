@@ -1,13 +1,4 @@
 return {
-  -- {
-  --   "mfussenegger/nvim-treehopper",
-  -- },
-  -- {
-  --   "phaazon/hop.nvim",
-  --   config = function()
-  --     require("hop").setup({ keys = "etovxqpdygfblzhckisuran" })
-  --   end,
-  -- },
   {
     "christoomey/vim-tmux-navigator",
   },
@@ -16,18 +7,18 @@ return {
     dependencies = { { "nvim-lua/plenary.nvim" } },
   },
   {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup()
+    end,
+  },
+  {
     "folke/flash.nvim",
     event = "VeryLazy",
-    opts = {},
+    config = function()
+      require("cores.flash")
+    end,
     keys = {
-      {
-        "s",
-        mode = { "n" },
-        function()
-          require("flash").jump()
-        end,
-        desc = "Flash",
-      },
       {
         "S",
         mode = { "n" },

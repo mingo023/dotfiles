@@ -79,10 +79,15 @@ require("catppuccin").setup({
   show_end_of_buffer = false,
   custom_highlights = function(colors)
     return {
-      NormalFloat = { bg = colors.crust },
+      -- Flash.nvim
+      FlashMatch = { bg = colors.base, fg = colors.teal },
+      FlashLabel = { bg = colors.base, fg = colors.teal },
+      -- Flash.nvim
+
+      NormalFloat = { bg = colors.base },
       DiffAdd = { bg = colors.surface0, fg = colors.green },
       DiffText = { bg = colors.surface0, fg = colors.blue },
-      FloatBorder = { bg = colors.crust, fg = colors.crust },
+      FloatBorder = { bg = colors.base, fg = colors.base },
       VertSplit = { bg = colors.base, fg = colors.surface0 },
       CursorLineNr = { fg = colors.mauve, style = { "bold" } },
       Pmenu = { bg = colors.crust, fg = "" },
@@ -107,3 +112,12 @@ require("catppuccin").setup({
     }
   end,
 })
+
+vim.cmd.colorscheme("catppuccin-mocha")
+
+vim.api.nvim_set_hl(0, "SignColumn", { ctermbg = 0, bg = transparent, fg = transparent })
+
+-- config for vim-dadbod-ui
+vim.api.nvim_set_hl(0, "NotificationInfo", { ctermbg = 0, bg = transparent, fg = transparent })
+vim.api.nvim_set_hl(0, "NotificationWarning", { ctermbg = 0, bg = transparent, fg = transparent })
+vim.api.nvim_set_hl(0, "NotificationError", { ctermbg = 0, bg = transparent, fg = transparent })

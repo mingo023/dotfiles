@@ -1,2 +1,2 @@
-require("opts.option")
 require("opts.style")
+require("opts.option")
