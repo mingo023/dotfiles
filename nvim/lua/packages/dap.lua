@@ -11,7 +11,4 @@ return {
       require("cores.dapui")
     end,
   },
-  {
-    "folke/neodev.nvim",
-  },
 }
