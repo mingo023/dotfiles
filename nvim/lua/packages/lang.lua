@@ -55,8 +55,6 @@ return {
           debounce = 24,
           keymap = {
             accept = "<C-j>",
-            next = "<C-e>",
-            prev = "<C-r>",
           },
         },
         copilot_node_command = vim.fn.expand("$HOME") .. "/.asdf/installs/nodejs/18.18.2/bin/node", -- Node.js version must be > 18.x

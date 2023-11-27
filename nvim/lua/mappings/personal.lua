@@ -23,11 +23,6 @@ map("n", "<Leader>ff", ":EslintFixAll <CR>", {
 map("n", "<C-s>", ":w <CR>")
 map("v", ":", ":s/")
 
--- override paste try to copying back to clipboard
-map("v", "p", "\"_dP", {
-    silent = true
-})
-
 -- remap :w to <cmd+s> (check at: ~/.config/alacritty/alacritty.yml:705)
 -- map("c", "w<CR>", 'echo "🚨 use <cmd+s> instead"<CR>')
 

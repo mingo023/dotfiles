@@ -30,14 +30,7 @@ return {
       require("cores.silicon")
     end,
   },
-  -- {
-  --   "rcarriga/nvim-notify",
-  --   event = "ColorScheme",
-  --   config = function()
-  --     require("cores.notify")
-  --   end,
-  -- },
   {
     "onsails/lspkind.nvim",
-  }
+  },
 }

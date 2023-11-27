@@ -27,7 +27,7 @@ require("nvim-tree").setup({
   system_open = { cmd = nil, args = {} },
   renderer = { indent_markers = { enable = true }, highlight_git = true },
   view = {
-    adaptive_size = false,
+    adaptive_size = true,
     side = "left",
   },
 })
