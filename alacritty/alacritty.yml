@@ -111,16 +111,16 @@ window:
 font:
   # Normal (roman) font face
   normal:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: FiraCode Nerd Font
     style: Regular
   bold:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: FiraCode Nerd Font
     style: Bold
   italic:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: FiraCode Nerd Font
     style: Italic
   bold_italic:
-    family: JetBrainsMonoNL Nerd Font Mono
+    family: FiraCode Nerd Font
     style: Bold Italic
 
   # Bold italic font face
