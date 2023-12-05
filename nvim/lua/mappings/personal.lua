@@ -12,8 +12,8 @@ map("n", "<Leader>dm", ":noh <CR>", { silent = true })
 map("v", "/", 'y/<C-R>"<CR>N', { silent = true })
 
 -- mapping for shift multiple lines repeatedly
-map("v", "<", "<gv", { silent = true })
-map("v", ">", ">gv", { silent = true })
+map("v", "<", "<gv", { silent = silent })
+map("v", ">", ">gv", { silent = silent })
 
 map("n", "<Leader>jt", ":RunJestFocused <CR>")
 
@@ -22,6 +22,8 @@ map("n", "<Leader>ff", ":EslintFixAll <CR>", {
 })
 map("n", "<C-s>", ":w <CR>")
 map("v", ":", ":s/")
+
+map("x", "p", "pgvy")
 
 -- remap :w to <cmd+s> (check at: ~/.config/alacritty/alacritty.yml:705)
 -- map("c", "w<CR>", 'echo "🚨 use <cmd+s> instead"<CR>')
