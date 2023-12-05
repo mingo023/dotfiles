@@ -45,4 +45,11 @@ function relative_paths()
   require("telescope.builtin").find_files(opts)
 end
 
+function relative_paths_in_nested()
+  local opts = {}
+  opts.cwd = vim.fn.expand("%:p:h:h")
+  require("telescope.builtin").find_files(opts)
+end
+
 map("n", ",e", relative_paths, { silent = true })
+map("n", ",,e", relative_paths_in_nested, { silent = true })
