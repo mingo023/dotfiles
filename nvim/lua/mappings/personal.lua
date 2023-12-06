@@ -23,7 +23,7 @@ map("n", "<Leader>ff", ":EslintFixAll <CR>", {
 map("n", "<C-s>", ":w <CR>")
 map("v", ":", ":s/")
 
-map("x", "p", "pgvy")
+map("x", "p", "pgvye")
 
 -- remap :w to <cmd+s> (check at: ~/.config/alacritty/alacritty.yml:705)
 -- map("c", "w<CR>", 'echo "🚨 use <cmd+s> instead"<CR>')
