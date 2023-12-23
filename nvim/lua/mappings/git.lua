@@ -23,6 +23,9 @@ local completed_merge = function()
   vim.cmd("silent! only!")
   vim.cmd("silent! Gitsigns stage_buffer")
   vim.cmd("LspStart")
+  vim.cmd("bufdo bwipeout") -- close buffer
+  vim.cmd("Git")
+  vim.cmd("16wincmd_")
 end
 
 vim.keymap.set("n", "gmc", completed_merge, opts)
