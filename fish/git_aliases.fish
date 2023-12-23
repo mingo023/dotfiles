@@ -22,6 +22,7 @@ alias gd='git diff'
 alias gcmsg='git commit -m'
 alias md='mkdir -p'
 alias gfo='git fetch origin'
+alias gs='git stash'
 
 function ggpush
     # Check if the last argument is '--force'
