@@ -39,6 +39,7 @@ return {
     config = function()
       require("drop").setup({
         theme = "snow",
+        filetypes = {},
       })
     end,
   },
