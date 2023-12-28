@@ -37,7 +37,9 @@ map("n", "<Leader>sp", function()
   })
 end, { silent = true })
 
-map("", ",g", ":Telescope git_status <CR>", { silent = true })
+map("", ",gs", ":Telescope git_status <CR>", { silent = true })
+map("", ",gb", ":Telescope git_branches <CR>", { silent = true })
+map("", ",gt", ":Telescope git_stash <CR>", { silent = true })
 
 function relative_paths()
   local opts = {}
