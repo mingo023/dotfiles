@@ -12,8 +12,8 @@ sketchybar --bar     height=24                                            \
                      blur_radius=0                                        \
                      padding_left=4                                       \
                      padding_right=4                                      \
-                     color=0xff1e1e1e                                     \
-                     position=top                                      \
+                     color=0xff0d0d0d                                     \
+                     position=top                                         \
                      sticky=on                                            \
                      font_smoothing=on                                    \
                                                                           \

@@ -57,7 +57,7 @@ require("catppuccin").setup({
       surface2 = "#4d4d4d",
       surface1 = "#404040",
       surface0 = "#292929",
-      base = "#1d2021",
+      base = "#181818",
       mantle = "#191b1c",
       crust = "#141617",
     },
@@ -85,6 +85,12 @@ require("catppuccin").setup({
       FlashLabel = { bg = colors.base, fg = colors.teal },
       -- Flash.nvim
 
+      -- NvimTree
+      NvimTreeStatuslineNc = { bg = colors.base, fg = colors.surface0 },
+      NvimTreeWinSeparator = { bg = colors.base, fg = colors.surface0 },
+      NvimTreeNormal = { bg = colors.base, fg = colors.text },
+      -- NvimTree
+
       CmpItemMenu = { fg = colors.surface2 },
       CursorLineNr = { fg = colors.green, style = { "bold" } },
       FloatBorder = { bg = colors.base, fg = colors.green },
@@ -95,7 +101,7 @@ require("catppuccin").setup({
       NeoTreeDirectoryName = { fg = colors.subtext1 },
       NormalFloat = { bg = colors.base, fg = "#ffffff" },
       VertSplit = { bg = colors.base, fg = colors.surface0 },
-      WhichKeyFloat = { bg = colors.mantle },
+      WhichKeyFloat = { bg = colors.crust },
       YankHighlight = { bg = colors.surface2 },
       FidgetTask = { fg = colors.subtext2 },
       FidgetTitle = { fg = colors.peach },
