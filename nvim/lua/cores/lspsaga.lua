@@ -7,6 +7,9 @@ saga.setup({
   ui = {
     border = "rounded",
   },
+  beacon = {
+    enable = false,
+  },
   rename = {
     quit = "<C-c>",
     exec = "<CR>",

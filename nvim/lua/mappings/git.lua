@@ -4,7 +4,7 @@ local opts = { silent = true }
 map("n", "<Leader>gg", ":Git<CR>:16wincmd_<CR>")
 map("n", "<Leader>gb", ":Git blame <CR>")
 map("n", "<Leader>gw", ":Gwrite <CR>")
-map("n", "<Leader>gdd", ":Gvdiffsplit <CR>")
+map("n", "<Leader>gdd", ":Gvdiffsplit! <CR>")
 map("n", "<Leader>co", ":diffget //2 <CR>")
 map("n", "<Leader>ct", ":diffget //3 <CR>")
 
