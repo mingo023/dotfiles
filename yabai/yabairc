@@ -23,7 +23,6 @@ yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="Raycast" manage=off
 yabai -m rule --add app="Finder" manage=off
-yabai -m rule --add app="Preview" manage=off
 yabai -m rule --add app="Telegram Web" manage=off
 yabai -m rule --add app="Telegram" manage=off
 yabai -m rule --add app="Spotify" manage=off
