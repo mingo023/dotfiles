@@ -1,0 +1,88 @@
+{
+  :sim 250
+  :main
+  [
+    {:des "Navigation and special keys" :rules [
+      [:caps_lock ["caps_lock_pressed" 1] nil
+       {:afterup ["caps_lock_pressed" 0]}
+      ]
+      ; [begin] navigation arrows
+      [:##h :left_arrow :caps_lock_pressed]
+      [:##l :right_arrow :caps_lock_pressed]
+      [:##j :down_arrow :caps_lock_pressed]
+      [:##k :up_arrow :caps_lock_pressed]
+      ; [end] navigation arrows
+
+      [:##s :left_shift :caps_lock_pressed]
+    ]}
+
+    {:des "Mouse mode" :rules [
+      ; [{:sim [:left_command :h]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder :insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]}]]
+      ; [{:sim [:left_command :j]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder :insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]}]]
+      ; [{:sim [:left_command :k]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder :insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]}]]
+      ; [{:sim [:left_command :l]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]}]]
+      ; [{:sim [:left_command :s]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder :insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]} {:set ["mouse_mode_scroll" 1]}] :mouse_mode]
+
+      [
+       {:sim [:left_command :h]
+        :modi {:optional [:any]}
+        :simo {:interrupt true
+               :dorder :insensitive
+               :uorder :insensitive
+               :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}}
+               
+       [ {:params {:sim 432}} {:set ["mouse_mode" 1]} {:mkey {:x -1200}}] :mouse_mode]
+      ; [{:sim [:left_command :j]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder :insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]} {:mkey {:y 1200}}] :mouse_mode]
+      ; [{:sim [:left_command :k]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder :insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]} {:mkey {:y -1200}}] :mouse_mode]
+      ; [{:sim [:left_command :l]
+      ;          :modi {:optional [:any]}
+      ;          :delay   500
+      ;   :simo {:interrupt true
+      ;          :dorder :insensitive
+      ;          :uorder :insensitive
+      ;          :afterup [{:set ["mouse_mode" 0]} {:set ["mouse_mode_scroll" 0]}]}} [{:set ["mouse_mode" 1]} {:mkey {:y 1200}}] :mouse_mode]
+    ]}
+  ]
+}
