@@ -5,35 +5,49 @@ local trouble = require("trouble.providers.telescope")
 telescope.setup({
   defaults = {
     file_ignore_patterns = {
-      ".git/", ".cache", "%.o", "%.a", "%.out", "%.class", "%.pdf", "%.mkv",
-      "%.mp4", "%.zip"
+      ".git/",
+      ".cache",
+      "%.o",
+      "%.a",
+      "%.out",
+      "%.class",
+      "%.pdf",
+      "%.mkv",
+      "%.mp4",
+      "%.zip",
+      "coverage%-report/.*",
     },
     vimgrep_arguments = {
-      "rg", "--color=never", "--no-heading", "--with-filename", "--line-number",
-      "--column", "--smart-case"
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
     },
     selection_caret = " ❯ ",
-    prompt_prefix=" 👀 ",
-    path_display = {'truncate'},
-    sorting_strategy = 'ascending',
+    prompt_prefix = " 👀 ",
+    path_display = { "truncate" },
+    sorting_strategy = "ascending",
     file_sorter = require("telescope.sorters").get_fzy_sorter,
     winblend = 0,
     color_devicons = true,
     use_less = true,
-    set_env = {["COLORTERM"] = "truecolor"}, -- default = nil,
+    set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
     initial_mode = "insert",
     results_title = false,
     border = true,
     borderchars = {
-      prompt = {" ", " ", "─", " ", " ", " ", "─", "─"},
-      results = {"─", " ", " ", " ", "─", "─", " ", " "},
-      preview = {"─", " ", "─", "│", "┬", "─", "─", "╰"}
+      prompt = { " ", " ", "─", " ", " ", " ", "─", "─" },
+      results = { "─", " ", " ", " ", "─", "─", " ", " " },
+      preview = { "─", " ", "─", "│", "┬", "─", "─", "╰" },
     },
-    layout_strategy = 'bottom_pane',
+    layout_strategy = "bottom_pane",
     layout_config = {
       height = 0.24,
       preview_width = 0.5,
-      prompt_position = "bottom"
+      prompt_position = "bottom",
     },
     mappings = {
       i = {
