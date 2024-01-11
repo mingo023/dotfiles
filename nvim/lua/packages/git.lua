@@ -9,6 +9,14 @@ return {
     "tpope/vim-fugitive",
   },
   {
-    "sindrets/diffview.nvim",
+    "akinsho/git-conflict.nvim",
+    config = function()
+      require("git-conflict").setup({
+        highlights = {
+          incoming = "DiffAdd",
+          current = "DiffChange",
+        },
+      })
+    end,
   },
 }
