@@ -54,13 +54,6 @@ dap.configurations.go = {
     args = { "server" },
   },
   {
-    name = "Run index veh shop",
-    type = "go",
-    request = "launch",
-    program = "main.go",
-    args = { "index_veh_shops" },
-  },
-  {
     type = "go",
     name = "Debug (Arguments)",
     request = "launch",
