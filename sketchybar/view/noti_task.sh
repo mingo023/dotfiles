@@ -2,7 +2,7 @@
 
 sketchybar --add item taskwarrior right                              \
            --set      taskwarrior script="$PLUGIN_DIR/noti_task.sh"  \
-                                  update_freq=120                    \
+                                  update_freq=20                     \
                                   padding_left=2                     \
                                   padding_right=2                    \
                                   background.border_width=0          \
