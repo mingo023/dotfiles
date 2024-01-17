@@ -13,5 +13,5 @@ else
   fi
 
   sketchybar --set $NAME label="${LABEL} |" \
-          label.drawing=on
+          label.drawing=on icon.drawing=on
 fi
