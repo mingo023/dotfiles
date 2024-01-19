@@ -11,6 +11,7 @@ end, { silent = true })
 
 map("n", "<C-p>", function()
   telescope_builtin.find_files({
+    hidden = true,
     find_command = {
       "fd",
       "--type",
@@ -48,7 +49,9 @@ function relative_paths()
 end
 
 function relative_paths_in_nested()
-  local opts = {}
+  local opts = {
+    hidden = true,
+  }
   opts.cwd = vim.fn.expand("%:p:h:h")
   require("telescope.builtin").find_files(opts)
 end
