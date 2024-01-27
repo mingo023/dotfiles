@@ -8,6 +8,7 @@ map("n", "<Leader>gdd", ":Gvdiffsplit! <CR>")
 -- Open merge tool
 map("n", "<Leader>cb", "<Plug>(git-conflict-both)")
 map("n", "<Leader>c0", "<Plug>(git-conflict-none)")
+map("n", "<Leader>co", "<Plug>(git-conflict-ours)")
 map("n", "<Leader>ct", "<Plug>(git-conflict-theirs)")
 map("n", "<Leader>cn", "<Plug>(git-conflict-next-conflict)")
 map("n", "<Leader>cp", "<Plug>(git-conflict-prev-conflict)")
