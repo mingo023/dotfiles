@@ -8,7 +8,7 @@ if [[ $STATUS_LABEL =~ \"label\"=\"([^\"]*)\" ]]; then
 fi
 
 if [[ $LABEL == "" ]]; then
-  sketchybar --set $NAME label="" label.drawing=on
+  sketchybar --set $NAME label="" icon="" label.drawing=on
 else
   sketchybar --set $NAME label="${LABEL} |" icon="💬" label.drawing=on
 fi
