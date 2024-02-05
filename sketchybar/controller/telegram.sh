@@ -12,3 +12,10 @@ if [[ $LABEL == "" ]]; then
 else
   sketchybar --set $NAME label="${LABEL} |" icon="💬" label.drawing=on
 fi
+
+case "$SENDER" in
+"mouse.clicked")
+    open -a "Telegram"
+    ;;
+*)
+esac
