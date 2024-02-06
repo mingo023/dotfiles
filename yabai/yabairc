@@ -12,7 +12,7 @@ yabai -m config \
 	left_padding 0 \
 	right_padding 0
 
-yabai -m config windown_shadow off
+yabai -m config window_shadow off
 yabai -m config external_bar all:24:0
 
 # signals

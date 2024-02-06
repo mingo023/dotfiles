@@ -6,6 +6,10 @@ return {
     end,
   },
   {
+    "hinell/lsp-timeout.nvim", -- this package to prevent lsp from consuming too much RAM, I hope so xD
+    dependencies = { "neovim/nvim-lspconfig" },
+  },
+  {
     "jose-elias-alvarez/nvim-lsp-ts-utils",
     dependencies = "nvim-lspconfig",
   },
@@ -49,6 +53,10 @@ return {
     event = "InsertEnter",
     config = function()
       require("copilot").setup({
+        filetypes = {
+          yaml = true,
+          markdown = true,
+        },
         suggestion = {
           enabled = true,
           auto_trigger = true,
@@ -58,7 +66,7 @@ return {
             next = "<C-n>",
           },
         },
-        copilot_node_command = vim.fn.expand("$HOME") .. "/.asdf/installs/nodejs/18.18.2/bin/node", -- Node.js version must be > 18.x
+        copilot_node_command = vim.fn.expand("$HOME") .. "/.asdf/installs/nodejs/20.11.0/bin/node", -- Node.js version must be > 18.x
         server_opts_overrides = {},
       })
     end,
