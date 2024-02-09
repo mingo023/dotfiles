@@ -36,7 +36,6 @@ source "$ITEM_DIR/front_app.sh"
 # source "$ITEM_DIR/warpvpn.sh"
 
 # right
-source "$ITEM_DIR/time.sh"
 source "$ITEM_DIR/cal.sh"
 source "$ITEM_DIR/mic.sh"
 source "$ITEM_DIR/wifi.sh"
