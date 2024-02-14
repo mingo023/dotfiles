@@ -1,12 +1,5 @@
 local opt = vim.opt
 
-vim.cmd([[
-    syntax on
-    if has('termguicolors')
-      set termguicolors
-    endif
-]])
-
 opt.ruler = false
 opt.hidden = true
 opt.ignorecase = true

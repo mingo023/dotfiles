@@ -42,3 +42,9 @@ map("n", "k", "gk")
 
 -- replace under cursor word
 map("n", "<Leader>r", ":%s/\\<<C-r><C-w>\\>/")
+
+-- move and center the cursor
+map("n", "<C-u>", "<C-u>zz")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-i>", "<C-i>zz")
+map("n", "<C-o>", "<C-o>zz")
