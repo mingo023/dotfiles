@@ -16,12 +16,7 @@ return {
   {
     "sainnhe/gruvbox-material",
     config = function()
-      vim.cmd([[
-        set background=dark
-        let g:gruvbox_material_background = 'hard'
-        let g:gruvbox_material_better_performance=1
-        colorscheme gruvbox-material
-      ]])
+      require("cores.theme.gruvbox-material")
     end,
   },
 }
