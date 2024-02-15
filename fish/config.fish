@@ -31,14 +31,10 @@ alias ls="exa -l --icons"
 alias rm="rm -rf"
 alias zshconfig="nvim ~/.config/zshrc/.zshrc"
 alias reload="source ~/.config/fish/config.fish"
-alias nvconfig="nvim ~/.config/nvim"
-alias tmuxconfig="nvim ~/.config/.tmux/.tmux.conf"
-alias alconfig="nvim ~/.config/alacritty"
 alias tmux="tmux -u"
 alias nv='nvim'
 alias k='kubectl'
 alias lg='lazygit'
-alias ct-be='cd ~/dev/chotot/be'
 alias kp='k get pods'
 alias t='task'
 
