@@ -6,10 +6,6 @@ return {
     end,
   },
   {
-    "hinell/lsp-timeout.nvim", -- this package to prevent lsp from consuming too much RAM, I hope so xD
-    dependencies = { "neovim/nvim-lspconfig" },
-  },
-  {
     "jose-elias-alvarez/nvim-lsp-ts-utils",
     dependencies = "nvim-lspconfig",
   },
