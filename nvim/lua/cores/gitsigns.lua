@@ -13,6 +13,7 @@ gitsigns.setup({
     changedelete = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChange" },
   },
   status_formatter = nil, -- Use default
+  attach_to_untracked = true,
   watch_gitdir = {
     interval = 100,
   },

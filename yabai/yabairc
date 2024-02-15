@@ -30,6 +30,7 @@ yabai -m rule --add app="Spotify" manage=off
 yabai -m rule --add app="OrbStack" manage=off
 yabai -m rule --add app="Obsidian" manage=off
 yabai -m rule --add app="Zalo" manage=off
+yabai -m rule --add app="Mail" manage=off
 
 sudo yabai --load-sa
 
