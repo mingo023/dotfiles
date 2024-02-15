@@ -19,3 +19,6 @@ local nvim_set_hl = vim.api.nvim_set_hl
 nvim_set_hl(0, "FloatBorder", { bg = colors.bg, fg = colors.fg })
 nvim_set_hl(0, "CursorLineNr", { fg = colors.green })
 nvim_set_hl(0, "CmpItemMenu", { fg = colors.purple, bg = "NONE", italic = true })
+
+-- highlight for alpha header
+nvim_set_hl(0, "AlphaHeader", { fg = colors.green, bg = "NONE" })
