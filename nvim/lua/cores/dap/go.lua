@@ -59,7 +59,6 @@ dap.configurations.go = {
     request = "launch",
     program = "main.go",
     args = get_arguments,
-  }
+  },
 }
 
-vim.fn.sign_define("DapBreakpoint", { text = "🦆", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
