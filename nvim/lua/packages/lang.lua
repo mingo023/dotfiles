@@ -52,6 +52,7 @@ return {
         filetypes = {
           yaml = true,
           markdown = true,
+          handlebars = true,
         },
         suggestion = {
           enabled = true,
