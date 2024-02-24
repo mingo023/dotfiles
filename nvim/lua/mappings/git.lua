@@ -1,6 +1,6 @@
 local map = require("utils.mapping")
 
-map("n", "<Leader>gg", ":Git<CR>:16wincmd_<CR>")
+map("n", "<Leader>gg", ":vertical Git<CR>:vertical resize 60<CR>")
 map("n", "<Leader>gb", ":Git blame <CR>")
 map("n", "<Leader>gw", ":Gwrite <CR>")
 map("n", "<Leader>gdd", ":Gvdiffsplit! <CR>")
