@@ -5,6 +5,7 @@ vim.opt.listchars:append("eol:↲")
 require("ibl").setup({
   indent = {
     char = "┊",
+    tab_char = "┊",
   },
   scope = {
     enabled = false,
