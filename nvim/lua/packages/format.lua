@@ -8,7 +8,6 @@ return {
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    version = "v2.20.8",
     config = function()
       require("cores.indent")
     end,
@@ -59,7 +58,11 @@ return {
   {
     "anuvyklack/pretty-fold.nvim",
     config = function()
-      require("pretty-fold").setup()
+      require("pretty-fold").setup({
+        matchup_patterns = {
+          { "function%s*%(", "end" },
+        },
+      })
     end,
   },
 }

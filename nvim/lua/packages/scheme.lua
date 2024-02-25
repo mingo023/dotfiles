@@ -10,13 +10,13 @@ return {
     name = "catppuccin",
     priority = 1000,
     config = function()
-      -- require("cores.theme.catppuccin")
+      require("cores.theme.catppuccin")
     end,
   },
   {
     "sainnhe/gruvbox-material",
     config = function()
-      require("cores.theme.gruvbox-material")
+      -- require("cores.theme.gruvbox-material")
     end,
   },
 }

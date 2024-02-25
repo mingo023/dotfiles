@@ -15,12 +15,12 @@ cmp.setup({
     end,
   },
   window = {
-    documentation = cmp.config.window.bordered({
-      border = "rounded",
-    }),
-    completion = cmp.config.window.bordered({
-      border = "rounded",
-    }),
+    -- documentation = cmp.config.window.bordered({
+    --   border = "rounded",
+    -- }),
+    -- completion = cmp.config.window.bordered({
+    --   border = "rounded",
+    -- }),
   },
   formatting = {
     format = function(entry, vim_item)
