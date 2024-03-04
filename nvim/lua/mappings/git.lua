@@ -25,3 +25,7 @@ map("n", ";gcc", ":Git checkout ", {
 map("n", ";gcm", ":Git commit <CR>", {
   desc = "Commit changes",
 })
+
+map("n", ";gp", ":Git push<CR>", {
+  desc = "Push changes",
+})
