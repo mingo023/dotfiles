@@ -7,6 +7,7 @@ shift + alt - z : open -a /Applications/zoom.us.app
 shift + alt - p : open -a /Applications/Postman.app
 shift + alt - d : open -a /Applications/Discord.app
 shift + alt - n : open -a /Applications/Notion.app
+shift + alt - y : yabai --restart-service
 
 shift + ctrl - 1 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.["stack-index"] == 1) | .id')
 shift + ctrl - 2 : yabai -m window --focus $(yabai -m query --windows | jq '.[] | select(.["stack-index"] == 2) | .id')

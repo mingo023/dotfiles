@@ -56,7 +56,9 @@ return {
         search_back = true,
       })
 
-      vim.api.nvim_set_keymap("n", ";r", "<Plug>RestNvim", {})
+      vim.api.nvim_set_keymap("n", ";r", "<Plug>RestNvim", {
+        desc = "Run rest under cursor",
+      })
     end,
   },
 }
