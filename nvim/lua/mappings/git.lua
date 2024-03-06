@@ -14,18 +14,18 @@ map("n", "<Leader>cn", "<Plug>(git-conflict-next-conflict)")
 map("n", "<Leader>cp", "<Plug>(git-conflict-prev-conflict)")
 map("n", "<Leader>gq", ":GitConflictListQf <CR>")
 
-map("n", ";gcn", ":Git checkout -b ", {
+map("n", ",gcn", ":Git checkout -b ", {
   desc = "Create a new branch",
 })
 
-map("n", ";gcc", ":Git checkout ", {
+map("n", ",gcc", ":Git checkout ", {
   desc = "Switch to a branch",
 })
 
-map("n", ";gcm", ":Git commit <CR>", {
+map("n", ",gcm", ":Git commit <CR>", {
   desc = "Commit changes",
 })
 
-map("n", ";gp", ":Git push<CR>", {
+map("n", ",gp", ":Git push<CR>", {
   desc = "Push changes",
 })

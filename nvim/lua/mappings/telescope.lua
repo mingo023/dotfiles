@@ -58,3 +58,54 @@ end
 
 map("n", ",e", relative_paths, { silent = true })
 map("n", ",,e", relative_paths_in_nested, { silent = true })
+
+-- NESTJS MAPPINGS
+-- menu for selecting controller - service - entity
+
+function display_nestjs_file_structure_types_menu()
+  local pickers = require("telescope.pickers")
+  local finders = require("telescope.finders")
+  local sorters = require("telescope.sorters")
+
+  local opts = {
+    finder = finders.new_table({
+      "controller",
+      "service",
+      "entity",
+      "repository",
+      "command",
+    }),
+    sorter = sorters.get_generic_fuzzy_sorter({}),
+  }
+
+  pickers
+    .new(opts, {
+      prompt_title = "NestJS File Structure Types",
+      sorter = sorters.get_generic_fuzzy_sorter({}),
+      attach_mappings = function(prompt_bufnr, map)
+        local select_file_structure_type = function()
+          local selection = require("telescope.actions.state").get_selected_entry()
+
+          telescope_builtin.find_files({
+            hidden = true,
+            find_command = {
+              "fd",
+              "--type",
+              "f",
+              "--follow",
+              "--glob",
+              "*" .. selection.value .. ".ts",
+            },
+          })
+        end
+
+        map("i", "<CR>", select_file_structure_type)
+        map("n", "<CR>", select_file_structure_type)
+
+        return true
+      end,
+    })
+    :find()
+end
+
+map("n", ",p", display_nestjs_file_structure_types_menu, { silent = true })

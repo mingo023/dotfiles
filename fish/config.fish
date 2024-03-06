@@ -38,6 +38,7 @@ alias reload="source ~/.config/fish/config.fish"
 alias tmux="tmux -u"
 alias nv='nvim'
 alias k='kubectl'
+alias kk='k9s'
 alias lg='lazygit'
 alias kp='k get pods'
 alias t='task'

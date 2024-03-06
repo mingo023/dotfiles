@@ -5,6 +5,7 @@ require("lsp/diagnostic")
 require("lsp/protobuf")
 require("lsp/ruby")
 require("lsp/tailwind")
+require("lsp/php")
 
 vim.fn.sign_define(
   "DiagnosticSignError",
