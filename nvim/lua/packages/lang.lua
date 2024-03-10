@@ -63,7 +63,7 @@ return {
             next = "<C-n>",
           },
         },
-        copilot_node_command = vim.fn.expand("$HOME") .. "/.asdf/installs/nodejs/20.11.0/bin/node", -- Node.js version must be > 18.x
+        copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/mise/installs/node/20/bin/node", -- Node.js version must be > 18.x
         server_opts_overrides = {},
       })
     end,
