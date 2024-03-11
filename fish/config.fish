@@ -66,6 +66,5 @@ function wpp
   osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$home/.config/wallpapers/$wallpaper\""
 end
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
-
 zoxide init fish | source
+~/.local/bin/mise activate fish | source
