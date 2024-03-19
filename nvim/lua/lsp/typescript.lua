@@ -10,6 +10,8 @@ autocmd BufEnter *.ts  setlocal
 lsp_config.tsserver.setup({
   on_attach = function(client, bufnr)
     client.server_capabilities.document_formatting = false
+    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.documentFormattingProvider = false
     on_attach(client, bufnr)
 
     local ts_utils = require("nvim-lsp-ts-utils")

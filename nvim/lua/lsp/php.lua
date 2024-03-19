@@ -1,6 +1,12 @@
 local lsp_config = require("lspconfig")
 local on_attach = require("lsp/on_attach")
 
+vim.cmd([[
+autocmd BufEnter *.php setlocal
+    \ shiftwidth=4
+    \ filetype=php
+]])
+
 -- lsp_config.psalm.setup({
 --   on_attach = on_attach,
 -- })

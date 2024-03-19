@@ -3,8 +3,6 @@ local h = require("null-ls.helpers")
 local methods = require("null-ls.methods")
 local on_attach = require("lsp/on_attach")
 
-local FORMATTING = methods.internal.FORMATTING
-
 null_ls.setup({
   sources = {
     null_ls.builtins.formatting.stylua.with({ extra_args = { "config-path", "{$HOME}/.config/nvim/lua/stylua.toml" } }),
