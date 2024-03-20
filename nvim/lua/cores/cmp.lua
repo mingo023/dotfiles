@@ -14,14 +14,6 @@ cmp.setup({
       require("luasnip").lsp_expand(args.body)
     end,
   },
-  window = {
-    -- documentation = cmp.config.window.bordered({
-    --   border = "rounded",
-    -- }),
-    -- completion = cmp.config.window.bordered({
-    --   border = "rounded",
-    -- }),
-  },
   formatting = {
     format = function(entry, vim_item)
       vim_item.kind = lspkind.symbolic(vim_item.kind, {})
