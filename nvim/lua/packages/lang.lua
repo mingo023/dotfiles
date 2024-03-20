@@ -6,8 +6,8 @@ return {
     end,
   },
   {
-    "jose-elias-alvarez/nvim-lsp-ts-utils",
-    dependencies = "nvim-lspconfig",
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
   },
   {
     "nvim-treesitter/nvim-treesitter",

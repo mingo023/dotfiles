@@ -7,24 +7,17 @@ autocmd BufEnter *.ts  setlocal
     \ filetype=typescript
 ]])
 
-lsp_config.tsserver.setup({
+require("typescript-tools").setup({
   on_attach = function(client, bufnr)
-    client.server_capabilities.document_formatting = false
-    client.resolved_capabilities.document_formatting = false
-    client.server_capabilities.documentFormattingProvider = false
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cs", ":TSToolsSortImports<CR>", { silent = true })
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cR", ":TSToolsRenameFile<CR>", { silent = true })
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>ci", ":TSToolsAddMissingImports<CR>", { silent = true })
+
     on_attach(client, bufnr)
-
-    local ts_utils = require("nvim-lsp-ts-utils")
-
-    ts_utils.setup({
-      update_imports_on_move = true,
-    })
-    ts_utils.setup_client(client)
-
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>co", ":TSLspOrganize<CR>", { silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cR", ":TSLspRenameFile<CR>", { silent = true })
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>ci", ":TSLspImportAll<CR>", { silent = true })
   end,
+})
+lsp_config.eslint.setup({
+  on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   root_dir = function()
     return vim.fn.getcwd()

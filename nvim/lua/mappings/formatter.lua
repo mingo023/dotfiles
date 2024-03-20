@@ -1,7 +1,9 @@
+local conform = require("conform")
+
 vim.api.nvim_create_user_command("Format", function()
-  vim.lsp.buf.format({ timeout_ms = 5000 })
+  conform.format()
 end, { nargs = "*" })
 
 local map = require("utils.mapping")
 
-map("n", "<C-f>", ":Format<CR>", { noremap = true, silent = true})
+map("n", "<C-f>", ":Format<CR>", { noremap = true, silent = true })

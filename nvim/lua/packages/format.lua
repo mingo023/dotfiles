@@ -55,17 +55,25 @@ return {
     end,
   },
   {
-    "nvimtools/none-ls.nvim",
-    config = function()
-      require("cores.null-ls")
-    end,
-  },
-  {
     "anuvyklack/pretty-fold.nvim",
     config = function()
       require("pretty-fold").setup({
         matchup_patterns = {
           { "function%s*%(", "end" },
+        },
+      })
+    end,
+  },
+  {
+    "stevearc/conform.nvim",
+    opts = {},
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          lua = { "stylua" },
+          javascript = { { "prettierd", "prettier" } },
+          typescript = { { "prettierd", "prettier" } },
+          go = { { "gofumpt", "gofmt", "goimports_reviser", "golines" } },
         },
       })
     end,
