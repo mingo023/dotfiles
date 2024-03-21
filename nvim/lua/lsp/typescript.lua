@@ -16,6 +16,7 @@ require("typescript-tools").setup({
     on_attach(client, bufnr)
   end,
 })
+
 lsp_config.eslint.setup({
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },

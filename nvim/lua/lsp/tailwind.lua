@@ -5,4 +5,5 @@ lsp_config.tailwindcss.setup({
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
   end,
+  filetypes = { "html", "css", "scss", "javascript", "javascriptreact", "typescript", "typescriptreact" },
 })
