@@ -9,7 +9,7 @@ autocmd BufEnter *.ts  setlocal
 
 require("typescript-tools").setup({
   on_attach = function(client, bufnr)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cs", ":TSToolsSortImports<CR>", { silent = true })
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cs", ":TSToolsOrganizeImports<CR>", { silent = true })
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cR", ":TSToolsRenameFile<CR>", { silent = true })
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>ci", ":TSToolsAddMissingImports<CR>", { silent = true })
 
