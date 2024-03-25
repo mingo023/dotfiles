@@ -37,8 +37,12 @@ map("n", "<A-Down>", ":resize -5<CR>")
 map("n", "<C-q>", ":qa! <CR>")
 map("i", "<C-q>", "<Esc>:qa! <CR>")
 
+-- move cursor line in multi-line format
 map("n", "j", "gj")
 map("n", "k", "gk")
+map("v", "j", "gj")
+map("v", "k", "gk")
+
 
 -- replace under cursor word
 map("n", "<Leader>r", ":%s/\\<<C-r><C-w>\\>/")
