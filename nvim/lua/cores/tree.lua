@@ -20,7 +20,7 @@ require("nvim-tree").setup({
   hijack_directories = { enable = true, auto_open = true },
   filters = {
     dotfiles = false,
-    custom = { ".cache", ".DS_Store", "^.git$" },
+    custom = { ".DS_Store", "^.git$" },
     exclude = { "dist", ".env" },
   },
   update_focused_file = { enable = true, update_cwd = false, ignore_list = {} },

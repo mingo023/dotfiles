@@ -6,7 +6,6 @@ telescope.setup({
   defaults = {
     file_ignore_patterns = {
       ".git/",
-      ".cache",
       "%.o",
       "%.a",
       "%.out",
