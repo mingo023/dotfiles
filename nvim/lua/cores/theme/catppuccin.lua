@@ -88,6 +88,7 @@ require("catppuccin").setup({
       -- NvimTree
       NvimTreeStatuslineNc = { bg = colors.base, fg = colors.surface0 },
       NvimTreeWinSeparator = { bg = colors.base, fg = colors.surface0 },
+      WinSeparator = { bg = colors.base, fg = colors.surface0 },
       NvimTreeNormal = { bg = colors.base, fg = colors.text },
       -- NvimTree
 
