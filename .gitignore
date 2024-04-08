@@ -19,3 +19,5 @@ gh-dash
 composer
 .phpactor.json
 btop
+argocd/
+helm/
