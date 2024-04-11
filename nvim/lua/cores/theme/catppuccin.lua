@@ -150,3 +150,13 @@ require("catppuccin").setup({
 })
 
 vim.cmd.colorscheme("catppuccin-mocha")
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  callback = function()
+    local current_working_dir = vim.fn.getcwd()
+    -- check if current dir endof with "perx-api"
+    if string.match(current_working_dir, "perx%-api$") then
+      vim.cmd.colorscheme("slate")
+    end
+  end,
+})
