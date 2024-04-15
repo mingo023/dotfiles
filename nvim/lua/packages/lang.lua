@@ -12,9 +12,6 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    config = function()
-      require("cores.treesitter")
-    end,
   },
   {
     "nvimdev/lspsaga.nvim",
@@ -70,9 +67,6 @@ return {
   },
   {
     "tpope/vim-rails",
-  },
-  {
-    "uarun/vim-protobuf",
   },
   {
     "danymat/neogen",

@@ -140,7 +140,7 @@ au FileType plantuml let g:plantuml_previewer#plantuml_jar_path = get(
 -- Draw Performance
 vim.cmd([[
   set ttyfast
-  set synmaxcol=128
+  set synmaxcol=256
   syntax sync minlines=256
 
   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
