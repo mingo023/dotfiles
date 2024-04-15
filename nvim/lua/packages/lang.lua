@@ -17,9 +17,6 @@ return {
     end,
   },
   {
-    "nvim-treesitter/nvim-treesitter-context",
-  },
-  {
     "nvimdev/lspsaga.nvim",
     event = "LspAttach",
     config = function()
@@ -82,7 +79,5 @@ return {
     config = function()
       require("neogen").setup({})
     end,
-    -- Uncomment next line if you want to follow only stable versions
-    -- tag = "*"
   },
 }

@@ -45,9 +45,6 @@ return {
     "tpope/vim-surround",
   },
   {
-    "kamykn/spelunker.vim",
-  },
-  {
     "nvim-pack/nvim-spectre",
     dependencies = "nvim-lua/plenary.nvim",
     config = function()

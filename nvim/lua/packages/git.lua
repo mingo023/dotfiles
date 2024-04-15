@@ -3,7 +3,7 @@ return {
     "lewis6991/gitsigns.nvim",
     config = function()
       require("cores.gitsigns")
-    end,
+    end
   },
   {
     "tpope/vim-fugitive",
