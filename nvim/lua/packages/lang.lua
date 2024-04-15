@@ -12,6 +12,9 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
+    config = function()
+      require("cores.treesitter")
+    end,
   },
   {
     "nvimdev/lspsaga.nvim",

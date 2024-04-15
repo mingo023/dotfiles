@@ -7,12 +7,6 @@ return {
     end,
   },
   {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("cores.indent")
-    end,
-  },
-  {
     "b3nj5m1n/kommentary",
     config = function()
       local config = require("kommentary.config")
