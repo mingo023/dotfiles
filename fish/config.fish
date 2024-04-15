@@ -42,6 +42,7 @@ alias kk='k9s'
 alias lg='lazygit'
 alias kp='k get pods'
 alias t='task'
+alias c='clear'
 
 function work
     ~/dev/work/

@@ -10,30 +10,30 @@ vim.env.PATH = vim.env.HOME .. "/.local/share/mise/shims:" .. vim.env.PATH
 
 -- Ignore compiled files
 opt.wildignore = "__pycache__"
-opt.wildignore:append { "*.o", "*~", "*.pyc", "*pycache*" }
-opt.wildignore:append { "Cargo.lock", "Cargo.Bazel.lock" }
+opt.wildignore:append({ "*.o", "*~", "*.pyc", "*pycache*" })
+opt.wildignore:append({ "Cargo.lock", "Cargo.Bazel.lock" })
 
 -- Cool floating window popup menu for completion on command line
-opt.pumblend = 17
+opt.pumblend = 0
 opt.wildmode = "longest:full"
 opt.wildoptions = "pum"
 opt.termguicolors = true
 opt.showmode = false
 opt.showcmd = true
-opt.cmdheight = 1         -- Height of the command bar
-opt.incsearch = true      -- Makes search act like search in modern browsers
-opt.showmatch = true      -- show matching brackets when text indicator is over them
+opt.cmdheight = 1 -- Height of the command bar
+opt.incsearch = true -- Makes search act like search in modern browsers
+opt.showmatch = true -- show matching brackets when text indicator is over them
 opt.relativenumber = true -- Show line numbers
-opt.number = true         -- But show the actual number for the line we're on
-opt.ignorecase = true     -- Ignore case when searching...
-opt.smartcase = true      -- ... unless there is a capital letter in the query
-opt.hidden = true         -- I like having buffers stay around
-opt.splitright = true     -- Prefer windows splitting to the right
-opt.splitbelow = false    -- Prefer windows splitting to the top
-opt.updatetime = 320     -- Make updates happen faster
-opt.hlsearch = true       -- I wouldn't use this without my DoNoHL function
-opt.scrolloff = 10        -- Make it so there are always ten lines below my cursor
-vim.opt.list = true       -- Show some invisible characters (tabs...)
+opt.number = true -- But show the actual number for the line we're on
+opt.ignorecase = true -- Ignore case when searching...
+opt.smartcase = true -- ... unless there is a capital letter in the query
+opt.hidden = true -- I like having buffers stay around
+opt.splitright = true -- Prefer windows splitting to the right
+opt.splitbelow = false -- Prefer windows splitting to the top
+opt.updatetime = 320 -- Make updates happen faster
+opt.hlsearch = true -- I wouldn't use this without my DoNoHL function
+opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
+vim.opt.list = true -- Show some invisible characters (tabs...)
 
 -- Cursorline highlighting control
 --  Only have it on in the active buffer
@@ -43,7 +43,9 @@ local set_cursorline = function(event, value, pattern)
   vim.api.nvim_create_autocmd(event, {
     group = group,
     pattern = pattern,
-    callback = function() vim.opt_local.cursorline = value end
+    callback = function()
+      vim.opt_local.cursorline = value
+    end,
   })
 end
 set_cursorline("WinLeave", false)
@@ -63,7 +65,7 @@ opt.breakindent = true
 opt.showbreak = string.rep(" ", 3) -- Make it so that long lines wrap smartly
 opt.linebreak = true
 
-opt.foldmethod = 'indent'
+opt.foldmethod = "indent"
 opt.foldnestmax = 5
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = -1
@@ -85,7 +87,11 @@ opt.joinspaces = false -- Two spaces and grade school, we're done
 opt.fillchars = { eob = "~" }
 
 vim.opt.diffopt = {
-  "internal", "filler", "closeoff", "hiddenoff", "algorithm:minimal"
+  "internal",
+  "filler",
+  "closeoff",
+  "hiddenoff",
+  "algorithm:minimal",
 }
 
 vim.opt.undofile = true
@@ -96,7 +102,7 @@ vim.api.nvim_command("set nospell")
 
 -- UNDOFILE
 vim.opt.undofile = true
-vim.opt.undodir = vim.fn.expand('~/.vim/undodir')
+vim.opt.undodir = vim.fn.expand("~/.vim/undodir")
 
 -- DISABLE BUILTIN VIM PLUGINS
 vim.g.loaded_gzip = 0
@@ -114,28 +120,37 @@ vim.g.loaded_spec = 0
 vim.g.rust_recommended_style = 0
 
 -- Golang
-vim.cmd [[au FileType go set noexpandtab]]
-vim.cmd [[au FileType go set shiftwidth=2]]
-vim.cmd [[au FileType go set softtabstop=2]]
-vim.cmd [[au FileType go set tabstop=2]]
+vim.cmd([[
+autocmd BufEnter *.go setlocal
+    \ tabstop=4 shiftwidth=4 softtabstop=4 textwidth=80 noexpandtab
+    \ cindent cinoptions=:0,l1,t0,g0,(0,W8
+    \ filetype=go
+]])
+
+-- PHP
+vim.cmd([[
+autocmd BufEnter *.php setlocal
+    \ shiftwidth=4
+    \ filetype=php
+]])
 
 -- LSP
 vim.g.auto_format = true
 
 -- Grep
-vim.cmd('set grepprg=rg\\ --vimgrep\\ --smart-case\\ --follow')
+vim.cmd("set grepprg=rg\\ --vimgrep\\ --smart-case\\ --follow")
 
 -- Winbar
 -- vim.api.nvim_command("set winbar=%m\\ %f")
 
 -- plantuml
-vim.cmd [[
+vim.cmd([[
 au FileType plantuml let g:plantuml_previewer#plantuml_jar_path = get(
     \  matchlist(system('cat `which plantuml` | grep plantuml.jar'), '\v.*\s[''"]?(\S+plantuml\.jar).*'),
     \  1,
     \  0
     \)
-  ]]
+  ]])
 
 -- Draw Performance
 vim.cmd([[
@@ -147,4 +162,4 @@ vim.cmd([[
 ]])
 
 -- Spell Check
-vim.cmd [[au FileType lua setlocal nospell]] -- disable spell check for lua files
+vim.cmd([[au FileType lua setlocal nospell]]) -- disable spell check for lua files
