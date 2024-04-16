@@ -21,15 +21,6 @@ vim.notify = function(msg, log_level)
   end
 end
 
-local function lspSymbol(name, icon)
-  vim.fn.sign_define("DiagnosticSign" .. name, { text = icon, numhl = "DiagnosticDefault" .. name })
-end
-lspSymbol("Error", " ")
-lspSymbol("Information", " ")
-lspSymbol("Hint", "💡")
-lspSymbol("Info", " ")
-lspSymbol("Warning", " ")
-
 vim.diagnostic.config({
   float = { border = "rounded" },
   virtual_text = false,

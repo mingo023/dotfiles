@@ -33,7 +33,8 @@ opt.splitbelow = false -- Prefer windows splitting to the top
 opt.updatetime = 320 -- Make updates happen faster
 opt.hlsearch = true -- I wouldn't use this without my DoNoHL function
 opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
-vim.opt.list = true -- Show some invisible characters (tabs...)
+opt.laststatus = 3 -- Always display the status line
+opt.list = true -- Show some invisible characters (tabs...)
 
 -- Cursorline highlighting control
 --  Only have it on in the active buffer
