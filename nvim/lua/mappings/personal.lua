@@ -43,7 +43,6 @@ map("n", "k", "gk")
 map("v", "j", "gj")
 map("v", "k", "gk")
 
-
 -- replace under cursor word
 map("n", "<Leader>r", ":%s/\\<<C-r><C-w>\\>/")
 
@@ -75,3 +74,11 @@ vim.keymap.set("n", ",ct", function()
     print("Not a snake_case or camelCase word")
   end
 end, { silent = true, desc = "switch case" })
+
+-- split window
+map("n", ",sp", ":split <CR>", {
+  desc = "split window",
+})
+map("n", ",vs", ":vsplit <CR>", {
+  desc = "vertical split window",
+})

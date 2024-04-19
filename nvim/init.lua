@@ -8,3 +8,7 @@ vim.cmd([[
 require("opts")
 require("plugins")
 require("mappings")
+
+-- DISABLE AUTO COMMENT ON INSERT
+vim.opt.formatoptions:remove { "c", "r", "o" }
+

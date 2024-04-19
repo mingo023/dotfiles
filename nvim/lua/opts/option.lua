@@ -30,7 +30,7 @@ opt.smartcase = true -- ... unless there is a capital letter in the query
 opt.hidden = true -- I like having buffers stay around
 opt.splitright = true -- Prefer windows splitting to the right
 opt.splitbelow = false -- Prefer windows splitting to the top
-opt.updatetime = 320 -- Make updates happen faster
+opt.updatetime = 1111 -- Make updates happen faster
 opt.hlsearch = true -- I wouldn't use this without my DoNoHL function
 opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
 opt.laststatus = 3 -- Always display the status line
@@ -65,11 +65,6 @@ opt.smartindent = true
 opt.breakindent = true
 opt.showbreak = string.rep(" ", 3) -- Make it so that long lines wrap smartly
 opt.linebreak = true
-
-opt.foldmethod = "indent"
-opt.foldnestmax = 5
-vim.o.foldlevel = 99
-vim.o.foldlevelstart = -1
 
 opt.belloff = "all" -- Just turn the dang bell off
 
@@ -164,3 +159,13 @@ vim.cmd([[
 
 -- Spell Check
 vim.cmd([[au FileType lua setlocal nospell]]) -- disable spell check for lua files
+
+-- DISABLE AUTO COMMENT ON INSERT
+-- use VimEnter to avoid autocmd conflict by other plugins
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  callback = function()
+    print("test")
+    print("test")
+    vim.opt.formatoptions:remove({ "c", "r", "o" })
+  end,
+})

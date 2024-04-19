@@ -64,6 +64,7 @@ return {
           lua = { "stylua" },
           javascript = { { "prettierd", "prettier" } },
           typescript = { { "prettierd", "prettier" } },
+          vue = { { "prettierd", "prettier" } },
           go = { { "gofumpt", "gofmt", "goimports_reviser", "golines" } },
           php = { { "phpcbf" } },
           ruby = { { "rubocop" } },

@@ -1,7 +1,7 @@
 local map = vim.keymap.set
 local telescope_builtin = require("telescope.builtin")
 
-map("n", "<Leader>fb", function()
+map("n", ",fb", function()
   telescope_builtin.buffers({
     show_all_buffers = true,
     sort_lastused = true,
@@ -21,7 +21,7 @@ map("n", "<C-p>", function()
   })
 end, { silent = true })
 
-map("n", "<Leader>fg", function()
+map("n", ",fg", function()
   telescope_builtin.live_grep({
     find_command = { "rg", "--ignore", "--hidden", "--files" },
   })
