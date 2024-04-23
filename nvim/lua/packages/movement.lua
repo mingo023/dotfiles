@@ -23,10 +23,4 @@ return {
       },
     },
   },
-  {
-    "antoinemadec/FixCursorHold.nvim",
-    config = function()
-      vim.cmd([[ let g:cursorhold_updatetime = 100 ]])
-    end,
-  },
 }

@@ -1,5 +1,5 @@
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-  virtual_text = false,
+  virtual_text = true,
   signs = true,
   underline = true,
   -- set this to true if you want diagnostics to show in insert mode
@@ -21,9 +21,9 @@ vim.notify = function(msg, log_level)
   end
 end
 
-vim.diagnostic.config({
-  float = { border = "rounded" },
-  virtual_text = false,
-})
+-- vim.diagnostic.config({
+--   float = { border = "rounded" },
+--   virtual_text = true,
+-- })
 
-vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float({focusable=false})]])
+-- vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float({focusable=false})]])

@@ -28,7 +28,6 @@ map("n", ",fg", function()
 end, { silent = true })
 
 map("n", "<Leader>ma", ":Telescope marks <CR>", { silent = true })
-map("n", "gr", ":Telescope lsp_references <CR>", { silent = true })
 map("n", "<Leader>sp", function()
   return require("telescope.builtin").lsp_document_symbols({
     symbol_width = 50,

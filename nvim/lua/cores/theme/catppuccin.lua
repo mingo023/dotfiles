@@ -32,6 +32,7 @@ require("catppuccin").setup({
       base = "#f9f5d7",
       mantle = "#f0ebce",
       crust = "#e8e3c8",
+      none = "NONE",
     },
     mocha = {
       rosewater = "#ea6962",
@@ -60,6 +61,7 @@ require("catppuccin").setup({
       base = "#181818",
       mantle = "#191b1c",
       crust = "#141617",
+      none = "NONE",
     },
   },
   styles = {
@@ -76,7 +78,10 @@ require("catppuccin").setup({
     types = { "bold" },
     operators = {},
   },
-  transparent_background = false,
+  integrations = {
+    lsp_saga = true,
+  },
+  transparent_background = true,
   show_end_of_buffer = false,
   custom_highlights = function(colors)
     return {
@@ -89,8 +94,12 @@ require("catppuccin").setup({
       NvimTreeStatuslineNc = { bg = colors.base, fg = colors.surface0 },
       NvimTreeWinSeparator = { bg = colors.base, fg = colors.surface0 },
       WinSeparator = { bg = colors.base, fg = colors.surface0 },
-      NvimTreeNormal = { bg = colors.base, fg = colors.text },
+      NvimTreeNormal = { bg = colors.none },
       -- NvimTree
+
+      -- LSP Saga
+      SagaFinderFname = { fg = colors.rosewater },
+      -- LSP Saga
 
       CmpItemMenu = { fg = colors.surface2 },
       CursorLineNr = { fg = colors.green, style = { "bold" } },
@@ -100,7 +109,7 @@ require("catppuccin").setup({
       LspInfoBorder = { link = "FloatBorder" },
       NeoTreeDirectoryIcon = { fg = colors.subtext1 },
       NeoTreeDirectoryName = { fg = colors.subtext1 },
-      NormalFloat = { bg = colors.base, fg = "#ffffff" },
+      NormalFloat = { bg = colors.none, fg = "#ffffff" },
       VertSplit = { bg = colors.base, fg = colors.surface0 },
       WhichKeyFloat = { bg = colors.crust },
       YankHighlight = { bg = colors.surface2 },

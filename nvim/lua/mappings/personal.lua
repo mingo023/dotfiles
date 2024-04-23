@@ -82,3 +82,7 @@ map("n", ",sp", ":split <CR>", {
 map("n", ",vs", ":vsplit <CR>", {
   desc = "vertical split window",
 })
+
+map("n", ",q", ":q <CR>", {
+  desc = "quit window",
+})

@@ -30,11 +30,19 @@ opt.smartcase = true -- ... unless there is a capital letter in the query
 opt.hidden = true -- I like having buffers stay around
 opt.splitright = true -- Prefer windows splitting to the right
 opt.splitbelow = false -- Prefer windows splitting to the top
-opt.updatetime = 1111 -- Make updates happen faster
+opt.updatetime = 2430 -- Make updates happen faster
 opt.hlsearch = true -- I wouldn't use this without my DoNoHL function
 opt.scrolloff = 10 -- Make it so there are always ten lines below my cursor
 opt.laststatus = 3 -- Always display the status line
 opt.list = true -- Show some invisible characters (tabs...)
+opt.listchars = {
+  tab = "» ",
+  trail = "·",
+  extends = ">",
+  precedes = "<",
+  nbsp = "␣",
+  conceal = "┊",
+}
 
 -- Cursorline highlighting control
 --  Only have it on in the active buffer
@@ -164,8 +172,6 @@ vim.cmd([[au FileType lua setlocal nospell]]) -- disable spell check for lua fil
 -- use VimEnter to avoid autocmd conflict by other plugins
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
   callback = function()
-    print("test")
-    print("test")
     vim.opt.formatoptions:remove({ "c", "r", "o" })
   end,
 })
