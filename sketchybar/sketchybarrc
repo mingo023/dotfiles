@@ -8,7 +8,7 @@ ITEM_DIR="$HOME/.config/sketchybar/view"
 PADDING=4
 LABEL="JetBrainsMono Nerd Font"
 
-sketchybar --bar     height=38                                            \
+sketchybar --bar     height=35                                            \
                      blur_radius=0                                        \
                      padding_left=4                                       \
                      padding_right=4                                      \
