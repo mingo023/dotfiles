@@ -16,7 +16,7 @@ yabai -m config window_shadow off
 yabai -m config external_bar all:35:0
 
 # Address issue windows of manage=off applications always in foreground
-yabai -m rule --add app=".*" sub-layer=normal
+yabai -m rule --add app=".*" sub-layer=normal space=1
 
 # signals
 
@@ -35,6 +35,9 @@ yabai -m rule --add app="Obsidian" manage=off
 yabai -m rule --add app="Zalo" manage=off
 yabai -m rule --add app="Mail" manage=off
 yabai -m rule --add app="^DataGrip$" manage=off
+
+# open Alacritty in space 2
+yabai -m rule --add app="Alacritty" space=2
 
 sudo yabai --load-sa
 
