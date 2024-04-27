@@ -11,6 +11,10 @@ require("nvim-treesitter.configs").setup({
     "php",
   },
 
+  indent = {
+    enable = true,
+  },
+
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = true,
 
@@ -22,8 +26,5 @@ require("nvim-treesitter.configs").setup({
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
   highlight = {
     enable = true,
-    additional_vim_regex_highlighting = {
-      "php",
-    },
   },
 })
