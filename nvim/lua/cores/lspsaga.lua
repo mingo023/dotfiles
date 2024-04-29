@@ -20,7 +20,8 @@ saga.setup({
     },
   },
   finder = {
-    right_width = 0.6,
+    left_width = 0.2,
+    right_width = 0.8,
     keys = {
       vsplit = "v",
       split = "s",

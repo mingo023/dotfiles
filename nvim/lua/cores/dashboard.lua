@@ -4,7 +4,7 @@ if not present then
   return
 end
 
-local theme = require("alpha.themes.theta")
+local theme = require("alpha.themes.startify")
 local dashboard = require("alpha.themes.dashboard")
 
 -- HEADER SECTION
@@ -27,7 +27,7 @@ local ascii = {
 local header = {
   type = "text",
   val = ascii,
-  opts = { position = "center", hl_shortcut = "AlphaHeader", hl = "AlphaHeader" },
+  opts = { position = "left", hl_shortcut = "AlphaHeader", hl = "AlphaHeader" },
 }
 
 -- INFO SECTION
@@ -42,7 +42,7 @@ local function get_info()
   return {
     type = "text",
     val = info_string,
-    opts = { hl = "Delimiter", position = "center" },
+    opts = { hl = "Delimiter", position = "left" },
   }
 end
 
@@ -53,7 +53,7 @@ local mru = {
     {
       type = "text",
       val = "Recent files",
-      opts = { hl = "SpecialComment", position = "center" },
+      opts = { hl = "SpecialComment", position = "left" },
     },
     { type = "padding", val = 1 },
     {
@@ -65,7 +65,7 @@ local mru = {
   },
 }
 theme.config.layout = {
-  { type = "padding", val = 14 },
+  -- { type = "padding", val = 14 },
   header,
   { type = "padding", val = 2 },
   get_info(),
