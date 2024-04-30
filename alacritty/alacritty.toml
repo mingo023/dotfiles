@@ -89,5 +89,5 @@ mods = "Command"
 
 [window]
 decorations = "buttonless"
-opacity = 0.96
+opacity = 0.88
 startup_mode = "Maximized"
