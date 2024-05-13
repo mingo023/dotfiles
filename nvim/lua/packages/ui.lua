@@ -25,9 +25,29 @@ return {
     end,
   },
   {
-    "narutoxy/silicon.lua",
+    "michaelrommel/nvim-silicon",
+    lazy = true,
+    cmd = "Silicon",
     config = function()
-      require("cores.silicon")
+      require("silicon").setup({
+        font = "FiraCode Nerd Font",
+        theme = "OneHalfDark",
+        to_clipboard = true,
+        background_image = "/Users/minhngo/.config/wallpapers/macos-blue.jpg",
+        language = function()
+          local ft = vim.bo.filetype
+          if ft == "php" then
+            return "PHP Source"
+          end
+
+          return ft
+        end,
+        window_title = function()
+          return vim.fn.expand("%:t")
+        end,
+      })
+
+      vim.keymap.set("v", "<leader>sc", ":Silicon<CR>", { silent = true })
     end,
   },
   {

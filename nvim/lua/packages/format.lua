@@ -7,6 +7,12 @@ return {
     end,
   },
   {
+    "windwp/nvim-ts-autotag",
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end,
+  },
+  {
     "b3nj5m1n/kommentary",
     config = function()
       local config = require("kommentary.config")
@@ -43,16 +49,6 @@ return {
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("spectre").setup()
-    end,
-  },
-  {
-    "anuvyklack/pretty-fold.nvim",
-    config = function()
-      require("pretty-fold").setup({
-        matchup_patterns = {
-          { "function%s*%(", "end" },
-        },
-      })
     end,
   },
   {
