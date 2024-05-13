@@ -31,7 +31,6 @@ return {
     config = function()
       require("silicon").setup({
         font = "FiraCode Nerd Font",
-        theme = "OneHalfDark",
         to_clipboard = true,
         background_image = "/Users/minhngo/.config/wallpapers/macos-blue.jpg",
         language = function()
