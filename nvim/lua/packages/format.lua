@@ -67,7 +67,7 @@ return {
           typescriptreact = { { "prettierd", "prettier" } },
           vue = { { "prettierd", "prettier" } },
           go = { { "gofumpt", "gofmt", "goimports_reviser", "golines" } },
-          php = { { "phpcbf" } },
+          php = { { "pint" } },
           ruby = { { "rubocop" } },
         },
       })

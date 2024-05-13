@@ -13,10 +13,4 @@ return {
       require("cores.theme.catppuccin")
     end,
   },
-  {
-    "sainnhe/gruvbox-material",
-    config = function()
-      -- require("cores.theme.gruvbox-material")
-    end,
-  },
 }

@@ -1,11 +1,6 @@
 return {
   {
-    "rafamadriz/friendly-snippets",
-    event = "InsertEnter",
-  },
-  {
     "hrsh7th/nvim-cmp",
-    dependencies = "friendly-snippets",
     config = function()
       require("cores.cmp")
     end,
@@ -40,7 +35,4 @@ return {
   {
     "hrsh7th/cmp-cmdline",
   },
-  -- {
-  --   "quangnguyen30192/cmp-nvim-tags"
-  -- }
 }

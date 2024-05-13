@@ -2,10 +2,10 @@ return {
   {
     "christoomey/vim-tmux-navigator",
   },
-  {
-    "ThePrimeagen/harpoon",
-    dependencies = { { "nvim-lua/plenary.nvim" } },
-  },
+  -- {
+  --   "ThePrimeagen/harpoon",
+  --   dependencies = { { "nvim-lua/plenary.nvim" } },
+  -- },
   {
     "folke/flash.nvim",
     event = "VeryLazy",
