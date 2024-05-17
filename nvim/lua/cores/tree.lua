@@ -28,7 +28,7 @@ require("nvim-tree").setup({
   renderer = { indent_markers = { enable = true }, highlight_git = true },
   view = {
     adaptive_size = true,
-    side = "right",
+    side = "left",
   },
 })
 

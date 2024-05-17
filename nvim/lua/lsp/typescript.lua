@@ -30,7 +30,21 @@ require("typescript-tools").setup({
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>ci", ":TSToolsAddMissingImports<CR>", { silent = true })
 
     on_attach(client, bufnr)
+
+    -- lsp inlay hint
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+
+    if vim.lsp.inlay_hint then
+      vim.lsp.inlay_hint.enable(true, nil)
+    end
+    -- lsp inlay hint
   end,
+  settings = {
+    tsserver_file_preferences = {
+      includeInlayParameterNameHints = "all",
+    },
+  },
 })
 
 lsp_config.eslint.setup({
