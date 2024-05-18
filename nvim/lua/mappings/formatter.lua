@@ -9,7 +9,7 @@ end, { nargs = "*" })
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.php",
   callback = function(args)
-    require("conform").format({ bufnr = args.buf })
+    local ok, result = pcall(conform.format, { bufnr = args.buf })
   end,
 })
 
