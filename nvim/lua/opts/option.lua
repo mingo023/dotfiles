@@ -170,8 +170,9 @@ vim.cmd([[au FileType lua setlocal nospell]]) -- disable spell check for lua fil
 
 -- DISABLE AUTO COMMENT ON INSERT
 -- use VimEnter to avoid autocmd conflict by other plugins
-vim.api.nvim_create_autocmd({ "VimEnter" }, {
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
   callback = function()
-    vim.opt.formatoptions:remove({ "c", "r", "o" })
+    vim.opt_local.formatoptions:remove({ "r", "o" })
   end,
 })
