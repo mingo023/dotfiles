@@ -15,6 +15,7 @@ telescope.setup({
       "%.mp4",
       "%.zip",
       "coverage%-report/.*",
+      "src/public/vendor/nova",
     },
     vimgrep_arguments = {
       "rg",
@@ -85,4 +86,3 @@ telescope.setup({
 })
 
 require("telescope").load_extension("fzf")
-

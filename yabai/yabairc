@@ -33,7 +33,7 @@ yabai -m rule --add app="OrbStack" manage=off
 yabai -m rule --add app="Obsidian" manage=off
 yabai -m rule --add app="Zalo" manage=off
 yabai -m rule --add app="Mail" manage=off
-yabai -m rule --add app="^DataGrip$" manage=off
+# yabai -m rule --add app="^DataGrip$" manage=off
 
 # open Alacritty in space 2
 # yabai -m rule --add app="Alacritty" space=2
