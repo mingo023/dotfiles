@@ -1,6 +1,6 @@
 local telescope = require("telescope")
 local actions = require("telescope.actions")
-local trouble = require("trouble.providers.telescope")
+local trouble = require("trouble.sources.telescope")
 
 telescope.setup({
   defaults = {
@@ -59,7 +59,7 @@ telescope.setup({
         -- ["<C-f>"] = actions.preview_scrolling_down,
         ["<C-s>"] = actions.select_vertical,
         ["<C-i>"] = actions.select_horizontal,
-        ["<C-t>"] = trouble.open_with_trouble,
+        ["<C-t>"] = trouble.open,
       },
       n = {
         ["<C-d>"] = actions.close,
@@ -70,7 +70,7 @@ telescope.setup({
         -- ["<C-f>"] = actions.preview_scrolling_down,
         ["<C-s>"] = actions.select_vertical,
         ["<C-i>"] = actions.select_horizontal,
-        -- ["<C-t>"] = trouble.open_with_trouble
+        -- ["<C-t>"] = trouble.open
       },
     },
   },

@@ -37,7 +37,11 @@ return {
     "folke/trouble.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("trouble").setup({})
+      require("trouble").setup({
+        warn_no_results = false,
+        auto_close = true,
+        focus = true,
+      })
     end,
   },
   {

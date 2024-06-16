@@ -25,7 +25,17 @@ require("nvim-tree").setup({
   },
   update_focused_file = { enable = true, update_cwd = false, ignore_list = {} },
   system_open = { cmd = nil, args = {} },
-  renderer = { indent_markers = { enable = true }, highlight_git = true },
+  renderer = {
+    indent_markers = { enable = true },
+    highlight_git = true,
+    icons = {
+      glyphs = {
+        git = {
+          untracked = "✦",
+        },
+      },
+    },
+  },
   view = {
     adaptive_size = true,
     side = "left",
