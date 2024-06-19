@@ -6,11 +6,11 @@ vim.api.nvim_create_user_command("Format", function()
 end, { nargs = "*" })
 
 -- config auto format for php
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.php",
-  callback = function(args)
-    local ok, result = pcall(conform.format, { bufnr = args.buf })
-  end,
-})
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+--   pattern = "*.php",
+--   callback = function(args)
+--     local ok, result = pcall(conform.format, { bufnr = args.buf })
+--   end,
+-- })
 
 map("n", "<C-f>", ":Format<CR>", { noremap = true, silent = true })
