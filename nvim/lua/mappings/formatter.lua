@@ -13,4 +13,4 @@ end, { nargs = "*" })
 --   end,
 -- })
 
-map("n", "<C-f>", ":Format<CR>", { noremap = true, silent = true })
+map("n", "<C-f>", ":Format<CR>", { noremap = true, silent = false })

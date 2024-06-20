@@ -6,11 +6,11 @@ end
 gitsigns.setup({
   sign_priority = 5,
   signs = {
-    add = { hl = "GitSignsAdd", text = "┃", numhl = "GitSignsAddNr", linehl = "GitSignsAdd" },
-    change = { hl = "GitSignsChange", text = "┃", numhl = "GitSignsChangeNr", linehl = "GitSignsChange" },
-    delete = { hl = "GitSignsDelete", text = "▁", numhl = "GitSignsDeleteNr", linehl = "GitSignsDelete" },
-    topdelete = { hl = "GitSignsDelete", text = "▔", numhl = "GitSignsDeleteNr", linehl = "GitSignsDelete" },
-    changedelete = { hl = "GitSignsChange", text = "~", numhl = "GitSignsChangeNr", linehl = "GitSignsChange" },
+    add = { text = "┃" },
+    change = { text = "┃" },
+    delete = { text = "▁" },
+    topdelete = { text = "▔" },
+    changedelete = { text = "~" },
   },
   status_formatter = nil, -- Use default
   attach_to_untracked = true,
@@ -60,4 +60,3 @@ gitsigns.setup({
 vim.api.nvim_set_hl(0, "GitSignsAdd", { ctermbg = 0, bg = transparent, fg = "#69FF94" })
 vim.api.nvim_set_hl(0, "GitSignsChange", { ctermbg = 0, bg = transparent, fg = "#E5C07B" })
 vim.api.nvim_set_hl(0, "GitSignsDelete", { ctermbg = 0, bg = transparent, fg = "#E06C75" })
-

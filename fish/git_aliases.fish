@@ -13,7 +13,7 @@ end
 
 alias gst='git status'
 alias ggpull='git pull origin (current_branch)'
-alias gco='git checkout'
+alias ggl='git pull origin (current_branch)'
 alias gco='git checkout'
 alias gb='git branch'
 alias ga='git add'
