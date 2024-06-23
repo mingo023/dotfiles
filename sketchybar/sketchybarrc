@@ -41,7 +41,6 @@ source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/airpodsbattery.sh"
 source "$ITEM_DIR/noti_task.sh"
-source "$ITEM_DIR/media.sh"
 
 # initializing
 sketchybar --update
