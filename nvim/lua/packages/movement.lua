@@ -2,10 +2,17 @@ return {
   {
     "christoomey/vim-tmux-navigator",
   },
-  -- {
-  --   "ThePrimeagen/harpoon",
-  --   dependencies = { { "nvim-lua/plenary.nvim" } },
-  -- },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      local harpoon = require("harpoon")
+
+      -- REQUIRED
+      harpoon:setup()
+    end,
+  },
   {
     "folke/flash.nvim",
     event = "VeryLazy",

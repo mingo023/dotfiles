@@ -1,8 +1,7 @@
 local map = vim.keymap.set
 
+local harpoon = require("harpoon")
+
 map("n", "<Leader>ha", function()
-  require("harpoon.mark").add_file()
-end, { noremap = true, silent = true })
-map("n", "<Leader>hm", function()
-  require("harpoon.ui").toggle_quick_menu()
+  harpoon:list():add()
 end, { noremap = true, silent = true })

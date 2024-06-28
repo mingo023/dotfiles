@@ -77,7 +77,7 @@ return {
       lint.linters_by_ft = {
         typescript = { "cspell" },
         ruby = { "rubocop", "cspell" },
-        -- php = { "cspell" },
+        php = { "cspell" },
       }
 
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })

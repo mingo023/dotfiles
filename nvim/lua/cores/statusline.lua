@@ -396,7 +396,7 @@ local IndentSizes = {
 heirline.setup({
   statusline = {
     ViMode,
-    Git,
+    -- Git,
     -- FileNameBlock,
     -- FileType,
     -- FileSize,
