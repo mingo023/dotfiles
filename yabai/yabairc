@@ -44,4 +44,6 @@ yabai -m config --space 2 layout bsp \
 
 sudo yabai --load-sa
 
+borders active_color=0xff7acc66 inactive_color=0xff494d64 width=5.0 whitelist="alacritty" &
+
 echo "yabai configuration loaded.."
