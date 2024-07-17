@@ -7,3 +7,7 @@ end, { noremap = true, silent = true })
 map("n", "<leader>tf", function()
   vim.cmd("TestFile")
 end, { noremap = true, silent = true })
+
+map("n", "<leader>lc", function()
+  vim.cmd("VimuxRunLastCommand")
+end, { noremap = true, silent = true })
