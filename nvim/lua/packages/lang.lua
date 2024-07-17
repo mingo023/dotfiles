@@ -72,13 +72,7 @@ return {
   {
     "mg979/vim-visual-multi",
   },
-  {
-    "tpope/vim-rails",
-  },
-  {
-    "danymat/neogen",
-    config = function()
-      require("neogen").setup({})
-    end,
-  },
+  -- {
+  --   "tpope/vim-rails",
+  -- },
 }
