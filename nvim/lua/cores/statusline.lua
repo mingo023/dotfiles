@@ -237,7 +237,7 @@ local LSPActive = {
   provider = function()
     local names = {}
     local ignore_servers = { "null-ls", "tailwindcss" }
-    for _, server in pairs(vim.lsp.get_active_clients()) do
+    for _, server in pairs(vim.lsp.get_clients()) do
       if not vim.tbl_contains(ignore_servers, server.name) then
         table.insert(names, server.name)
       end
