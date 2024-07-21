@@ -24,3 +24,6 @@ argocd/
 helm/
 mise/
 valet
+oss/*
+
+!oss/.gitkeep
