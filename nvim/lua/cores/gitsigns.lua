@@ -53,6 +53,7 @@ gitsigns.setup({
       gs.reset_hunk({ vim.fn.line("."), vim.fn.line("v") })
     end)
     map("n", "<leader>hp", gs.preview_hunk)
+    map("n", "<leader>tb", gs.toggle_current_line_blame)
     map("n", "<Leader>hl", ":Gitsigns setqflist<CR>")
   end,
 })

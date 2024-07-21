@@ -11,7 +11,14 @@
       "Dispatchable",
       "colour",
       "ecommerce",
-      "doesntContain"
+      "doesntContain",
+      "normalise",
+      "normalised",
+      "shopthru",
+      "magento",
+      "Skus",
+      "initialised",
+      "Debouncer"
     ],
     // flagWords - list of words to be always considered incorrect
     // This is useful for offensive words and common spelling errors.

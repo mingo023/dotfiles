@@ -76,6 +76,9 @@ local default_stubs = {
   "zlib",
 }
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+
 require("lspconfig").intelephense.setup({
   on_init = function(client)
     client.server_capabilities.documentFormattingProvider = false
@@ -90,5 +93,6 @@ require("lspconfig").intelephense.setup({
       }),
     },
   },
+  capabilities = capabilities,
   on_attach = on_attach,
 })
