@@ -14,6 +14,7 @@ local lazygit = Terminal:new({
   -- function to run on closing the terminal
   on_close = function(term)
     vim.cmd("startinsert!")
+    vim.cmd("checktime")
   end,
 })
 
