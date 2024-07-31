@@ -1,34 +1,31 @@
 {
-    // Version of the setting file.  Always 0.2
-    "version": "0.2",
-    // language - current active spelling language
-    "language": "en",
-    // words - list of words to be always considered correct
-    "words": [
-      "AssertableJson",
-      "Activitylog",
-      "Spatie",
-      "Dispatchable",
-      "colour",
-      "ecommerce",
-      "doesntContain",
-      "normalise",
-      "normalised",
-      "shopthru",
-      "magento",
-      "Skus",
-      "initialised",
-      "Debouncer",
-      "ratailer_id",
-      "massdelete",
-      "Queueable"
-    ],
-    // flagWords - list of words to be always considered incorrect
-    // This is useful for offensive words and common spelling errors.
-    // For example "hte" should be "the"
-    "flagWords": ["hte"],
-    "ignorePaths": [
-        "node_modules/**",
-    ]
+  "version": "0.2",
+  "language": "en",
+  "flagWords": [
+    "hte"
+  ],
+  "ignorePaths": [
+    "node_modules/**"
+  ],
+  "words": [
+    "AssertableJson",
+    "Activitylog",
+    "Spatie",
+    "Dispatchable",
+    "colour",
+    "ecommerce",
+    "doesntContain",
+    "normalise",
+    "normalised",
+    "shopthru",
+    "magento",
+    "Skus",
+    "initialised",
+    "Debouncer",
+    "ratailer_id",
+    "massdelete",
+    "Queueable",
+    "secretmanager",
+    "bothify"
+  ]
 }
-
