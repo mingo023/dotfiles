@@ -26,7 +26,7 @@ yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="Raycast" manage=off
 yabai -m rule --add app="Finder" manage=off
-yabai -m rule --add app="^Telegram$" manage=off
+yabai -m rule --add app="Telegram" manage=off
 yabai -m rule --add app="Preview" manage=off
 yabai -m rule --add app="Spotify" manage=off
 yabai -m rule --add app="OrbStack" manage=off
@@ -34,16 +34,16 @@ yabai -m rule --add app="Obsidian" manage=off
 yabai -m rule --add app="Zalo" manage=off
 yabai -m rule --add app="Mail" manage=off
 
-yabai -m rule --add app="^Alacritty$" space=^2
+yabai -m rule --add app="^Alacritty$" space=^1
 
-yabai -m config --space 2 layout bsp \
-  left_padding 20 \
-  right_padding 20 \
-  top_padding 20 \
-  bottom_padding 20
+# yabai -m config --space 2 layout bsp \
+#   left_padding 20 \
+#   right_padding 20 \
+#   top_padding 20 \
+#   bottom_padding 20
 
 sudo yabai --load-sa
 
-borders active_color=0xff7acc66 inactive_color=0xff494d64 width=5.0 whitelist="alacritty" &
+# borders active_color=0xff7acc66 inactive_color=0xff494d64 width=5.0 whitelist="alacritty" &
 
 echo "yabai configuration loaded.."

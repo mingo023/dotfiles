@@ -74,6 +74,7 @@ local default_stubs = {
   "Zend OPcache",
   "zip",
   "zlib",
+  "random",
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
