@@ -17,9 +17,6 @@ yabai -m config window_border_blur off
 
 yabai -m config external_bar all:35:0
 
-# Address issue windows of manage=off applications always in foreground
-yabai -m rule --add app=".*" sub-layer=normal
-
 # apps to not manage (ignore)
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
@@ -33,14 +30,19 @@ yabai -m rule --add app="OrbStack" manage=off
 yabai -m rule --add app="Obsidian" manage=off
 yabai -m rule --add app="Zalo" manage=off
 yabai -m rule --add app="Mail" manage=off
+yabai -m rule --add app="Notion" manage=off
+yabai -m rule --add app="1Password" manage=off
 
-yabai -m rule --add app="^Alacritty$" space=^1
+# Address issue windows of manage=off applications always in foreground
+yabai -m rule --add app=".*" sub-layer=normal
 
-# yabai -m config --space 2 layout bsp \
-#   left_padding 20 \
-#   right_padding 20 \
-#   top_padding 20 \
-#   bottom_padding 20
+yabai -m rule --add app="^Alacritty$" space=^2
+
+yabai -m config --space 2 layout bsp \
+  left_padding 20 \
+  right_padding 20 \
+  top_padding 20 \
+  bottom_padding 20
 
 sudo yabai --load-sa
 

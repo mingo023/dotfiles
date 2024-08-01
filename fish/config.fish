@@ -31,7 +31,7 @@ set fish_path $HOME/.config/fish
 . $fish_path/functions/fzf_pass.fish
 . $fish_path/custom_variables.fish
 
-alias ls="exa -l --icons"
+alias ls="eza -l --icons"
 alias rm="rm -rf"
 alias zshconfig="nvim ~/.config/zshrc/.zshrc"
 alias reload="source ~/.config/fish/config.fish"
@@ -61,7 +61,7 @@ end
 
 function wpp
   set home $HOME
-  set wallpaper (exa $home/.config/wallpapers | fzf)
+  set wallpaper (eza $home/.config/wallpapers | fzf)
   osascript -e "tell application \"Finder\" to set desktop picture to POSIX file \"$home/.config/wallpapers/$wallpaper\""
 end
 
