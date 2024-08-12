@@ -26,6 +26,15 @@
     "massdelete",
     "Queueable",
     "secretmanager",
-    "bothify"
+    "bothify",
+    "ecom",
+    "braintree",
+    "braintree_applepay",
+    "braintree_googlepay",
+    "initialiseCart",
+    "sensetiveKeys",
+    "Loggable",
+    "doesntHave",
+    "Mpbarlow"
   ]
 }
