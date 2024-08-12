@@ -1,6 +1,7 @@
 return {
   {
     "mfussenegger/nvim-dap",
+    lazy = true,
     config = function()
       require("cores.dap.go")
       require("cores.dap.node")
@@ -8,6 +9,7 @@ return {
   },
   {
     "rcarriga/nvim-dap-ui",
+    lazy = true,
     dependencies = {
       "nvim-neotest/nvim-nio",
     },
