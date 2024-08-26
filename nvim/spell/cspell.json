@@ -35,6 +35,9 @@
     "sensetiveKeys",
     "Loggable",
     "doesntHave",
-    "Mpbarlow"
+    "Mpbarlow",
+    "regexify",
+    "lucene",
+    "Healthcheck"
   ]
 }
