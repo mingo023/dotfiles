@@ -31,6 +31,7 @@ require("typescript-tools").setup({
 
     on_attach(client, bufnr)
   end,
+  single_file_support = true,
   settings = {
     tsserver_file_preferences = {
       includeInlayParameterNameHints = "all",
