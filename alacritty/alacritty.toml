@@ -55,20 +55,24 @@ TERM = "xterm-256color"
 size = 13
 
 [font.bold]
-family = "FiraCode Nerd Font"
+family = "JetbrainsMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "FiraCode Nerd Font"
+family = "JetbrainsMono Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "FiraCode Nerd Font"
+family = "JetbrainsMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "JetbrainsMono Nerd Font"
 style = "Regular"
+
+[font.offset]
+x = 0
+y = 1
 
 [[keyboard.bindings]]
 chars = "\u0002c"
