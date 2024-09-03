@@ -38,6 +38,7 @@
     "Mpbarlow",
     "regexify",
     "lucene",
-    "Healthcheck"
+    "Healthcheck",
+    "evaluable"
   ]
 }
