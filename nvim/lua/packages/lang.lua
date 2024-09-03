@@ -70,6 +70,72 @@ return {
     end,
   },
   {
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-telescope/telescope.nvim", -- Optional
+      {
+        "stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
+        opts = {},
+      },
+    },
+    config = function()
+      require("codecompanion").setup({
+        adapters = {
+          anthropic = "anthropic",
+          copilot = "copilot",
+          gemini = "gemini",
+          ollama = "ollama",
+          openai = "openai",
+          opts = {
+            allow_insecure = false, -- Allow insecure connections?
+            proxy = nil, -- [protocol://]host[:port] e.g. socks5://127.0.0.1:9999
+          },
+        },
+        strategies = {
+          -- CHAT STRATEGY ----------------------------------------------------------
+          chat = {
+            adapter = "copilot",
+            roles = {
+              llm = "CodeCompanion", -- The markdown header content for the LLM's responses
+              user = "Me", -- The markdown header for your questions
+            },
+          },
+          inline = {
+            adapter = "copilot",
+            keymaps = {
+              accept_change = {
+                modes = {
+                  n = "ga",
+                },
+                index = 1,
+                callback = "keymaps.accept_change",
+                description = "Accept change",
+              },
+              reject_change = {
+                modes = {
+                  n = "gr",
+                },
+                index = 2,
+                callback = "keymaps.reject_change",
+                description = "Reject change",
+              },
+            },
+            prompts = {
+              -- The prompt to send to the LLM when a user initiates the inline strategy and it needs to convert to a chat
+              inline_to_chat = function(context)
+                return "I want you to act as an expert and senior developer in the "
+                  .. context.filetype
+                  .. " language. I will ask you questions, perhaps giving you code examples, and I want you to advise me with explanations and code where neccessary."
+              end,
+            },
+          },
+        },
+      })
+    end,
+  },
+  {
     "mg979/vim-visual-multi",
   },
   -- {

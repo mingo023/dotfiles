@@ -36,7 +36,7 @@ map("n", "<Leader>f", "<Cmd>BufferLineGoToBuffer 4<CR>", {
   noremap = true,
   silent = true,
 })
-map("n", "<Leader>g", "<Cmd>BufferLinegoToBuffer 5<CR>", {
+map("n", "<Leader>g", "<Cmd>BufferLineGoToBuffer 5<CR>", {
   noremap = true,
   silent = true,
 })
