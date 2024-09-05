@@ -15,19 +15,24 @@ cmp.setup({
     end,
   },
   formatting = {
-    format = function(entry, vim_item)
-      vim_item.kind = lspkind.symbolic(vim_item.kind, {})
+    fields = { "kind", "abbr", "menu" },
+    format = lspkind.cmp_format({
+      mode = "symbol",
+      maxwidth = 50,
+      ellipsis_char = "...",
+      show_labelDetails = true,
+      before = function(entry, vim_item)
+        vim_item.menu = ({
+          nvim_lsp = vim_item.kind,
+          nvim_lua = "[Lua]",
+          buffer = "[BUF]",
+          luasnip = "[Snip]",
+          ["vim-dadbod-completion"] = "[DB]",
+        })[entry.source.name]
 
-      vim_item.menu = ({
-        nvim_lsp = "[LSP]",
-        nvim_lua = "[Lua]",
-        buffer = "[BUF]",
-        luasnip = "[Snip]",
-        ["vim-dadbod-completion"] = "[DB]",
-      })[entry.source.name]
-
-      return vim_item
-    end,
+        return vim_item
+      end,
+    }),
   },
   mapping = {
     ["<Up>"] = cmp.mapping.select_prev_item(),
