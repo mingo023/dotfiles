@@ -39,6 +39,7 @@
     "regexify",
     "lucene",
     "Healthcheck",
-    "evaluable"
+    "evaluable",
+    "treblle"
   ]
 }
