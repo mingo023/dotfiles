@@ -7,7 +7,7 @@ autocmd BufEnter *.ts  setlocal
     \ filetype=typescript
 ]])
 
-require("lspconfig").tsserver.setup({
+require("lspconfig").ts_ls.setup({
   init_options = {
     plugins = {
       {
