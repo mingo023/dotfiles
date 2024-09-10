@@ -15,8 +15,6 @@ return function(client, bufnr)
   }
   buf_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   buf_set_keymap("n", "gd", ":Lspsaga goto_definition<CR>", opts)
-  buf_set_keymap("n", "vgd", ":vsplit | Lspsaga goto_definition<CR>", opts)
-  buf_set_keymap("n", "sgd", ":split | Lspsaga goto_definition<CR>", opts)
   buf_set_keymap("n", "K", ":Lspsaga hover_doc<CR>", opts)
   buf_set_keymap("n", "gr", ":Lspsaga finder<CR>", opts)
   buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
