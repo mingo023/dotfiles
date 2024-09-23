@@ -51,7 +51,7 @@ return {
       require("silicon").setup({
         font = "FiraCode Nerd Font",
         to_clipboard = true,
-        theme = "OneHalfLight",
+        theme = "gruvbox-dark",
         background_image = "/Users/minhngo/.config/wallpapers/macos-blue.jpg",
         language = function()
           local ft = vim.bo.filetype
