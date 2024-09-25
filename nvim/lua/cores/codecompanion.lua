@@ -10,7 +10,7 @@ require("codecompanion").setup({
       proxy = nil, -- [protocol://]host[:port] e.g. socks5://127.0.0.1:9999
     },
   },
-  pre_defined_prompts = {
+  prompt_library = {
     ["Custom Prompt"] = {
       strategy = "inline",
       description = "Prompt the LLM from Neovim",
@@ -361,7 +361,7 @@ Use Markdown formatting and include the programming language name at the start o
 %s
 ```
 ]],
-              vim.fn.system("git diff")
+              vim.fn.system("git diff --cached")
             )
           end,
           opts = {

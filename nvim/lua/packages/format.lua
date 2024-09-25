@@ -58,13 +58,13 @@ return {
       require("conform").setup({
         formatters_by_ft = {
           lua = { "stylua" },
-          javascript = { { "prettierd", "prettier" } },
-          typescript = { { "prettierd", "prettier" } },
-          typescriptreact = { { "prettierd", "prettier" } },
-          vue = { { "prettierd", "prettier" } },
-          go = { { "gofumpt", "gofmt", "goimports_reviser", "golines" } },
-          php = { { "pint" } },
-          ruby = { { "rubocop" } },
+          javascript = { "prettierd", "prettier", stop_after_first = true },
+          typescript = { "prettierd", "prettier", stop_after_first = true },
+          typescriptreact = { "prettierd", "prettier", stop_after_first = true },
+          vue = { "prettierd", "prettier", stop_after_first = true },
+          go = { "gofumpt", "gofmt", "goimports_reviser", "golines" },
+          php = { "pint", "php-cs-fixer" },
+          ruby = { "rubocop", stop_after_first = true },
         },
       })
     end,
