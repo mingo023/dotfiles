@@ -1,7 +1,5 @@
 local map = require("utils.mapping")
 
-map("i", "jj", "<ESC>", { silent = true })
-
 -- enable copy to clipboard
 map("v", "<C-c>", '"+y')
 
