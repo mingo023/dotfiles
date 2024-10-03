@@ -42,6 +42,8 @@
     "evaluable",
     "treblle",
     "Bakewell",
-    "bigcommerce"
+    "bigcommerce",
+    "dontLogIfAttributesChangedOnly",
+    "dontLogIfAttributesChangedOnly"
   ]
 }
