@@ -361,7 +361,7 @@ Use Markdown formatting and include the programming language name at the start o
 %s
 ```
 ]],
-              vim.fn.system("git diff --cached")
+              vim.fn.system("git diff --stagged")
             )
           end,
           opts = {
