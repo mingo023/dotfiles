@@ -1191,13 +1191,7 @@
                 }
             ],
             "name": "Default profile",
-            "selected": true,
-            "simple_modifications": [
-                {
-                    "from": { "key_code": "caps_lock" },
-                    "to": [{ "key_code": "escape" }]
-                }
-            ]
+            "selected": true
         }
     ]
 }

@@ -60,11 +60,11 @@ style = "Bold"
 
 [font.bold_italic]
 family = "JetbrainsMono Nerd Font"
-style = "Bold Italic"
+style = "Bold"
 
 [font.italic]
 family = "JetbrainsMono Nerd Font"
-style = "Italic"
+style = "Regular"
 
 [font.normal]
 family = "JetbrainsMono Nerd Font"
