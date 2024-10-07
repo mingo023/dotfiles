@@ -379,6 +379,16 @@ Use Markdown formatting and include the programming language name at the start o
         llm = "CodeCompanion", -- The markdown header content for the LLM's responses
         user = "Me", -- The markdown header for your questions
       },
+      slash_commands = {
+        ["buffer"] = {
+          callback = "helpers.slash_commands.buffer",
+          description = "Insert open buffers",
+          opts = {
+            contains_code = true,
+            provider = "telescope", -- default|telescope|mini_pick|fzf_lua
+          },
+        },
+      },
     },
     inline = {
       adapter = "copilot",
