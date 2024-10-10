@@ -75,10 +75,6 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "echasnovski/mini.diff",
-      {
-        "stevearc/dressing.nvim", -- Optional: Improves the default Neovim UI
-        opts = {},
-      },
     },
     config = function()
       require("cores.codecompanion")
