@@ -16,6 +16,7 @@ telescope.setup({
       "%.zip",
       "coverage%-report/.*",
       "src/public/vendor/nova",
+      "karabiner"
     },
     vimgrep_arguments = {
       "rg",
