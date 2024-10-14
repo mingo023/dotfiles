@@ -27,6 +27,36 @@ local high_contrast_theme = {
   crust = "#191926",
 }
 
+local gruvbox_theme = {
+  rosewater = "#FB4834",
+  flamingo = "#FB4834",
+  red = "#FB4834",
+  maroon = "#FB4834",
+  pink = "#d3859b",
+  mauve = "#d3859b",
+  peach = "#e78a4e",
+  yellow = "#FBBD2E",
+  green = "#8dc07c",
+  teal = "#B9BB25",
+  sky = "#99c792",
+  sapphire = "#99c792",
+  blue = "#8dbba3",
+  lavender = "#8dbba3",
+  text = "#f1e4c2",
+  subtext2 = "#c5b4a1",
+  subtext1 = "#d5c4a1",
+  subtext0 = "#bdae93",
+  overlay2 = "#a89984",
+  overlay1 = "#928374",
+  overlay0 = "#595959",
+  surface2 = "#4d4d4d",
+  surface1 = "#404040",
+  surface0 = "#292929",
+  base = "#1d2224",
+  mantle = "#1d2224",
+  crust = "#1f2223",
+}
+
 local ming_scheme = {
   rosewater = "#ea6962",
   flamingo = "#ea6962",
@@ -185,6 +215,17 @@ require("catppuccin").setup({
       NotificationError = { fg = colors.text },
 
       SignColumn = { bg = colors.base, fg = colors.base },
+
+      -- Telescope configuration
+      TelescopePromptTitle = { fg = colors.mantle, bg = "#39fd9c", style = { "bold" } },
+      TelescopePromptCounter = { fg = colors.red, style = { "bold" } },
+      TelescopePromptBorder = { bg = colors.crust },
+      -- Telescope results
+      TelescopeResultsTitle = { link = "TelescopePromptTitle" },
+      TelescopeResultsBorder = { link = "TelescopePromptBorder" },
+      -- Telescope preview
+      TelescopePreviewTitle = { link = "TelescopePromptTitle" },
+      TelescopePreviewBorder = { link = "TelescopePromptBorder" },
     }
   end,
 })

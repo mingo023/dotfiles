@@ -44,6 +44,7 @@
     "Bakewell",
     "bigcommerce",
     "dontLogIfAttributesChangedOnly",
-    "dontLogIfAttributesChangedOnly"
+    "dontLogIfAttributesChangedOnly",
+    "tokenable"
   ]
 }
