@@ -12,8 +12,10 @@ map("n", "<Leader>dm", ":noh <CR>", { silent = true })
 map("v", "/", 'y/<C-R>"<CR>N', { silent = true })
 
 -- mapping for shift multiple lines repeatedly
-map("v", "<", "<gv", { silent = silent })
-map("v", ">", ">gv", { silent = silent })
+map("x", "<Left>", "<gv", { silent = true })
+map("x", "<Right>", ">gv", { silent = true })
+map("x", "<Down>", ":move '>+1<CR>gv-gv", { silent = true })
+map("x", "<Up>", ":move '<-2<CR>gv-gv", { silent = true })
 
 map("n", "<Leader>jt", ":RunJestFocused <CR>")
 
@@ -53,7 +55,7 @@ map("n", "<C-i>", "<C-i>zz")
 map("n", "<C-o>", "<C-o>zz")
 
 -- convert snakecase to camelcase
-vim.keymap.set("n", ",ct", function()
+map("n", ",ct", function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
   local word = vim.fn.expand("<cword>")
   local word_start = vim.fn.matchstrpos(vim.fn.getline("."), "\\k*\\%" .. (col + 1) .. "c\\k*")[2]

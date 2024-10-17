@@ -16,7 +16,8 @@ telescope.setup({
       "%.zip",
       "coverage%-report/.*",
       "src/public/vendor/nova",
-      "karabiner"
+      "karabiner",
+      "**/vendor/*",
     },
     vimgrep_arguments = {
       "rg",
@@ -37,18 +38,33 @@ telescope.setup({
     use_less = true,
     set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
     initial_mode = "insert",
-    results_title = false,
     border = true,
-    borderchars = {
-      prompt = { " ", " ", "─", " ", " ", " ", "─", "─" },
-      results = { "─", " ", " ", " ", "─", "─", " ", " " },
-      preview = { "─", " ", "─", "│", "┬", "─", "─", "╰" },
+    pickers = {
+      find_files = {
+        find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+      },
     },
-    layout_strategy = "bottom_pane",
+    preview = {
+      hide_on_startup = true,
+    },
+    -- layout_strategy = "horizontal",
     layout_config = {
-      height = 0.43,
-      preview_width = 0.68,
-      prompt_position = "bottom",
+      horizontal = {
+        prompt_position = "top",
+        preview_width = 0.55,
+        results_width = 0.8,
+      },
+      vertical = {
+        mirror = false,
+      },
+      width = 0.68,
+      height = 0.80,
+      preview_cutoff = 120,
+    },
+    path_display = {
+      filename_first = {
+        reverse_directories = true,
+      },
     },
     mappings = {
       i = {
@@ -60,6 +76,7 @@ telescope.setup({
         -- ["<C-f>"] = actions.preview_scrolling_down,
         ["<C-s>"] = actions.select_vertical,
         ["<C-i>"] = actions.select_horizontal,
+        ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
         ["<C-t>"] = trouble.open,
       },
       n = {

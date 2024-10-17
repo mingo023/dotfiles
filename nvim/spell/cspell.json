@@ -45,6 +45,8 @@
     "bigcommerce",
     "dontLogIfAttributesChangedOnly",
     "dontLogIfAttributesChangedOnly",
-    "tokenable"
+    "tokenable",
+    "Authorizable",
+    "querydetector"
   ]
 }

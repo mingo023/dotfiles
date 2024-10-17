@@ -217,15 +217,18 @@ require("catppuccin").setup({
       SignColumn = { bg = colors.base, fg = colors.base },
 
       -- Telescope configuration
-      TelescopePromptTitle = { fg = colors.mantle, bg = "#39fd9c", style = { "bold" } },
+      TelescopePromptTitle = { fg = colors.mantle, bg = colors.green, style = { "bold" } },
       TelescopePromptCounter = { fg = colors.red, style = { "bold" } },
-      TelescopePromptBorder = { bg = colors.crust },
+      TelescopePromptBorder = { bg = colors.base, fg = colors.base },
       -- Telescope results
-      TelescopeResultsTitle = { link = "TelescopePromptTitle" },
+      TelescopeResultsTitle = { fg = colors.mantle, bg = colors.sky },
       TelescopeResultsBorder = { link = "TelescopePromptBorder" },
       -- Telescope preview
-      TelescopePreviewTitle = { link = "TelescopePromptTitle" },
+      TelescopePreviewTitle = { fg = colors.mantle, bg = colors.rosewater },
       TelescopePreviewBorder = { link = "TelescopePromptBorder" },
+
+      TelescopeBorder = { bg = colors.base, fg = colors.base },
+      TelescopeNormal = { bg = colors.base },
     }
   end,
 })
