@@ -23,7 +23,18 @@ end, { silent = true })
 
 map("n", ",fg", function()
   telescope_builtin.live_grep({
-    find_command = { "rg", "--ignore", "--hidden", "--files" },
+    hidden = true,
+    previewer = true,
+    find_command = {
+      "fd",
+      "--type",
+      "file",
+      "--type",
+      "symlink",
+      "--hidden",
+      "--exclude",
+      ".git",
+    },
   })
 end, { silent = true })
 

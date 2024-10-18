@@ -39,11 +39,6 @@ telescope.setup({
     set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
     initial_mode = "insert",
     border = true,
-    pickers = {
-      find_files = {
-        find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
-      },
-    },
     preview = {
       hide_on_startup = true,
     },
@@ -51,7 +46,7 @@ telescope.setup({
     layout_config = {
       horizontal = {
         prompt_position = "top",
-        preview_width = 0.55,
+        preview_width = 0.65,
         results_width = 0.8,
       },
       vertical = {
@@ -68,6 +63,7 @@ telescope.setup({
     },
     mappings = {
       i = {
+        ["<C-q>"] = actions.close,
         ["<C-d>"] = actions.close,
         ["<Esc>"] = actions.close,
         -- ["<C-j>"] = actions.move_selection_next,
