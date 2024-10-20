@@ -105,12 +105,12 @@ local louis_scheme = {
   text = "#e8e1bf",
   subtext1 = "#e0d7c3",
   subtext0 = "#d3c6aa",
-  overlay2 = "#9da9a0",
-  overlay1 = "#859289",
-  overlay0 = "#6d6649",
-  surface2 = "#585c4a",
-  surface1 = "#414b50",
-  surface0 = "#374145",
+  overlay2 = "#a89984",
+  overlay1 = "#928374",
+  overlay0 = "#595959",
+  surface2 = "#4d4d4d",
+  surface1 = "#404040",
+  surface0 = "#292929",
   base = "#1C1C20",
   mantle = "#161b1d",
   crust = "#14181a",
@@ -154,15 +154,19 @@ require("catppuccin").setup({
       -- NvimTree
       NvimTreeStatuslineNc = { bg = colors.base, fg = colors.surface0 },
       NvimTreeWinSeparator = { bg = colors.none, fg = colors.surface0 },
-      WinSeparator = { bg = colors.none, fg = colors.text },
       NvimTreeNormal = { bg = colors.none },
       -- NvimTree
+
+      WinSeparator = { bg = colors.none, fg = colors.surface0 },
 
       -- LSP Saga
       SagaFinderFname = { fg = colors.rosewater },
       -- LSP Saga
 
+      -- Cmp
       CmpItemMenu = { fg = colors.surface2 },
+      -- Cmp
+
       CursorLineNr = { fg = colors.green, style = { "bold" } },
       FloatBorder = { bg = colors.base, fg = colors.green },
       GitSignsChange = { fg = colors.peach },
@@ -219,7 +223,7 @@ require("catppuccin").setup({
       -- Telescope configuration
       TelescopePromptTitle = { fg = colors.mantle, bg = colors.green, style = { "bold" } },
       TelescopePromptCounter = { fg = colors.red, style = { "bold" } },
-      TelescopePromptBorder = { bg = colors.base, fg = colors.base },
+      TelescopePromptBorder = { bg = colors.surface0, fg = colors.surface0 },
       -- Telescope results
       TelescopeResultsTitle = { fg = colors.mantle, bg = colors.sky },
       TelescopeResultsBorder = { link = "TelescopePromptBorder" },
@@ -227,8 +231,8 @@ require("catppuccin").setup({
       TelescopePreviewTitle = { fg = colors.mantle, bg = colors.rosewater },
       TelescopePreviewBorder = { link = "TelescopePromptBorder" },
 
-      TelescopeBorder = { bg = colors.base, fg = colors.base },
-      TelescopeNormal = { bg = colors.base },
+      TelescopeBorder = { bg = colors.surface0, fg = colors.base },
+      TelescopeNormal = { bg = colors.surface0 },
     }
   end,
 })

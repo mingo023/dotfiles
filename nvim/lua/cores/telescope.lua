@@ -1,6 +1,7 @@
 local telescope = require("telescope")
 local actions = require("telescope.actions")
 local trouble = require("trouble.sources.telescope")
+local sorter = require("telescope.sorters")
 
 telescope.setup({
   defaults = {
@@ -28,11 +29,11 @@ telescope.setup({
       "--column",
       "--smart-case",
     },
-    selection_caret = " ❯ ",
-    prompt_prefix = " 👀 ",
+    selection_caret = "╰┈➤ ",
+    prompt_prefix = "(づ ̄ ³ ̄)づ",
     path_display = { "truncate" },
     sorting_strategy = "ascending",
-    file_sorter = require("telescope.sorters").get_fzy_sorter,
+    file_sorter = sorter.get_fzy_sorter,
     winblend = 0,
     color_devicons = true,
     use_less = true,
@@ -52,7 +53,7 @@ telescope.setup({
         mirror = false,
       },
       width = 0.68,
-      height = 0.80,
+      height = 0.3,
       preview_cutoff = 120,
     },
     mappings = {
@@ -62,8 +63,8 @@ telescope.setup({
         ["<Esc>"] = actions.close,
         -- ["<C-j>"] = actions.move_selection_next,
         ["<C-k>"] = actions.move_selection_previous,
-        ["<C-b>"] = actions.preview_scrolling_up,
-        -- ["<C-f>"] = actions.preview_scrolling_down,
+        ["<C-j>"] = actions.preview_scrolling_down,
+        ["<C-k>"] = actions.preview_scrolling_up,
         ["<C-s>"] = actions.select_vertical,
         ["<C-i>"] = actions.select_horizontal,
         ["<C-p>"] = require("telescope.actions.layout").toggle_preview,
