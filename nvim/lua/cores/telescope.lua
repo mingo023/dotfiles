@@ -42,7 +42,6 @@ telescope.setup({
     preview = {
       hide_on_startup = true,
     },
-    -- layout_strategy = "horizontal",
     layout_config = {
       horizontal = {
         prompt_position = "top",
@@ -55,11 +54,6 @@ telescope.setup({
       width = 0.68,
       height = 0.80,
       preview_cutoff = 120,
-    },
-    path_display = {
-      filename_first = {
-        reverse_directories = true,
-      },
     },
     mappings = {
       i = {

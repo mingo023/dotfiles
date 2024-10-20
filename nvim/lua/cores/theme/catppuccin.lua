@@ -142,7 +142,7 @@ require("catppuccin").setup({
   integrations = {
     lsp_saga = true,
   },
-  transparent_background = true,
+  transparent_background = false,
   show_end_of_buffer = false,
   custom_highlights = function(colors)
     return {

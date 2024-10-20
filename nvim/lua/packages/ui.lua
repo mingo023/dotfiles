@@ -18,21 +18,21 @@ return {
       end
     end,
   },
-  {
-    "j-hui/fidget.nvim",
-    tag = "legacy",
-    config = function()
-      require("fidget").setup({
-        text = {
-          spinner = "dots_ellipsis",
-        },
-        window = {
-          blend = 0,
-          relative = "editor",
-        },
-      })
-    end,
-  },
+  -- {
+  --   "j-hui/fidget.nvim",
+  --   tag = "legacy",
+  --   config = function()
+  --     require("fidget").setup({
+  --       text = {
+  --         spinner = "dots_ellipsis",
+  --       },
+  --       window = {
+  --         blend = 0,
+  --         relative = "editor",
+  --       },
+  --     })
+  --   end,
+  -- },
   {
     "folke/zen-mode.nvim",
     config = function()
