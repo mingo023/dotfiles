@@ -47,6 +47,7 @@
     "dontLogIfAttributesChangedOnly",
     "tokenable",
     "Authorizable",
-    "querydetector"
+    "querydetector",
+    "Outl1ne"
   ]
 }
