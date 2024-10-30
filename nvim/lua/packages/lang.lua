@@ -75,6 +75,7 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
       "echasnovski/mini.diff",
+      "stevearc/dressing.nvim",
     },
     config = function()
       require("cores.codecompanion")
