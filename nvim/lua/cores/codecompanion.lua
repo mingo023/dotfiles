@@ -1,7 +1,15 @@
 require("codecompanion").setup({
   adapters = {
     anthropic = "anthropic",
-    copilot = "copilot",
+    copilot = function()
+      return require("codecompanion.adapters").extend("copilot", {
+        schema = {
+          model = {
+            default = "claude-3.5-sonnet",
+          },
+        },
+      })
+    end,
     gemini = "gemini",
     ollama = "ollama",
     openai = "openai",

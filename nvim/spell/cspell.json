@@ -48,6 +48,9 @@
     "tokenable",
     "Authorizable",
     "querydetector",
-    "Outl1ne"
+    "Outl1ne",
+    "Encrypter",
+    "awin",
+    "rakuten"
   ]
 }
