@@ -28,6 +28,8 @@ set -gx PATH ".git/safe/../../bin:$PATH"
 
 set -gx USE_GKE_GCLOUD_AUTH_PLUGIN True
 
+set -U fish_user_paths $HOME/.config/composer/vendor/bin
+
 set fish_path $HOME/.config/fish
 
 . $fish_path/git_aliases.fish

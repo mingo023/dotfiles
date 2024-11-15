@@ -76,6 +76,7 @@ return {
       "nvim-treesitter/nvim-treesitter",
       "echasnovski/mini.diff",
       "stevearc/dressing.nvim",
+      { "MeanderingProgrammer/render-markdown.nvim", ft = { "markdown", "codecompanion" } }, -- Optional: For prettier markdown rendering
     },
     config = function()
       require("cores.codecompanion")

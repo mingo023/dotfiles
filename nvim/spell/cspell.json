@@ -51,6 +51,13 @@
     "Outl1ne",
     "Encrypter",
     "awin",
-    "rakuten"
+    "rakuten",
+    "PPCP",
+    "applepay",
+    "googlepay",
+    "customerFirstname",
+    "customerLastname",
+    "firstname",
+    "lastname"
   ]
 }
