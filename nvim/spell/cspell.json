@@ -58,6 +58,10 @@
     "customerFirstname",
     "customerLastname",
     "firstname",
-    "lastname"
+    "lastname",
+    "setRedirector",
+    "publisherpages",
+    "endsection",
+    "publisherdefault"
   ]
 }

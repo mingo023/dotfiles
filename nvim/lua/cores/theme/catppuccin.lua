@@ -167,7 +167,7 @@ require("catppuccin").setup({
       CmpItemMenu = { fg = colors.surface2 },
       -- Cmp
 
-      CursorLineNr = { fg = colors.green, style = { "bold" } },
+      CursorLineNr = { fg = colors.text, style = { "bold" } },
       FloatBorder = { bg = colors.base, fg = colors.green },
       GitSignsChange = { fg = colors.peach },
       LineNr = { fg = colors.overlay0 },
