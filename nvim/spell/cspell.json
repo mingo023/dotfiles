@@ -62,6 +62,8 @@
     "setRedirector",
     "publisherpages",
     "endsection",
-    "publisherdefault"
+    "publisherdefault",
+    "Debounceable",
+    "somtimes"
   ]
 }

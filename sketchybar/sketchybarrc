@@ -31,6 +31,7 @@ sketchybar --bar     height=38                                            \
 
 # left
 source "$ITEM_DIR/front_app.sh"
+source "$ITEM_DIR/space.sh"
 
 # right
 source "$ITEM_DIR/cal.sh"
