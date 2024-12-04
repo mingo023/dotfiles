@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SPACE_ICONS=("Chat" "Browser" "Code" "Note" "Music")
+SPACE_ICONS=("Chat" "Browser" "Code" "Tools" "Music")
 
 YELLOW=#eed49f
 GREEN=#8DC583

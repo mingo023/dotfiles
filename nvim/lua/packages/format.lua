@@ -75,7 +75,7 @@ return {
       local lint = require("lint")
 
       lint.linters_by_ft = {
-        -- typescript = { "cspell" },
+        typescript = { "cspell" },
         ruby = { "rubocop", "cspell" },
         php = { "cspell" },
       }

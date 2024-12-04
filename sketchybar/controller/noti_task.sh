@@ -12,6 +12,6 @@ else
           LABEL="!$OVERDUE_TASK/$PENDING_TASK"
   fi
 
-  sketchybar --set $NAME icon="􀧵" label="${LABEL} |" \
+  sketchybar --set $NAME icon="􀧵" label="${LABEL} " \
           label.drawing=on icon.drawing=on
 fi
