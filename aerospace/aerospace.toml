@@ -113,10 +113,6 @@ run='move-node-to-workspace 3'
 if.app-id = 'org.alacritty'
 run='move-node-to-workspace 3'
 
-[[on-window-detected]]
-if.app-id = 'org.alacritty'
-run='move-node-to-workspace 3'
-
 # Workspace 4 Apps
 [[on-window-detected]]
 if.app-id = 'com.postmanlabs.mac'
@@ -133,6 +129,10 @@ run='move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'notion.id'
 run='move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run='layout floating'
 
 # Workspace 5 Apps
 [[on-window-detected]]

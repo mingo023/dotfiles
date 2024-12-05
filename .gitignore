@@ -25,5 +25,6 @@ helm/
 mise/
 valet
 oss/*
+stripe
 
 !oss/.gitkeep
