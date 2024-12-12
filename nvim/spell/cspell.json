@@ -64,6 +64,8 @@
     "endsection",
     "publisherdefault",
     "Debounceable",
-    "somtimes"
+    "somtimes",
+    "dontFlash",
+    "dontReport"
   ]
 }
