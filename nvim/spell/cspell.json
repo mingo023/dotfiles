@@ -66,6 +66,10 @@
     "Debounceable",
     "somtimes",
     "dontFlash",
-    "dontReport"
+    "dontReport",
+    "snakecaseKeys",
+    "snakecase",
+    "Flysystem",
+    "PhpseclibV3"
   ]
 }

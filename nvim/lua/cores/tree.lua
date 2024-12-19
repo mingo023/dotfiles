@@ -40,7 +40,7 @@ require("nvim-tree").setup({
     adaptive_size = true,
     side = "left",
     float = {
-      enable = true,
+      enable = false,
       open_win_config = {
         relative = "editor",
         border = "rounded",
