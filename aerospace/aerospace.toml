@@ -53,7 +53,7 @@ outer.right =      0
 [mode.main.binding]
 alt-shift-b = 'exec-and-forget open -a /Applications/Arc.app'
 alt-shift-t = 'exec-and-forget open -a /Applications/Microsoft\ Teams.app/'
-alt-shift-a = 'exec-and-forget open -a /Applications/Alacritty.app'
+alt-shift-a = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-shift-c = 'exec-and-forget open -a /Applications/Visual\ Studio\ Code.app'
 alt-shift-p = 'exec-and-forget open -a /Applications/Postman.app'
 alt-shift-d = 'exec-and-forget open -a /Applications/Discord.app'

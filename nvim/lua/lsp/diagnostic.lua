@@ -6,6 +6,11 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
   update_in_insert = false,
 })
 
+vim.cmd([[
+  hi DiagnosticUnderlineError gui=undercurl
+  hi DiagnosticUnderlineWarn guisp='Cyan' gui=undercurl
+]])
+
 -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 --   border = "rounded",
 -- })

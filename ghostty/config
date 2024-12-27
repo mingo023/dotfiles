@@ -1,0 +1,26 @@
+theme = catppuccin-frappe
+font-family = JetbrainsMono Nerd Font
+shell-integration = fish
+
+font-size = 16
+
+window-padding-x = 1
+window-padding-y = 1
+window-decoration = false
+macos-titlebar-style = hidden
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-icon-ghost-color = grey
+macos-icon-screen-color = dark grey,black
+macos-option-as-alt = true
+macos-window-shadow = true
+
+clipboard-read = allow
+clipboard-write = allow
+
+background = "#181818"
+foreground = "#d4be98"
+
+keybind = cmd+t=text:\x01c
+keybind = cmd+s=text::w\r
+keybind = cmd+w=text:\x01x
