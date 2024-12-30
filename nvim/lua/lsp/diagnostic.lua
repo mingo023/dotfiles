@@ -9,6 +9,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 vim.cmd([[
   hi DiagnosticUnderlineError gui=undercurl
   hi DiagnosticUnderlineWarn guisp='Cyan' gui=undercurl
+  hi DiagnosticUnderlineInfo gui=undercurl
 ]])
 
 -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
