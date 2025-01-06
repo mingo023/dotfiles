@@ -11,7 +11,6 @@ window-decoration = false
 macos-titlebar-style = hidden
 macos-icon = custom-style
 macos-icon-frame = aluminum
-macos-icon-ghost-color = grey
 macos-icon-screen-color = dark grey,black
 macos-option-as-alt = true
 macos-window-shadow = true
@@ -25,3 +24,4 @@ foreground = "#d4be98"
 keybind = cmd+t=text:\x01c
 keybind = cmd+s=text::w\r
 keybind = cmd+w=text:\x01x
+keybind = cmd+f=text:\x01[/

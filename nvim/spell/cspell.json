@@ -70,6 +70,8 @@
     "snakecaseKeys",
     "snakecase",
     "Flysystem",
-    "PhpseclibV3"
+    "PhpseclibV3",
+    "AutoCategoriseProduct",
+    "categorise"
   ]
 }
