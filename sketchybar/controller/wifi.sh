@@ -3,7 +3,7 @@
 WIFIACTIVEICON=􀙇
 WIFIINACTIVEICON=􀙈
 
-CURRENT_WIFI="$(networksetup -listallhardwareports | awk '/Wi-Fi/{getline; print $2}' | xargs networksetup -getairportnetwork | sed "s/Current Wi-Fi Network: //")"
+CURRENT_WIFI="$(ipconfig getsummary en0 | awk -F ' SSID : '  '/ SSID : / {print $2}')"
 SSID="$(echo "$CURRENT_WIFI" | awk '{for(i=1; i<=NF; i++) printf "%s",substr($i,1,1)}')"
 
 if [ "$SSID" = "" ]; then

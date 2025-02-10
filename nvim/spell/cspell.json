@@ -72,6 +72,8 @@
     "Flysystem",
     "PhpseclibV3",
     "AutoCategoriseProduct",
-    "categorise"
+    "categorise",
+    "sanitised",
+    "SIGNATURE_METHOD_HMACSHA256"
   ]
 }

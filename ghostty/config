@@ -7,6 +7,7 @@ font-size = 16
 
 window-padding-x = 1
 window-padding-y = 1
+background-opacity = 0.9
 window-decoration = false
 macos-titlebar-style = hidden
 macos-icon = custom-style

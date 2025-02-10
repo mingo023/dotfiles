@@ -5,7 +5,6 @@ source "$HOME/.config/sketchybar/colors.sh"
 PLUGIN_DIR="$HOME/.config/sketchybar/controller"
 ITEM_DIR="$HOME/.config/sketchybar/view"
 
-PADDING=4
 LABEL="JetBrainsMono Nerd Font"
 
 sketchybar --bar     height=38                                            \
@@ -20,14 +19,22 @@ sketchybar --bar     height=38                                            \
            --default updates=when_shown                                   \
                      drawing=on                                           \
                      icon.font="$LABEL:SemiBold:12.5"                     \
-                     label.font="$LABEL:SemiBold:12.5"                    \
-                     icon.padding_left=$PADDING                           \
-                     icon.padding_right=$PADDING                          \
-                     label.padding_left=$PADDING                          \
-                     label.padding_right=$PADDING                         \
-                     label.color=0xff${NORD4:1}                           \
+                     icon.padding_left=10                                 \
+                     icon.padding_right=2                                 \
                      icon.color=0xff${NORD4:1}                            \
-
+                     icon.drawing=on                                      \
+                     label.font="$LABEL:SemiBold:12.5"                    \
+                     label.padding_left=2                                 \
+                     label.padding_right=10                               \
+                     label.color=0xff${NORD4:1}                           \
+                     label.drawing=on                                     \
+                     background.color=0xff282930                          \
+                     background.border_color=0xff000000                   \
+                     background.border_width=2                            \
+                     background.corner_radius=5                           \
+                     background.padding_left=2                            \
+                     background.padding_right=2                           \
+                     background.height=24                                 \
 
 # left
 source "$ITEM_DIR/front_app.sh"
@@ -38,7 +45,7 @@ source "$ITEM_DIR/cal.sh"
 source "$ITEM_DIR/mic.sh"
 # source "$ITEM_DIR/mem.sh"
 # source "$ITEM_DIR/cpu.sh"
-# source "$ITEM_DIR/wifi.sh"
+source "$ITEM_DIR/wifi.sh"
 source "$ITEM_DIR/battery.sh"
 source "$ITEM_DIR/airpodsbattery.sh"
 # source "$ITEM_DIR/noti_task.sh"
