@@ -13,7 +13,7 @@ if [[ $LEFT_BATTERY = "" ]]; then
     icon.padding_left=0 label.padding_left=0 \
     icon.padding_right=0 label.padding_right=0
 else
-  sketchybar --set $NAME icon=$AIRPODICON label="$LEFT_BATTERY%-$RIGHT_BATTERY% |" \
+  sketchybar --set $NAME icon=$AIRPODICON label="$LEFT_BATTERY%-$RIGHT_BATTERY%" \
     icon.padding_left=$PADDING label.padding_left=$PADDING \
     icon.padding_right=$PADDING label.padding_right=$PADDING
 fi
