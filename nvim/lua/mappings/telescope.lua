@@ -39,14 +39,7 @@ map("n", ",fg", function()
 end, { silent = true })
 
 map("n", "<Leader>ma", ":Telescope marks <CR>", { silent = true })
-map("n", "<Leader>sp", function()
-  return require("telescope.builtin").lsp_document_symbols({
-    symbol_width = 50,
-    symbols = {
-      "Method",
-    },
-  })
-end, { silent = true })
+map("n", "<Leader>sp", ":Namu symbols <CR>", { silent = true })
 
 map("", ",gs", ":Telescope git_status <CR>", { silent = true })
 map("", ",gb", ":Telescope git_branches <CR>", { silent = true })
