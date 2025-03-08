@@ -42,7 +42,7 @@ local plugins = merge(
   movement_pkg,
   testing_pkg,
   ui_pkg,
-  dashboard_pkg,
+  -- dashboard_pkg,
   bufferline_pkg,
   db_pkg
 )

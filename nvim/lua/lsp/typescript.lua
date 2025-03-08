@@ -3,7 +3,7 @@ local on_attach = require("lsp/on_attach")
 
 vim.cmd([[
 autocmd BufEnter *.ts  setlocal
-    \ shiftwidth=4
+    \ shiftwidth=2
     \ filetype=typescript
 ]])
 
