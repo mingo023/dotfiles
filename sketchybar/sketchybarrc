@@ -7,14 +7,15 @@ ITEM_DIR="$HOME/.config/sketchybar/view"
 
 LABEL="JetBrainsMono Nerd Font"
 
-sketchybar --bar     height=38                                            \
+sketchybar --bar     height=27                                            \
                      blur_radius=0                                        \
                      padding_left=4                                       \
                      padding_right=4                                      \
                      color=0xFF000000                                     \
-                     position=top                                         \
+                     position=bottom                                         \
                      sticky=on                                            \
                      font_smoothing=on                                    \
+                     topmost=window                                       \
                                                                           \
            --default updates=when_shown                                   \
                      drawing=on                                           \

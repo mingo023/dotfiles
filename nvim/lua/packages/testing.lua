@@ -1,21 +1,8 @@
 return {
   {
     "vim-test/vim-test",
-    dependencies = {
-      "preservim/vimux",
-    },
+    dependencies = { "preservim/vimux" },
     config = function()
-      -- set strategy
-      vim.g["test#project_root"] = function()
-        local working_dir = vim.fn.getcwd()
-
-        -- check if working_dir is ends with "portal-service-be"
-        if working_dir:sub(-#("portal-service-be")) == "portal-service-be" then
-          return "./src"
-        end
-
-        return "."
-      end
       -- set strategy
       vim.g["test#strategy"] = "vimux"
 

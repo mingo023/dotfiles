@@ -2,7 +2,6 @@ return {
   {
     "windwp/nvim-autopairs",
     dependencies = "nvim-cmp",
-    lazy = true,
     config = function()
       require("cores.auto-pair")
     end,

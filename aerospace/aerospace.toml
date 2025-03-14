@@ -42,8 +42,8 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 inner.horizontal = 14
 inner.vertical =   14
 outer.left =       0
-outer.bottom =     0
-outer.top = [{ monitor."Builtin-in" = 27 }, { monitor."DELL P2719H" = 30 }, { monitor."DELL U2720Q" = 30 }, { monitor."DELL U2723QE" = 30 }, 0]
+outer.top =     0
+outer.bottom = 27
 outer.right =      0
 
 # 'main' binding mode declaration
