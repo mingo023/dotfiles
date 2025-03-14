@@ -218,7 +218,7 @@ require("catppuccin").setup({
       NotificationWarning = { fg = colors.text },
       NotificationError = { fg = colors.text },
 
-      SignColumn = { bg = colors.base, fg = colors.base },
+      SignColumn = { bg = colors.none, fg = colors.base },
 
       -- Telescope configuration
       TelescopePromptTitle = { fg = colors.mantle, bg = colors.green, style = { "bold" } },
