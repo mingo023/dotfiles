@@ -8,7 +8,7 @@ adjust-cell-height = 13%
 
 window-padding-x = 1
 window-padding-y = 1
-background-opacity = 0.91
+background-opacity = 0.96
 window-decoration = false
 macos-titlebar-style = hidden
 macos-icon = custom-style
