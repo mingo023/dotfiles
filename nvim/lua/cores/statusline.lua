@@ -392,10 +392,49 @@ local IndentSizes = {
     return conditions.buffer_not_empty() and conditions.hide_in_width()
   end,
 }
+local MacroRecording = {
+  condition = conditions.is_active,
+  init = function(self)
+    self.reg_recording = vim.fn.reg_recording()
+    self.status_dict = vim.b.gitsigns_status_dict or { added = 0, removed = 0, changed = 0 }
+    self.has_changes = self.status_dict.added ~= 0 or self.status_dict.removed ~= 0 or self.status_dict.changed ~= 0
+  end,
+  {
+    condition = function(self)
+      return self.reg_recording ~= ""
+    end,
+    {
+      condition = function(self)
+        return self.has_changes
+      end,
+      LeftSep,
+    },
+    {
+      provider = "   ",
+      hl = { fg = colors.autumnRed },
+    },
+    {
+      provider = function(self)
+        return "@" .. self.reg_recording
+      end,
+      hl = { italic = false, bold = true },
+    },
+    {
+      Space,
+    },
+    {
+      LeftSep,
+      hl = { bg = active_background_color, fg = recording_background_color },
+    },
+    hl = { bg = recording_background_color, fg = active_background_color },
+  },
+  update = { "RecordingEnter", "RecordingLeave" },
+}
 
 heirline.setup({
   statusline = {
     ViMode,
+    MacroRecording,
     -- Git,
     -- FileNameBlock,
     -- FileType,
