@@ -24,10 +24,10 @@ return {
     cmd = "Silicon",
     config = function()
       require("silicon").setup({
-        font = "FiraCode Nerd Font",
+        font = "JetbrainsMono Nerd Font",
         to_clipboard = true,
-        theme = "gruvbox-dark",
-        background_image = "/Users/minhngo/.config/wallpapers/macos-blue.jpg",
+        theme = "TwoDark",
+        background_image = "/Users/minhngo/.config/wallpapers/dragon-anime.jpg",
         language = function()
           local ft = vim.bo.filetype
           if ft == "php" then
