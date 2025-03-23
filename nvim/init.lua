@@ -8,4 +8,3 @@ vim.cmd([[
 require("opts")
 require("plugins")
 require("mappings")
-

@@ -20,6 +20,8 @@ set -gx AWS_PROFILE lawbite
 # config for HF projects
 set -gx PATH ".git/safe/../../bin:$PATH"
 
+set -gx NAVI_PATH $HOME/.config/navi/cheats
+
 
 # Ruby setup
 # set -gx GEM_HOME $HOME/.gem

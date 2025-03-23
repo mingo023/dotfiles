@@ -15,7 +15,7 @@ require("nvim-tree").setup({
   },
   diagnostics = {
     enable = true,
-    icons = { hint = "", info = "", warning = "", error = "" },
+    icons = { hint = " ", info = " ", warning = " ", error = " " },
   },
   hijack_directories = { enable = true, auto_open = true },
   filters = {
@@ -32,9 +32,25 @@ require("nvim-tree").setup({
       glyphs = {
         git = {
           untracked = "✦",
+          unstaged = "",
+          staged = "",
+          unmerged = "",
+          renamed = "",
+          deleted = "",
+          ignored = "",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty_open = "",
+          empty = "",
+          symlink = "",
         },
       },
     },
+  },
+  git = {
+    enable = true,
   },
   view = {
     adaptive_size = true,
@@ -54,15 +70,6 @@ require("nvim-tree").setup({
 g.nvim_tree_icons = {
   default = "",
   symlink = "",
-  git = {
-    deleted = "",
-    ignored = "◌",
-    renamed = "➜",
-    staged = "✓",
-    unmerged = "",
-    unstaged = "✗",
-    untracked = "★",
-  },
   folder = {
     -- disable indent_markers option to get arrows working or if you want both arrows and indent then just add the arrow icons in front of the default and opened folders below!
     arrow_open = "",

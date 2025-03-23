@@ -127,7 +127,7 @@ require("catppuccin").setup({
   },
   styles = {
     comments = { "italic" },
-    conditionals = { "italic" },
+    conditionals = {},
     loops = { "bold" },
     functions = { "bold" },
     keywords = { "bold" },
@@ -233,6 +233,10 @@ require("catppuccin").setup({
 
       TelescopeBorder = { bg = colors.surface0, fg = colors.base },
       TelescopeNormal = { bg = colors.surface0 },
+
+      NvimTreeFolderName = { fg = colors.subtext1 },
+      NvimTreeOpenedFolderName = { fg = colors.subtext1 },
+      NvimTreeFolderIcon = { fg = colors.subtext1 },
     }
   end,
 })
