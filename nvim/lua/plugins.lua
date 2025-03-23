@@ -27,6 +27,7 @@ local testing_pkg = require("packages.testing")
 local ui_pkg = require("packages.ui")
 local bufferline_pkg = require("packages.bufferline")
 local db_pkg = require("packages.db")
+local ai_pkg = require("packages.ai")
 
 local plugins = merge(
   scheme_pkg,
@@ -42,7 +43,8 @@ local plugins = merge(
   movement_pkg,
   ui_pkg,
   bufferline_pkg,
-  db_pkg
+  db_pkg,
+  ai_pkg
 )
 
 require("lazy").setup({
