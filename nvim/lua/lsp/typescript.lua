@@ -2,26 +2,10 @@ local lsp_config = require("lspconfig")
 local on_attach = require("lsp/on_attach")
 
 vim.cmd([[
-autocmd BufEnter *.ts  setlocal
-    \ shiftwidth=4
-    \ filetype=typescript
-]])
-
-require("lspconfig").ts_ls.setup({
-  init_options = {
-    plugins = {
-      {
-        name = "@vue/typescript-plugin",
-        location = "/Users/minhngo/.local/share/mise/installs/node/20.11.1/lib/node_modules/@vue/typescript-plugin",
-        languages = { "vue" },
-      },
-    },
-  },
-  filetypes = {
-    "vue",
-  },
-  on_attach = on_attach,
-})
+  autocmd BufEnter *.ts setlocal
+      \ shiftwidth=4
+      \ filetype=typescript
+  ]])
 
 require("typescript-tools").setup({
   on_attach = function(client, bufnr)

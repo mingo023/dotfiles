@@ -123,7 +123,7 @@ require("catppuccin").setup({
     dark = "mocha",
   },
   color_overrides = {
-    mocha = louis_scheme,
+    mocha = ming_scheme,
   },
   styles = {
     comments = { "italic" },

@@ -1,10 +1,9 @@
 auto-update-channel = stable
 theme = catppuccin-frappe
-font-family = JetbrainsMono Nerd Font
-shell-integration = fish
+font-family = JetBrainsMono NFM SemiBold
 
-font-size = 16
-adjust-cell-height = 13%
+shell-integration = fish
+adjust-cell-height = 10%
 
 window-padding-x = 1
 window-padding-y = 1
