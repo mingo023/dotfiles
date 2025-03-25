@@ -26,9 +26,21 @@ require("nvim-tree").setup({
   update_focused_file = { enable = true, update_cwd = false, ignore_list = {} },
   system_open = { cmd = nil, args = {} },
   renderer = {
-    indent_markers = { enable = true },
+    indent_markers = {
+      enable = true,
+      icons = {
+        corner = "╰┈",
+        edge = "│",
+        item = "│",
+        bottom = "",
+        none = "",
+      },
+    },
     highlight_git = true,
     icons = {
+      show = {
+        folder_arrow = false,
+      },
       glyphs = {
         git = {
           untracked = "✦",
@@ -66,19 +78,3 @@ require("nvim-tree").setup({
     },
   },
 })
-
-g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  folder = {
-    -- disable indent_markers option to get arrows working or if you want both arrows and indent then just add the arrow icons in front of the default and opened folders below!
-    arrow_open = "",
-    arrow_closed = "",
-    default = "",
-    empty = "", -- 
-    empty_open = "",
-    open = "",
-    symlink = "",
-    symlink_open = "",
-  },
-}

@@ -74,6 +74,7 @@
     "AutoCategoriseProduct",
     "categorise",
     "sanitised",
-    "SIGNATURE_METHOD_HMACSHA256"
+    "SIGNATURE_METHOD_HMACSHA256",
+    "temporalio"
   ]
 }

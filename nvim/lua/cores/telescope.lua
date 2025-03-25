@@ -7,8 +7,6 @@ telescope.setup({
   defaults = {
     file_ignore_patterns = {
       ".git/",
-      "%.o",
-      "%.a",
       "%.out",
       "%.class",
       "%.pdf",
