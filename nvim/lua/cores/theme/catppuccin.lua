@@ -234,9 +234,9 @@ require("catppuccin").setup({
       TelescopeBorder = { bg = colors.surface0, fg = colors.base },
       TelescopeNormal = { bg = colors.surface0 },
 
-      NvimTreeFolderName = { fg = colors.subtext1 },
-      NvimTreeOpenedFolderName = { fg = colors.subtext1 },
-      NvimTreeFolderIcon = { fg = colors.subtext1 },
+      NvimTreeFolderName = { fg = colors.sapphire },
+      NvimTreeOpenedFolderName = { fg = colors.sapphire },
+      NvimTreeFolderIcon = { fg = colors.sapphire },
     }
   end,
 })
