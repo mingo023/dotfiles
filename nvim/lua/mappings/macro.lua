@@ -1,4 +1,4 @@
-local map = vim.api.nvim_set_keymap
+local map = require("utils.mapping")
 
 local opts = { noremap = true, silent = true }
 
@@ -24,3 +24,14 @@ vim.api.nvim_create_user_command("EditMacro", function()
     vim.fn.setreg("q", macro)
   end)
 end, { nargs = "*" })
+
+vim.api.nvim_create_augroup("TSMacro", { clear = true })
+local esc = vim.api.nvim_replace_termcodes("<Esc>", true, true, true)
+vim.api.nvim_create_autocmd("FileType", {
+  group = "TSMacro",
+  pattern = { "typescript", "typescriptreact", "typescript.tsx" },
+  callback = function()
+    vim.fn.setreg("l", "yoconsole.log('" .. esc .. "pa: '" .. esc .. "a, " .. esc .. "pa);" .. esc)
+    map("v", "<leader>l", "@l", opts)
+  end,
+})
