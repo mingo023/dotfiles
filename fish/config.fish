@@ -20,6 +20,10 @@ set -gx AWS_PROFILE lawbite
 # config for HF projects
 set -gx PATH ".git/safe/../../bin:$PATH"
 
+# Python setup
+set -Ux PYENV_ROOT $HOME/.pyenv
+fish_add_path $PYENV_ROOT/bin
+
 set -gx NAVI_PATH $HOME/.config/navi/cheats
 
 
@@ -86,3 +90,5 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+source /Users/minhngo/.config/op/plugins.sh

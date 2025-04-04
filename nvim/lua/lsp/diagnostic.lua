@@ -18,24 +18,5 @@ for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
--- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
---   border = "rounded",
--- })
 
--- vim.notify = function(msg, log_level)
---   if msg:match("exit code") then
---     return
---   end
---   if log_level == vim.log.levels.ERROR then
---     vim.api.nvim_err_writeln(msg)
---   else
---     vim.api.nvim_echo({ { msg } }, true, {})
---   end
--- end
-
--- vim.diagnostic.config({
---   float = { border = "rounded" },
---   virtual_text = true,
--- })
-
--- vim.cmd([[autocmd CursorHold * lua vim.diagnostic.open_float({focusable=false})]])
+vim.diagnostic.config({ virtual_text = true })

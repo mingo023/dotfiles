@@ -99,7 +99,7 @@ vim.opt.diffopt = {
 }
 
 vim.opt.undofile = true
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "yes:1"
 
 -- SPELL
 vim.api.nvim_command("set nospell")
