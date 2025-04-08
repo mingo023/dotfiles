@@ -1,7 +1,6 @@
 local lsp_config = require("lspconfig")
 local merge = require("utils.merge")
 local on_attach = require("lsp/on_attach")
-
 local default_stubs = {
   "apache",
   "bcmath",

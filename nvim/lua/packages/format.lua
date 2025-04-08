@@ -23,6 +23,11 @@ return {
       config.configure_language("php", {
         prefer_single_line_comments = true,
       })
+      config.configure_language("py", {
+        prefer_single_line_comments = true,
+        single_line_comment_string = "#",
+        multi_line_comment_strings = { '"""', '"""' },
+      })
     end,
   },
   {
@@ -76,6 +81,7 @@ return {
           go = { "gofumpt", "gofmt", "goimports_reviser", "golines" },
           php = { "pint", "php-cs-fixer" },
           ruby = { "rubocop", stop_after_first = true },
+          python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
         },
       })
     end,
@@ -89,6 +95,7 @@ return {
         typescript = { "cspell" },
         ruby = { "rubocop", "cspell" },
         php = { "cspell" },
+        python = { "ruff" },
       }
 
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
