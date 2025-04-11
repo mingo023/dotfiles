@@ -1,3 +1,5 @@
+local map = require("utils.mapping")
+
 return {
   {
     "windwp/nvim-autopairs",
@@ -50,20 +52,13 @@ return {
     "tpope/vim-surround",
   },
   {
-    "nvim-pack/nvim-spectre",
-    dependencies = "nvim-lua/plenary.nvim",
+    "MagicDuck/grug-far.nvim",
     config = function()
-      require("spectre").setup({
-        replace_engine = {
-          ["sed"] = {
-            cmd = "sed",
-            args = {
-              "-i",
-              "",
-              "-E",
-            },
-          },
+      require("grug-far").setup({
+        keymaps = {
+          replace = { n = "<leader>R" },
         },
+        startInInsertMode = false,
       })
     end,
   },
