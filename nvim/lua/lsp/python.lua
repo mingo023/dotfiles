@@ -6,6 +6,9 @@ lsp_config.pylsp.setup({
   settings = {
     pylsp = {
       plugins = {
+        rope_autoimport = {
+          enabled = true,
+        },
         pycodestyle = { enabled = false },
         mccabe = { enabled = false },
         pyflakes = { enabled = false },

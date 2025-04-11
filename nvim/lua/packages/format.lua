@@ -95,15 +95,10 @@ return {
         typescript = { "cspell" },
         ruby = { "rubocop", "cspell" },
         php = { "cspell" },
-        python = { "ruff" },
+        python = { "ruff", "cspell" },
       }
 
       local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-
-      lint.linters.cspell.args = {
-        "--config",
-        vim.fn.stdpath("config") .. "/spell/cspell.json",
-      }
 
       vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
         group = lint_augroup,

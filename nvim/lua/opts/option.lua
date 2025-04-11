@@ -1,5 +1,3 @@
-vim.g.loaded_matchparen = 1
-
 local opt = vim.opt
 
 vim.g.dark_mode = true
@@ -117,7 +115,6 @@ vim.g.loaded_2html_plugin = 0
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
 vim.g.loaded_matchit = 0
-vim.g.loaded_matchparen = 0
 vim.g.loaded_spec = 0
 
 -- RUST
