@@ -6,7 +6,7 @@ return {
     opts = {
       bigfile = { enabled = true },
       quickfile = { enabled = true },
-      notifier = { enabled = true },
+      notifier = { enabled = false },
       zen = {
         enabled = false,
         toggles = {
