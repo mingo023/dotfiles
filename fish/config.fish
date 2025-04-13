@@ -41,6 +41,7 @@ set fish_path $HOME/.config/fish
 . $fish_path/git_aliases.fish
 . $fish_path/functions/fzf_pass.fish
 . $fish_path/custom_variables.fish
+. $fish_path/idk.fish
 
 alias ls="eza -l --icons"
 alias rm="rm -rf"

@@ -7,6 +7,13 @@ return {
     opts = {
       config = {
         on_attach = on_attach,
+        config = {
+          settings = {
+            ["csharp|formatting"] = {
+              dotnet_organize_imports_on_format = true,
+            },
+          },
+        },
       },
     },
   },
