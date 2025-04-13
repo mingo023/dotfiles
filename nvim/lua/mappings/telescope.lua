@@ -7,7 +7,15 @@ map("n", ",fb", function()
     sort_lastused = true,
     ignore_current_buffer = true,
   })
-end, { silent = true })
+end, { silent = true, desc = "Telescope Buffers" })
+
+map("n", ",fr", function()
+  telescope_builtin.lsp_references({
+    show_line = false,
+    include_declaration = false,
+    previewer = true,
+  })
+end, { silent = true, desc = "Telescope LSP References" })
 
 map("n", "<C-p>", function()
   telescope_builtin.find_files({
