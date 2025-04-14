@@ -9,6 +9,7 @@ return {
           yaml = true,
           markdown = true,
           handlebars = true,
+          cs = true,
         },
         suggestion = {
           enabled = true,

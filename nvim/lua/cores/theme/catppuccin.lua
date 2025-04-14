@@ -5,6 +5,9 @@ require("catppuccin").setup({
   },
   color_overrides = {
     -- mocha = require("cores.theme.schemes.tokyonight"),
+    mocha = {
+      base = "#181818",
+    },
   },
   styles = {
     comments = { "italic" },

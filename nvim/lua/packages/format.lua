@@ -82,6 +82,7 @@ return {
           php = { "pint", "php-cs-fixer" },
           ruby = { "rubocop", stop_after_first = true },
           python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
+          cs = { "csharpier" },
         },
       })
     end,
