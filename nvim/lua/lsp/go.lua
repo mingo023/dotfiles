@@ -19,7 +19,7 @@ lsp_config.gopls.setup({
       },
       staticcheck = true,
       completeUnimported = true,
-      usePlaceholders = true,
+      usePlaceholders = false,
     },
   },
 })
