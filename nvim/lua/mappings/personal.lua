@@ -88,3 +88,9 @@ map("n", ",vs", ":vsplit <CR>", {
 map("n", ",q", ":q <CR>", {
   desc = "quit window",
 })
+
+-- comment and copy
+map("n", "ycc", "yygccp", {
+  desc = "copy line and comment",
+  remap = true
+})
