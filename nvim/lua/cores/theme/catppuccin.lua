@@ -10,7 +10,7 @@ require("catppuccin").setup({
     },
   },
   styles = {
-    comments = { "italic" },
+    comments = {},
     conditionals = {},
     loops = { "bold" },
     functions = { "bold" },
