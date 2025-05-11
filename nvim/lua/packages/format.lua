@@ -71,7 +71,9 @@ return {
     "stevearc/conform.nvim",
     opts = {},
     config = function()
-      require("conform").setup({
+      local conform = require("conform")
+
+      conform.setup({
         formatters_by_ft = {
           lua = { "stylua" },
           javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -82,9 +84,17 @@ return {
           php = { "pint", "php-cs-fixer" },
           ruby = { "rubocop", stop_after_first = true },
           python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
-          cs = { "csharpier" },
+          cs = {
+            "csharpier",
+          },
         },
       })
+
+      conform.formatters.csharpier = {
+        command = "dotnet",
+        args = { "csharpier", "format", "--write-stdout" },
+        stdin = true,
+      }
     end,
   },
   {

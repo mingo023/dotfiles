@@ -20,6 +20,9 @@ set -gx AWS_PROFILE lawbite
 # config for HF projects
 set -gx PATH ".git/safe/../../bin:$PATH"
 
+# config PATH for dotnet
+set -gx PATH "~/.dotnet/tools:$PATH"
+
 # Python setup
 set -Ux PYENV_ROOT $HOME/.pyenv
 fish_add_path $PYENV_ROOT/bin
