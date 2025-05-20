@@ -381,6 +381,9 @@ function icon_map() {
   "Microsoft Excel")
     icon_result=":microsoft_excel:"
     ;;
+  "Ghostty")
+    icon_result=":ghostty:"
+    ;;
   "KeePassXC")
     icon_result=":kee_pass_x_c:"
     ;;
