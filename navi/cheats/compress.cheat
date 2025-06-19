@@ -1,0 +1,4 @@
+% compress
+
+# Compress a video file using ffmpeg and remove the original file
+ffmpeg -i <original_file> -qscale 0 <compressed_file> && rm <original_file>

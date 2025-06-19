@@ -31,3 +31,4 @@ stripe
 yarn
 op/*
 fish/idk.fish
+local-run/

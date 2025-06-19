@@ -7,7 +7,7 @@ return {
       vim.g["test#strategy"] = "vimux"
 
       -- set options for jest
-      vim.g["test#javascript#jest#options"] = " --config jest.config.json"
+      vim.g["test#javascript#jest#options"] = ""
 
       -- set options for phpunit
       vim.g["test#php#phpunit#executable"] = "docker-compose exec -it php php artisan test"

@@ -1,0 +1,4 @@
+% port-fowarding
+
+# Forward service port to localhost
+kubectl port-forward svc/<service_name> <local_port>:<service_port> --namespace <namespace>
