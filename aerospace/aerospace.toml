@@ -51,8 +51,8 @@ outer.right =      0
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
-# alt-shift-b = 'exec-and-forget open -a /Applications/Arc.app'
-alt-shift-b = 'exec-and-forget open -a /Applications/Google\ Chrome.app/'
+alt-shift-b = 'exec-and-forget open -a /Applications/Arc.app'
+# alt-shift-b = 'exec-and-forget open -a /Applications/Google\ Chrome.app/'
 alt-shift-t = 'exec-and-forget open -a /Applications/Microsoft\ Teams.app/'
 alt-shift-a = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-shift-c = 'exec-and-forget open -a /Applications/Visual\ Studio\ Code.app'
