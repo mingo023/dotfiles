@@ -13,22 +13,10 @@ return {
     end,
   },
   {
-    "b3nj5m1n/kommentary",
-    config = function()
-      local config = require("kommentary.config")
-
-      config.configure_language("default", {
-        prefer_single_line_comments = true,
-      })
-      config.configure_language("php", {
-        prefer_single_line_comments = true,
-      })
-      config.configure_language("py", {
-        prefer_single_line_comments = true,
-        single_line_comment_string = "#",
-        multi_line_comment_strings = { '"""', '"""' },
-      })
-    end,
+    "folke/ts-comments.nvim",
+    opts = {},
+    event = "VeryLazy",
+    enabled = vim.fn.has("nvim-0.10.0") == 1,
   },
   {
     "folke/todo-comments.nvim",

@@ -380,6 +380,18 @@ local FileEncoding = {
   hl = { bg = colors.crust, fg = colors.overlay0 },
 }
 
+local SearchCount = {
+  condition = function()
+    return vim.v.hlsearch ~= 0
+  end,
+  provider = function()
+    local ok, search = pcall(vim.fn.searchcount)
+    if ok and search.total then
+      return string.format("%d/%d", search.current, math.min(search.total, search.maxcount))
+    end
+  end,
+}
+
 local IndentSizes = {
   provider = function()
     local indent_type = vim.api.nvim_get_option_value("expandtab", { scope = "local" }) and "Spaces" or "Tab Size"
@@ -445,5 +457,6 @@ heirline.setup({
     FileFormat,
     FileEncoding,
     IndentSizes,
+    SearchCount,
   },
 })
