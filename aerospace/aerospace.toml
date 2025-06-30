@@ -146,6 +146,10 @@ run='move-node-to-workspace 4'
 if.app-id = 'com.apple.finder'
 run='layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.lowtechguys.Clop'
+run='layout floating'
+
 # Workspace 5 Apps
 [[on-window-detected]]
 if.app-id = 'com.github.th-ch.youtube-music'

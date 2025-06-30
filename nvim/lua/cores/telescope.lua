@@ -16,6 +16,8 @@ telescope.setup({
       "coverage%-report/.*",
       "src/public/vendor/nova",
       "karabiner",
+      "node_modules/*",
+      "dist/*",
       "**/vendor/*",
     },
     vimgrep_arguments = {

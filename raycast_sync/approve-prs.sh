@@ -2,7 +2,7 @@
 
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title Approve PRs
+# @raycast.title Regask Approve PRs
 # @raycast.mode fullOutput
 
 # Optional parameters:
