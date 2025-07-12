@@ -20,22 +20,9 @@ return {
             next = "<C-n>",
           },
         },
-        copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/mise/installs/node/20/bin/node", -- Node.js version must be > 18.x
+        copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/mise/installs/node/22/bin/node", -- Node.js version must be > 18.x
         server_opts_overrides = {},
       })
-    end,
-  },
-  {
-    "olimorris/codecompanion.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-treesitter/nvim-treesitter",
-      "echasnovski/mini.diff",
-      "stevearc/dressing.nvim",
-      { "MeanderingProgrammer/render-markdown.nvim", ft = { "markdown", "codecompanion" } }, -- Optional: For prettier markdown rendering
-    },
-    config = function()
-      require("cores.codecompanion")
     end,
   },
 }

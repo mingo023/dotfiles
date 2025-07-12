@@ -7,6 +7,17 @@ vim.cmd([[
       \ filetype=typescript
   ]])
 
+local current_workspace = vim.fn.getcwd()
+local hodfords_path = "hodfords"
+
+if string.find(current_workspace, hodfords_path) then
+  vim.cmd([[
+    autocmd BufEnter *.ts setlocal
+        \ shiftwidth=4
+        \ filetype=typescript
+    ]])
+end
+
 require("typescript-tools").setup({
   on_attach = function(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<Leader>cs", ":TSToolsOrganizeImports<CR>", { silent = true })

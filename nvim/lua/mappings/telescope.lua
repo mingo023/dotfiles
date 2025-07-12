@@ -49,7 +49,7 @@ end, { silent = true })
 vim.cmd("command! NvimConfig lua require('telescope.builtin').find_files({ cwd = '~/.config/nvim' })")
 
 map("n", "<Leader>ma", ":Telescope marks <CR>", { silent = true })
-map("n", "<Leader>sp", ":Namu symbols <CR>", { silent = true })
+map("n", "<Leader>sp", ":Telescope lsp_document_symbols <CR>", { silent = true })
 
 map("", ",gs", ":Telescope git_status <CR>", { silent = true })
 map("", ",gb", ":Telescope git_branches <CR>", { silent = true })
