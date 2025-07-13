@@ -1,6 +1,6 @@
 auto-update-channel = stable
 theme = catppuccin-frappe
-font-family = monoki
+font-family = Jetbrains Mono
 
 shell-integration = fish
 adjust-cell-height = 10%
