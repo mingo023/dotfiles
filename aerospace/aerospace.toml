@@ -40,11 +40,11 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 [gaps]
 inner.horizontal = 14
-inner.vertical =   14
-outer.left =       0
-outer.top =     0
-outer.bottom = 27
-outer.right =      0
+inner.vertical   = 14
+outer.left       = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
+outer.top        = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
+outer.bottom     = [{ monitor."Builtin-in" = 27 }, { monitor."DELL U2720Q" = 64 }, 27 ]
+outer.right      = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -72,75 +72,80 @@ alt-comma = 'layout accordion horizontal vertical'
 
 alt-slash = 'layout tiles horizontal vertical'
 
-alt-q = 'workspace 1' # Chat apps
-alt-w = 'workspace 2' # Browser and email
-alt-e = 'workspace 3' # Code editors
-alt-r = 'workspace 4' # Debug tools
-alt-t = 'workspace 5' # Music
+alt-q = 'workspace C' # Chat apps
+alt-w = 'workspace W' # Browser and email
+alt-e = 'workspace I' # IDE and terminal
+alt-r = 'workspace D' # Debug tools and docs
+alt-t = 'workspace M' # Music
+alt-y = 'workspace T' # Temporary
 
-# Workspace 1 Apps
+# workspace C Apps
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
-run='move-node-to-workspace 1'
+run='move-node-to-workspace C'
 
 [[on-window-detected]]
 if.app-id = 'com.tinyspeck.slackmacgap'
-run='move-node-to-workspace 1'
+run='move-node-to-workspace C'
 
 [[on-window-detected]]
 if.app-id = 'com.vng.zalo'
-run='move-node-to-workspace 1'
+run='move-node-to-workspace C'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
-run='move-node-to-workspace 1'
+run='move-node-to-workspace C'
 
 [[on-window-detected]]
 if.app-id = 'com.tdesktop.Telegram'
-run='move-node-to-workspace 1'
+run='move-node-to-workspace C'
 
-# Workspace 2 Apps
+# workspace W Apps
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run='move-node-to-workspace 2'
+run='move-node-to-workspace W'
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run='move-node-to-workspace 2'
+run='move-node-to-workspace W'
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run='move-node-to-workspace W'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run='move-node-to-workspace 2'
+run='move-node-to-workspace W'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.iCal'
-run='move-node-to-workspace 2'
+run='move-node-to-workspace W'
 
-# Workspace 3 Apps
+# workspace I Apps
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run='move-node-to-workspace 3'
+run='move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run='move-node-to-workspace 3'
+run='move-node-to-workspace I'
 
-# Workspace 4 Apps
+# workspace D Apps
 [[on-window-detected]]
 if.app-id = 'com.postmanlabs.mac'
-run='move-node-to-workspace 4'
+run='move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.jetbrains.datagrip'
-run='move-node-to-workspace 4'
+run='move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.1password.1password'
-run='move-node-to-workspace 4'
+run='move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'notion.id'
-run='move-node-to-workspace 4'
+run='move-node-to-workspace D'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
@@ -148,17 +153,28 @@ run='layout floating'
 
 [[on-window-detected]]
 if.app-id = 'com.anthropic.claudefordesktop'
-run='layout floating'
+run=['layout floating', 'move-node-to-workspace D']
 
 [[on-window-detected]]
 if.app-id = 'com.lowtechguys.Clop'
 run='layout floating'
 
-# Workspace 5 Apps
+# workspace M Apps
 [[on-window-detected]]
 if.app-id = 'com.github.th-ch.youtube-music'
-run='move-node-to-workspace 5'
+run='move-node-to-workspace M'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
-run='move-node-to-workspace 5'
+run='move-node-to-workspace M'
+
+[[on-window-detected]]
+check-further-callbacks = true
+run = ['layout floating', 'move-node-to-workspace T']
+
+[workspace-to-monitor-force-assignment]
+A = '^built-in'
+
+[[on-window-detected]]
+run = 'move-node-to-workspace T'
+

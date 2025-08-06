@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 ICON_FONT="sketchybar-app-font"
 
-sketchybar --add item       front_app left                                    \
+sketchybar --add item       front_app center                                    \
            --subscribe      front_app front_app_switched                      \
            --set            front_app script="$PLUGIN_DIR/front_app.sh"       \
                             label.padding_left=-1                             \

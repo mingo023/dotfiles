@@ -1,47 +1,36 @@
 #!/usr/bin/env bash
 
-SPACE_ICONS=("💬" "🌏" "⌨️" "🛠️" "🎧")
+SPACE_ICONS=("chat" "web" "ide" "docs" "music" "terminal")
+LIST_SPACES_INDEX=(C W I D M T)
 
-YELLOW=#eed49f
-GREEN=#8DC583
-PURPLE=#c6a0f6
-GRAY=#868686
-ORANGE=#FF8564
-BLUE=#36ADFF
-WHITE=#F9F9F9
+ACTIVATE_COLORS=(
+  "#8AD9ED"  # Chat
+  "#4ECDC4"  # Web
+  "#6DE85F"  # IDE
+  "#C7F464"  # Docs
+  "#FF6B6B"  # Music
+  "#C72EFF"  # Terminal
+)
 
 DEACTIVATE=$GRAY
 
 sketchybar --add event aerospace_workspace_change
 
-for i in "${!SPACE_ICONS[@]}"; do
-  sid=$(($i+1))
-  echo $sid
+for i in "${!LIST_SPACES_INDEX[@]}"; do
+  sid=${LIST_SPACES_INDEX[i]}
 
-  if [ $sid -eq 1 ]; then
-    ACTIVATE=$PURPLE
-  elif [ $sid -eq 2 ]; then
-    ACTIVATE=$GREEN
-  elif [ $sid -eq 3 ]; then
-    ACTIVATE=$BLUE
-  elif [ $sid -eq 4 ]; then
-    ACTIVATE=$YELLOW
-  elif [ $sid -eq 5 ]; then
-    ACTIVATE=$ORANGE
-  else
-    ACTIVATE=$WHITE
-  fi
+  ACTIVATE=${ACTIVATE_COLORS[$i]}
 
   sketchybar --add item space.$sid left \
              --subscribe space.$sid aerospace_workspace_change \
              --set space.$sid \
                         icon=${SPACE_ICONS[i]}                    \
-                        icon.font="$LABEL:SemiBold:14"            \
-                        icon.padding_left=7                      \
-                        icon.padding_right=7                     \
-                        icon.color=0xff${DEACTIVATE:1}       \
-                        icon.highlight_color=0xff${ACTIVATE:1}       \
+                        icon.padding_left=5                      \
+                        icon.padding_right=5                     \
                         label.drawing=off                         \
+                        icon.highlight_color=0xff${ACTIVATE:1} \
+                        icon.font.style="Bold"  \
+                        icon.font="JetBrainsMono Nerd Font:Bold:12.5" \
                         script="$PLUGIN_DIR/space.sh $sid"             \
                         click_script="aerospace workspace $sid"
 done
