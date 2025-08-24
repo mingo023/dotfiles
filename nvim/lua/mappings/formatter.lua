@@ -3,6 +3,8 @@ local map = require("utils.mapping")
 
 vim.api.nvim_create_user_command("Format", function()
   conform.format()
+  -- run Eslintfix command
+  vim.cmd("EslintFixAll")
 end, { nargs = "*" })
 
 -- config auto format for php

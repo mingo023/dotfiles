@@ -52,7 +52,7 @@ require("catppuccin").setup({
       -- Cmp
 
       CursorLineNr = { fg = colors.text, style = { "bold" } },
-      FloatBorder = { bg = colors.base, fg = colors.green },
+      FloatBorder = { bg = colors.none, fg = colors.green },
       GitSignsChange = { fg = colors.peach },
       LineNr = { fg = colors.overlay0 },
       LspInfoBorder = { link = "FloatBorder" },

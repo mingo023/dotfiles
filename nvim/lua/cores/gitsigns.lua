@@ -8,9 +8,9 @@ gitsigns.setup({
   signs = {
     add = { text = "┃" },
     change = { text = "┃" },
-    delete = { text = "▁" },
-    topdelete = { text = "▔" },
-    changedelete = { text = "~" },
+    delete = { text = "┃" },
+    topdelete = { text = "┃" },
+    changedelete = { text = "┃" },
   },
   status_formatter = nil, -- Use default
   attach_to_untracked = true,
