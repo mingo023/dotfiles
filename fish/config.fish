@@ -85,9 +85,6 @@ zoxide init fish | source
 
 starship init fish | source
 
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/minhngo/.cache/lm-studio/bin
-
 # pnpm
 set -gx PNPM_HOME "/Users/minhngo/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH

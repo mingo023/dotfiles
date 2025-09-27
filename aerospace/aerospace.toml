@@ -43,7 +43,7 @@ inner.horizontal = 14
 inner.vertical   = 14
 outer.left       = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
 outer.top        = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
-outer.bottom     = [{ monitor."Builtin-in" = 27 }, { monitor."DELL U2720Q" = 64 }, 27 ]
+outer.bottom     = [{ monitor."Builtin-in" = 26 }, { monitor."DELL U2720Q" = 64 }, 26 ]
 outer.right      = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
 
 # 'main' binding mode declaration
@@ -54,14 +54,12 @@ outer.right      = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }
 alt-shift-b = 'exec-and-forget open -a /Applications/Arc.app'
 # alt-shift-b = 'exec-and-forget open -a /Applications/Google\ Chrome.app/'
 alt-shift-t = 'exec-and-forget open -a /Applications/Microsoft\ Teams.app/'
-alt-shift-a = 'exec-and-forget open -a /Applications/Ghostty.app'
+alt-shift-a = 'exec-and-forget open -a /Applications/Alacritty.app'
 alt-shift-c = 'exec-and-forget open -a /Applications/Visual\ Studio\ Code.app'
 alt-shift-p = 'exec-and-forget open -a /Applications/Postman.app'
 alt-shift-d = 'exec-and-forget open -a /Applications/Discord.app'
 alt-shift-n = 'exec-and-forget open -a /Applications/Notion.app'
 alt-shift-s = 'exec-and-forget open -a /Applications/Slack.app'
-
-alt-f = 'layout floating tiling'
 
 alt-shift-h = 'move left'
 alt-shift-k = 'move up'

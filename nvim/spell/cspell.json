@@ -13,6 +13,16 @@
     "subscope",
     "usecase",
     "usecases",
-    "dtos"
+    "dtos",
+    "firstname",
+    "lastname",
+    "CLIENTADMIN",
+    "healthcheck",
+    "lucene",
+    "Subscopes",
+    "xsmall",
+    "favorited",
+    "favourites",
+    "reggenius"
   ]
 }

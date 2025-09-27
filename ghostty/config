@@ -1,7 +1,6 @@
 auto-update-channel = stable
-custom-shader = shaders/cursor_smear_fade.glsl
-theme = catppuccin-frappe
-font-family = Jetbrains Mono
+font-family = FiraCode Nerd Font
+theme = Catppuccin Frappe
 
 shell-integration = fish
 adjust-cell-height = 10%

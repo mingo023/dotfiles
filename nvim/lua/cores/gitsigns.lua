@@ -12,6 +12,13 @@ gitsigns.setup({
     topdelete = { text = "┃" },
     changedelete = { text = "┃" },
   },
+  signs_staged = {
+    add = { text = "┃" },
+    change = { text = "┃" },
+    delete = { text = "┃" },
+    topdelete = { text = "┃" },
+    changedelete = { text = "┃" },
+  },
   status_formatter = nil, -- Use default
   attach_to_untracked = true,
   watch_gitdir = {

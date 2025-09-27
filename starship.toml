@@ -20,3 +20,10 @@ modified = '📝'
 staged = '[++\($count\)](green)'
 renamed = '👅'
 deleted = '🗑'
+
+[custom.git_username]
+command = 'git config user.name'
+when = 'git rev-parse --is-inside-work-tree 2>/dev/null'
+[custom.git_useremail]
+command = 'git config user.email'
+when = 'git rev-parse --is-inside-work-tree 2>/dev/null'

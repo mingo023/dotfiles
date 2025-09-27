@@ -3,16 +3,12 @@ local map = require("utils.mapping")
 
 vim.api.nvim_create_user_command("Format", function()
   conform.format()
-  -- run Eslintfix command
-  vim.cmd("EslintFixAll")
-end, { nargs = "*" })
 
--- config auto format for php
--- vim.api.nvim_create_autocmd("BufWritePre", {
---   pattern = "*.php",
---   callback = function(args)
---     local ok, result = pcall(conform.format, { bufnr = args.buf })
---   end,
--- })
+  -- run Eslintfix command only for typescript and javascript files
+  local ft = vim.bo.filetype
+  if ft == "typescript" or ft == "javascript" or ft == "typescriptreact" or ft == "javascriptreact" then
+    vim.cmd("EslintFixAll")
+  end
+end, { nargs = "*" })
 
 map("n", "<C-f>", ":Format<CR>", { noremap = true, silent = false })
