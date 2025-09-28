@@ -1,8 +1,8 @@
 return {
-  rosewater = "#FB4834",
-  flamingo = "#FB4834",
-  red = "#FB4834",
-  maroon = "#FB4834",
+  rosewater = "#ea6962",
+  flamingo = "#ea6962",
+  red = "#ea6962",
+  maroon = "#ea6962",
   pink = "#d3859b",
   mauve = "#d3859b",
   peach = "#e78a4e",

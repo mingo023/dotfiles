@@ -125,7 +125,7 @@ if.app-id = 'com.microsoft.VSCode'
 run='move-node-to-workspace D'
 
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
+if.app-id = 'org.alacritty'
 run='move-node-to-workspace I'
 
 # workspace D Apps
