@@ -1,4 +1,6 @@
 local g = vim.g
+local icons = require("cores.icons").diagnostics
+local tree_icons = require("cores.icons").tree
 
 require("nvim-tree").setup({
   disable_netrw = true,
@@ -15,7 +17,12 @@ require("nvim-tree").setup({
   },
   diagnostics = {
     enable = true,
-    icons = { hint = " ", info = " ", warning = " ", error = " " },
+    icons = {
+      hint = icons.Hint,
+      info = icons.Info,
+      warning = icons.Warn,
+      error = icons.Error,
+    },
   },
   hijack_directories = { enable = true, auto_open = true },
   filters = {
@@ -51,13 +58,7 @@ require("nvim-tree").setup({
           deleted = "",
           ignored = "",
         },
-        folder = {
-          default = "",
-          open = "",
-          empty_open = "",
-          empty = "",
-          symlink = "",
-        },
+        folder = tree_icons.folder,
       },
     },
   },

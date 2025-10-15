@@ -1,4 +1,3 @@
-local lsp_config = require("lspconfig")
 local on_attach = require("lsp/on_attach")
 
 vim.cmd([[
@@ -34,7 +33,7 @@ require("typescript-tools").setup({
   },
 })
 
-lsp_config.eslint.setup({
+require("lspconfig").eslint.setup({
   on_attach = on_attach,
   filetypes = {
     "typescript",
@@ -48,3 +47,5 @@ lsp_config.eslint.setup({
     return vim.fn.getcwd()
   end,
 })
+
+vim.lsp.enable("eslint")

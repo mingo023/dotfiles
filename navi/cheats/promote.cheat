@@ -1,4 +1,4 @@
-% Regask promote
+% regask promote
 
 # Promote code from one branch to another
 loca-promote --from-branch <from> --to-branch <to> --services <service> --copy-to-clipboard

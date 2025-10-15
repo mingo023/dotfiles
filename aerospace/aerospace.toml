@@ -54,7 +54,7 @@ outer.right      = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }
 alt-shift-b = 'exec-and-forget open -a /Applications/Arc.app'
 # alt-shift-b = 'exec-and-forget open -a /Applications/Google\ Chrome.app/'
 alt-shift-t = 'exec-and-forget open -a /Applications/Microsoft\ Teams.app/'
-alt-shift-a = 'exec-and-forget open -a /Applications/Alacritty.app'
+alt-shift-a = 'exec-and-forget open -a /Applications/Ghostty.app'
 alt-shift-c = 'exec-and-forget open -a /Applications/Visual\ Studio\ Code.app'
 alt-shift-p = 'exec-and-forget open -a /Applications/Postman.app'
 alt-shift-d = 'exec-and-forget open -a /Applications/Discord.app'
@@ -125,7 +125,7 @@ if.app-id = 'com.microsoft.VSCode'
 run='move-node-to-workspace D'
 
 [[on-window-detected]]
-if.app-id = 'org.alacritty'
+if.app-id = 'com.mitchellh.ghostty'
 run='move-node-to-workspace I'
 
 # workspace D Apps

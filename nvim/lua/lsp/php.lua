@@ -1,4 +1,3 @@
-local lsp_config = require("lspconfig")
 local merge = require("utils.merge")
 local on_attach = require("lsp/on_attach")
 local default_stubs = {
@@ -79,7 +78,7 @@ local default_stubs = {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require("lspconfig").intelephense.setup({
+vim.lsp.config("intelephense", {
   on_init = function(client)
     client.server_capabilities.documentFormattingProvider = false
   end,
