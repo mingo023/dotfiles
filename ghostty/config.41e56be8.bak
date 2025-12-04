@@ -27,4 +27,3 @@ keybind = cmd+t=text:\x01c
 keybind = cmd+s=text::w\r
 keybind = cmd+w=text:\x01x
 keybind = cmd+f=text:\x01[/
-keybind = shift+enter=text:\x1b\r

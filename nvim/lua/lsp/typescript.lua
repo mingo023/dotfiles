@@ -33,7 +33,7 @@ require("typescript-tools").setup({
   },
 })
 
-require("lspconfig").eslint.setup({
+vim.lsp.config("eslint", {
   on_attach = on_attach,
   filetypes = {
     "typescript",
@@ -43,9 +43,6 @@ require("lspconfig").eslint.setup({
     "javascriptreact",
     "javascript.jsx",
   },
-  root_dir = function()
-    return vim.fn.getcwd()
-  end,
 })
 
 vim.lsp.enable("eslint")

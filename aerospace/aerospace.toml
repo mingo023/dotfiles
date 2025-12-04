@@ -41,10 +41,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 [gaps]
 inner.horizontal = 14
 inner.vertical   = 14
-outer.left       = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
-outer.top        = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
-outer.bottom     = [{ monitor."Builtin-in" = 26 }, { monitor."DELL U2720Q" = 64 }, 26 ]
-outer.right      = [{ monitor."Builtin-in" = 0 }, { monitor."DELL U2720Q" = 28 }, 0 ]
+outer.left       = [{ monitor."Builtin-in" = 0 }, { monitor."LG ULTRAFINE" = 28 }, 0 ]
+outer.top        = [{ monitor."Builtin-in" = 0 }, { monitor."LG ULTRAFINE" = 28 }, 0 ]
+outer.bottom     = [{ monitor."Builtin-in" = 26 }, { monitor."LG ULTRAFINE" = 64 }, 26 ]
+outer.right      = [{ monitor."Builtin-in" = 0 }, { monitor."LG ULTRAFINE" = 28 }, 0 ]
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes

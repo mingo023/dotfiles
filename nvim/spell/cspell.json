@@ -25,6 +25,12 @@
     "favourites",
     "reggenius",
     "pendo",
-    "partialize"
+    "partialize",
+    "veeva",
+    "hideable",
+    "cloudevents",
+    "duckdb",
+    "agms",
+    "byoc"
   ]
 }

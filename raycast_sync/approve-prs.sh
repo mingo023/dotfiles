@@ -36,3 +36,6 @@ for PR_URL in $PR_URLS; do
   gh pr review "$PR_URL" --approve
   echo "✅ Approved PR: $PR_URL"
 done
+
+# run raycast confetti
+open -g "raycast://confetti"

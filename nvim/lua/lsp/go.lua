@@ -1,5 +1,7 @@
 local on_attach = require("lsp/on_attach")
 
+vim.lsp.enable("gopls")
+
 vim.lsp.config("gopls", {
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)

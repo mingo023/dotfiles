@@ -91,3 +91,7 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# libpq
+set -gx PATH /opt/homebrew/opt/libpq/bin $PATH
+# libpq end
