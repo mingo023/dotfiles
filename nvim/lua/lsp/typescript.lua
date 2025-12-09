@@ -33,8 +33,17 @@ require("typescript-tools").setup({
   },
 })
 
+local base_on_attach = vim.lsp.config.eslint.on_attach
+
 vim.lsp.config("eslint", {
-  on_attach = on_attach,
+  on_attach = function(client, bufnr)
+    if not base_on_attach then
+      return
+    end
+
+    base_on_attach(client, bufnr)
+    on_attach(client, bufnr)
+  end,
   filetypes = {
     "typescript",
     "typescriptreact",
