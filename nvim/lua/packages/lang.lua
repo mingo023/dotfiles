@@ -30,7 +30,6 @@ return {
       require("cores.lspsaga")
     end,
     dependencies = {
-      { "nvim-tree/nvim-web-devicons" },
       { "nvim-treesitter/nvim-treesitter" },
     },
   },
@@ -47,7 +46,6 @@ return {
   },
   {
     "folke/trouble.nvim",
-    dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
       require("trouble").setup({
         warn_no_results = false,
