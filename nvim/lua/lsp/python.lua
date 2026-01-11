@@ -30,3 +30,5 @@ vim.cmd([[
       \ softtabstop=2
       \ expandtab
   ]])
+
+vim.lsp.enable("pylsp")
