@@ -1,0 +1,15 @@
+[core]
+    pager = delta
+[user]
+	email = nvminh023@gmail.com
+	name = mingo023
+[color]
+	ui = true
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[core]
+	excludesfile = /Users/minh.ngovan/.gitignore_global
+[push]
+	autoSetupRemote = true
+[rerere]
+  enabled = true

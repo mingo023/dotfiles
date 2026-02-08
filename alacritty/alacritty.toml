@@ -55,19 +55,19 @@ TERM = "xterm-256color"
 size = 13
 
 [font.bold]
-family = "JetbrainsMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetbrainsMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "JetbrainsMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [font.normal]
-family = "JetbrainsMono Nerd Font"
+family = "FiraCode Nerd Font"
 style = "Regular"
 
 [font.offset]
@@ -93,5 +93,10 @@ mods = "Command"
 
 [window]
 decorations = "buttonless"
-opacity = 1
+opacity = 0.96
 startup_mode = "Maximized"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001b\r"

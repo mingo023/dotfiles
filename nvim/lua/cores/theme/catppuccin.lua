@@ -4,7 +4,7 @@ require("catppuccin").setup({
     dark = "mocha",
   },
   color_overrides = {
-    -- mocha = require("cores.theme.schemes.tokyonight"),
+    -- mocha = require("cores.theme.schemes.gruvbox-material"),
     mocha = {
       base = "#181818",
     },

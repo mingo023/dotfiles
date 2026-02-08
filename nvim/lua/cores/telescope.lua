@@ -40,20 +40,20 @@ telescope.setup({
     set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
     initial_mode = "insert",
     border = true,
-    preview = {
-      hide_on_startup = true,
+    borderchars = {
+      prompt = { "─", "│", "─", "│", "┌", "┐", "┤", "├" },
+      results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+      preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
     },
+    layout_strategy = "horizontal",
     layout_config = {
       horizontal = {
         prompt_position = "top",
-        preview_width = 0.65,
-        results_width = 0.8,
+        preview_width = 0.6,
+        results_width = 0.4,
       },
-      vertical = {
-        mirror = false,
-      },
-      width = 0.68,
-      height = 0.3,
+      width = 0.85,
+      height = 0.8,
       preview_cutoff = 120,
     },
     mappings = {
